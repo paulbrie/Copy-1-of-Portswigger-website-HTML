@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en"
+  ><head
+    ><title>PortSwigger Research at Black Hat USA and DEF CON</title
+    ><meta
+      name="description"
+      content="Watch the PortSwigger Research presentations from Black Hat USA and DEF CON."
+    /><meta
+      property="og:title"
+      content="PortSwigger Research at Black Hat USA and DEF CON"
+    /><meta
+      property="og:description"
+      content="Watch the PortSwigger Research presentations from Black Hat USA and DEF CON."
+    /><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    /><meta charset="utf-8" /><meta
+      property="twitter:card"
+      content="summary_large_image"
+    />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <link
+      rel="preload"
+      href="/mega-nav/images/mega-nav-portswigger-logo.svg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="/content/fonts/ps-main/ps-icons.woff?l1la2n"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/content/fonts/ps-icons-small/ps-icons-small.woff?td2uot"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link rel="preload" href="/mega-nav/meganav.css" as="style" />
+
+    <style>
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+    <script>
+      (function(window, document, dataLayerName, id) {
+      var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName);
+      var qPString=qP.length>0?("?"+qP.join("&")):"";
+      document.write('<nonce-script src="https://ps.containers.piwik.pro/'+id+'.sync.js' + qPString + '" nonce="NIFdcp1UaO0OFJv1ewzs2Putqt1LcUl0"></' + 'nonce-script>');
+      })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');
+    </script></head
+  >
+  <body
+    ><link rel="stylesheet" href="./style.css" /><div
+      ><link href="./black-hat-2024.css" rel="stylesheet" /><div
+        class="black-hat-research-container10"
+        ><live-tag-production-wrapper
+          class="live-tag-production-wrapper"
+          rootclassname="live-tag-productionundefined"
+          ><!--LiveTagProduction component--><div
+            portswigger-live-tag-production="5a9e3886-3303-415c-a955-f221bb95905a"
+            class="live-tag-production-container live-tag-productionroot-class-name12"
+          ></div></live-tag-production-wrapper
+        ><minimal-header-wrapper
+          class="minimal-header-wrapper"
+          rootclassname="minimal-headerundefined"
+          ><!--MinimalHeader component--><div
+            class="minimal-header-container minimal-headerroot-class-name2"
+            ><a href="http://portswigger.net" class="minimal-header-link"
+              ><img
+                alt="image"
+                src="public/portswigger-dark-logo.svg"
+                class="minimal-header-image" /></a></div></minimal-header-wrapper
+        ><div class="black-hat-research-container11"
+          ><div class="black-hat-research-container12"
+            ><div class="black-hat-research-container13"
+              ><div class="black-hat-research-container14"
+                ><h1 class="black-hat-research-text10 H1"
+                  >PortSwigger Research at Black Hat USA and DEF CON</h1
+                ><span class="black-hat-research-text11 H6"
+                  >Watch the PortSwigger Research presentations from DEF
+                  CON.</span
+                ></div
+              ><div class="black-hat-research-container15"
+                ><div class="black-hat-research-container16"
+                  ><iframe
+                    src="https://www.youtube.com/embed/70yyOMFylUA?si=ax44I-Wp33Yy-TG4"
+                    class="black-hat-research-iframe1"
+                  ></iframe
+                  ><span class="black-hat-research-text12 Paragraph"
+                    >Gotta Cache 'em All: Bending the Rules of Web Cache
+                    Exploitation</span
+                  ></div
+                ><div class="black-hat-research-container17"
+                  ><iframe
+                    src="https://www.youtube.com/embed/JERBqoTllaE?si=DRxmqVy6e_ote3I6"
+                    class="black-hat-research-iframe2"
+                  ></iframe
+                  ><span class="black-hat-research-text13 Paragraph"
+                    >Splitting the Email Atom: Exploiting Parsers to Bypass
+                    Access Controls</span
+                  ></div
+                ></div
+              ></div
+            ></div
+          ></div
+        ><div class="black-hat-research-container18"
+          ><h3 class="black-hat-research-text14 H3">Read the white papers</h3
+          ><div class="black-hat-research-container19"
+            ><div class="black-hat-research-container20"
+              ><h3 class="black-hat-research-text15 H4"
+                >Gotta Cache 'em All: Bending the Rules of Web Cache
+                Exploitation</h3
+              ><span class="black-hat-research-text16 Paragraph"
+                >This paper will explore how different HTTP servers and proxies
+                behave when parsing specially crafted URLs and explore
+                ambiguities in the RFC that lead to path confusion. </span
+              ><div
+                src="7974de57-64f4-46b4-83c5-5f10a99ce378"
+                class="black-hat-research-container21"
+                ><a
+                  href="https://portswigger.net/research/gotta-cache-em-all"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="black-hat-research-button1 button"
+                  ><span
+                    buttontext="TQ_TH6-S_dqix"
+                    class="black-hat-research-text17 ButtonFont"
+                    >READ MORE</span
+                  ><img
+                    id=""
+                    alt="ChevronRightI2321"
+                    src="public/external/chevronright1151-d7ji.svg"
+                    class="black-hat-research-chevron-right1" /></a></div></div
+            ><div class="black-hat-research-container22"
+              ><img
+                alt="image"
+                src="public/c528-article-gotta-cache-em-all-image-article-1500w.png"
+                class="black-hat-research-image1" /></div></div></div
+        ><div class="black-hat-research-container23"
+          ><div class="black-hat-research-container24"
+            ><div class="black-hat-research-container25"
+              ><h3 class="black-hat-research-text18 H4"
+                >Splitting the Email Atom: Exploiting Parsers to Bypass Access
+                Controls</h3
+              ><span class="black-hat-research-text19 Paragraph"
+                ><span
+                  >In this paper, Gareth Heyes shows you how to turn email
+                  parsing discrepancies into access control bypasses and even
+                  RCE.</span
+                ><span class="BodyLarge"> </span></span
+              ><div
+                src="7974de57-64f4-46b4-83c5-5f10a99ce378"
+                class="black-hat-research-container26"
+                ><a
+                  href="https://portswigger.net/research/splitting-the-email-atom"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="black-hat-research-button2 button"
+                  ><span
+                    buttontext="TQ_TH6-S_dqix"
+                    class="black-hat-research-text22 ButtonFont"
+                    >READ MORE</span
+                  ><img
+                    id=""
+                    alt="ChevronRightI2321"
+                    src="public/external/chevronright1151-d7ji.svg"
+                    class="black-hat-research-chevron-right2" /></a></div></div
+            ><div class="black-hat-research-container27"
+              ><img
+                alt="image"
+                src="public/6b26-article-splitting-the-email-atom-article-1500w.png"
+                class="black-hat-research-image2" /></div></div></div
+        ><div class="black-hat-research-container28"
+          ><div class="black-hat-research-container29"
+            ><div class="black-hat-research-container30"
+              ><h3 class="black-hat-research-text23 H4"
+                >Listen to the Whispers: Web Timing Attacks that Actually
+                Work</h3
+              ><span class="black-hat-research-text24 Paragraph"
+                >James Kettle unleashes novel attack concepts to coax out server
+                secrets including masked misconfigurations, blind data-structure
+                injection, hidden routes to forbidden areas, and a vast expanse
+                of invisible attack surface.</span
+              ><div
+                src="7974de57-64f4-46b4-83c5-5f10a99ce378"
+                class="black-hat-research-container31"
+                ><a
+                  href="https://portswigger.net/research/listen-to-the-whispers-web-timing-attacks-that-actually-work"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="black-hat-research-button3 button"
+                  ><span
+                    buttontext="TQ_TH6-S_dqix"
+                    class="black-hat-research-text25 ButtonFont"
+                    >READ MORE</span
+                  ><img
+                    id=""
+                    alt="ChevronRightI2321"
+                    src="public/external/chevronright1151-d7ji.svg"
+                    class="black-hat-research-chevron-right3" /></a></div></div
+            ><div class="black-hat-research-container32"
+              ><img
+                alt="image"
+                src="public/c60b-article-listen-to-the-whispers-article-800w.png"
+                class="black-hat-research-image3" /></div></div></div
+        ><div class="black-hat-research-container33"
+          ><div class="black-hat-research-frame5519"
+            ><h1 class="black-hat-research-text26 H4"
+              >🎉 Share your success stories with us 🎉</h1
+            ><span class="black-hat-research-text27 Paragraph"
+              >Have you successfully implemented the techniques in the research?
+              Share your stories with the community!&nbsp;</span
+            ><span class="black-hat-research-text28 Paragraph"
+              >Share your stories with the community!&nbsp;</span
+            ><div class="black-hat-research-container34"
+              ><div
+                src="7974de57-64f4-46b4-83c5-5f10a99ce378"
+                class="black-hat-research-container35"
+                ><a
+                  href="https://discord.com/invite/portswigger"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="black-hat-research-button4 button"
+                  ><img
+                    id=""
+                    alt="ChevronRightI2321"
+                    src="public/discord-mark-white.svg"
+                    class="black-hat-research-chevron-right4"
+                  /><span
+                    buttontext="TQ_TH6-S_dqix"
+                    class="black-hat-research-text29"
+                    >MESSAGE</span
+                  ></a
+                ></div
+              ><div
+                src="7974de57-64f4-46b4-83c5-5f10a99ce378"
+                class="black-hat-research-container36"
+                ><a
+                  href="https://twitter.com/intent/tweet?text=%40PortSwigger"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="black-hat-research-button5 button"
+                  ><img
+                    id=""
+                    alt="ChevronRightI2321"
+                    src="public/x-logo.svg"
+                    class="black-hat-research-chevron-right5"
+                  /><span
+                    buttontext="TQ_TH6-S_dqix"
+                    class="black-hat-research-text30"
+                    >POST</span
+                  ></a
+                ></div
+              ><div
+                src="7974de57-64f4-46b4-83c5-5f10a99ce378"
+                class="black-hat-research-container37"
+                ><a
+                  href="https://www.linkedin.com/shareArticle?mini=true&amp;url="
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="black-hat-research-button6 button"
+                  ><img
+                    id=""
+                    alt="ChevronRightI2321"
+                    src="public/li-in-bug-200h.png"
+                    class="black-hat-research-chevron-right6"
+                  /><span
+                    buttontext="TQ_TH6-S_dqix"
+                    class="black-hat-research-text31"
+                    >POST</span
+                  ></a
+                ></div
+              ></div
+            ></div
+          ></div
+        ><footer-final-wrapper class="footer-final-wrapper"
+          ><!--FooterFinal component--><div
+            class="footer-final-footer1 footer-final"
+            ><div class="footer-final-container10"
+              ><div class="footer-final-container11"
+                ><div class="footer-final-footer2"
+                  ><div class="footer-final-container12"
+                    ><div class="footer-final-container13"
+                      ><div class="footer-final-section1"
+                        ><div class="footer-final-container14"
+                          ><footer-column-title-wrapper
+                            class="footer-column-title-wrapper"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container footer-column-titleroot-class-name261"
+                              ><p class="footer-column-title-text"
+                                ><span>Burp Suite</span></p
+                              ></div
+                            ></footer-column-title-wrapper
+                          ><a
+                            href="https://portswigger.net/burp/vulnerability-scanner"
+                            class="footer-final-link10"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text10 Footer"
+                              ><fragment class="black-hat-research-fragment10"
+                                ><span class="black-hat-research-text32"
+                                  >Web vulnerability scanner</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/burp"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            class="footer-final-link11"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text11 Footer"
+                              ><fragment class="black-hat-research-fragment11"
+                                ><span class="black-hat-research-text33"
+                                  >Burp Suite Editions</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/burp/releases"
+                            class="footer-final-link12"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text12 Footer"
+                              ><fragment class="black-hat-research-fragment12"
+                                ><span class="black-hat-research-text34"
+                                  >Release Notes</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container15"
+                          ><footer-column-title-wrapper-t0v4
+                            class="footer-column-title-wrapper-t0v4"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container1 footer-column-titleroot-class-name262"
+                              ><p class="footer-column-title-text1"
+                                ><span>Vulnerabilities</span></p
+                              ></div
+                            ></footer-column-title-wrapper-t0v4
+                          ><a
+                            href="https://portswigger.net/web-security/cross-site-scripting"
+                            class="footer-final-link13"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text13 Footer"
+                              ><fragment class="black-hat-research-fragment13"
+                                ><span class="black-hat-research-text35"
+                                  >Cross-site scripting (XSS)</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/sql-injection"
+                            class="footer-final-link14"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text14 Footer"
+                              ><fragment class="black-hat-research-fragment14"
+                                ><span class="black-hat-research-text36"
+                                  >SQL injection</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/csrf"
+                            class="footer-final-link15"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text15 Footer"
+                              ><fragment class="black-hat-research-fragment15"
+                                ><span class="black-hat-research-text37"
+                                  >Cross-site request forgery</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/xxe"
+                            class="footer-final-link16"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text16 Footer"
+                              ><fragment class="black-hat-research-fragment16"
+                                ><span class="black-hat-research-text38"
+                                  >XML external entity injection</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/file-path-traversal"
+                            class="footer-final-link17"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text17 Footer"
+                              ><fragment class="black-hat-research-fragment17"
+                                ><span class="black-hat-research-text39"
+                                  >Directory traversal</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/ssrf"
+                            class="footer-final-link18"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text18 Footer"
+                              ><fragment class="black-hat-research-fragment18"
+                                ><span class="black-hat-research-text40"
+                                  >Server-side request forgery</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ></div
+                      ><div class="footer-final-section2"
+                        ><div class="footer-final-container16"
+                          ><footer-column-title-wrapper-qbrv
+                            class="footer-column-title-wrapper-qbrv"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container2 footer-column-titleroot-class-name263"
+                              ><p class="footer-column-title-text2"
+                                ><span>Customers</span></p
+                              ></div
+                            ></footer-column-title-wrapper-qbrv
+                          ><a
+                            href="https://portswigger.net/organizations"
+                            class="footer-final-link19"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text19 Footer"
+                              ><fragment class="black-hat-research-fragment19"
+                                ><span class="black-hat-research-text41"
+                                  >Organizations</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/testers"
+                            class="footer-final-link20"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text20 Footer"
+                              ><fragment class="black-hat-research-fragment20"
+                                ><span class="black-hat-research-text42"
+                                  >Testers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/developers"
+                            class="footer-final-link21"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text21 Footer"
+                              ><fragment class="black-hat-research-fragment21"
+                                ><span class="black-hat-research-text43"
+                                  >Developers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container17"
+                          ><footer-column-title-wrapper-utx8
+                            class="footer-column-title-wrapper-utx8"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container3 footer-column-titleroot-class-name264"
+                              ><p class="footer-column-title-text3"
+                                ><span>Company</span></p
+                              ></div
+                            ></footer-column-title-wrapper-utx8
+                          ><a
+                            href="https://portswigger.net/about"
+                            class="footer-final-link22"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text22 Footer"
+                              ><fragment class="black-hat-research-fragment22"
+                                ><span class="black-hat-research-text44"
+                                  >About</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/careers"
+                            class="footer-final-link23"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text23 Footer"
+                              ><fragment class="black-hat-research-fragment23"
+                                ><span class="black-hat-research-text45"
+                                  >Careers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/about/contact"
+                            class="footer-final-link24"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text24 Footer"
+                              ><fragment class="black-hat-research-fragment24"
+                                ><span class="black-hat-research-text46"
+                                  >Contact</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/legal"
+                            class="footer-final-link25"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text25 Footer"
+                              ><fragment class="black-hat-research-fragment25"
+                                ><span class="black-hat-research-text47"
+                                  >Legal</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/privacy"
+                            class="footer-final-link26"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text26 Footer"
+                              ><fragment class="black-hat-research-fragment26"
+                                ><span class="black-hat-research-text48"
+                                  >Privacy Notice</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ></div
+                      ><div class="footer-final-section3"
+                        ><div class="footer-final-container18"
+                          ><footer-column-title-wrapper-av8i
+                            class="footer-column-title-wrapper-av8i"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container4 footer-column-titleroot-class-name265"
+                              ><p class="footer-column-title-text4"
+                                ><span>Insights</span></p
+                              ></div
+                            ></footer-column-title-wrapper-av8i
+                          ><a
+                            href="https://portswigger.net/web-security"
+                            class="footer-final-link27"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text27 Footer"
+                              ><fragment class="black-hat-research-fragment27"
+                                ><span class="black-hat-research-text49"
+                                  >Web Security Academy</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/blog"
+                            class="footer-final-link28"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text28 Footer"
+                              ><fragment class="black-hat-research-fragment28"
+                                ><span class="black-hat-research-text50"
+                                  >Blog</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/research"
+                            class="footer-final-link29"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text29 Footer"
+                              ><fragment class="black-hat-research-fragment29"
+                                ><span class="black-hat-research-text51"
+                                  >Research</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container19"
+                          ><a
+                            href="https://portswigger.net"
+                            class="footer-final-link30"
+                            ><img
+                              alt="image"
+                              src="public/portswigger-logo.svg"
+                              class="footer-final-image" /></a
+                          ><a
+                            href="https://x.com/PortSwigger"
+                            class="footer-final-link31"
+                            ><twitter-button-wrapper
+                              class="footer-final-component6"
+                              rootclassname="twitter-buttonundefined"
+                              ><!--TwitterButton component--><div
+                                class="twitter-button-container twitter-buttonroot-class-name50"
+                                ><div
+                                  href="https://twitter.com/Burp_Suite"
+                                  class="twitter-button-frame5622"
+                                  ><div class="twitter-button-frame5626"
+                                    ><img
+                                      alt="TwitterandXlogossvg14713"
+                                      src="public/external/twitterandxlogossvg14713-0pok-200h.png"
+                                      class="twitter-button-twitterand-xlogossvg1"
+                                    /><span class="twitter-button-text"
+                                      ><span>Follow us</span></span
+                                    ></div
+                                  ></div
+                                ></div
+                              ></twitter-button-wrapper
+                            ></a
+                          ><p class="footer-final-text30 Footer"
+                            ><fragment class="black-hat-research-fragment30"
+                              ><span class="black-hat-research-text52"
+                                >© 2025 PortSwigger Ltd.</span
+                              ></fragment
+                            ></p
+                          ></div
+                        ></div
+                      ></div
+                    ></div
+                  ></div
+                ></div
+              ></div
+            ></div
+          ></footer-final-wrapper
+        ></div
+      ></div
+    >
+    <script>
+      (function(window, document, dataLayerName, id) {
+          window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});
+          var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+          var qP = [];
+          dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), tags.nonce = "@Html.Raw(Context.GetNonce())";
+      var qPString=qP.length>0?("?"+qP.join("&")):"";
+          tags.async=!0,tags.src="https://ps.containers.piwik.pro/"+id+".js"+qPString,
+          scripts.parentNode.insertBefore(tags,scripts);
+          !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){
+          var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+          })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');</script
+    ><script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script></body
+></html>

@@ -1,0 +1,129 @@
+.meganavwebinarsignup1-container1 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.meganavwebinarsignup1-container2 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: var(--dl-color-backgrounds-blue1);
+}
+ 
+.meganavwebinarsignup1-container3 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  max-width: 1140px;
+  align-self: center;
+  align-items: flex-start;
+  padding-top: 1rem;
+  flex-direction: row;
+  padding-bottom: 1rem;
+}
+ 
+.meganavwebinarsignup1-container4 {
+  flex: 0 0 auto;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.meganavwebinarsignup1-text1 {
+  color: var(--dl-color-text-white);
+  font-size: 1rem;
+  font-style: normal;
+  font-family: "Arial";
+  font-weight: 700;
+  line-height: 1.45;
+}
+ 
+.meganavwebinarsignup1-container5 {
+  flex: 0 0 auto;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+ 
+.meganavwebinarsignup1-link1 {
+  display: contents;
+}
+ 
+.meganavwebinarsignup1-link2 {
+  gap: var(--dl-layout-space-twothirds);
+  color: var(--dl-color-portswigger-accent-orange);
+  display: flex;
+  transition: 0.3s;
+  align-items: center;
+  flex-direction: row;
+  text-decoration: none;
+}
+ 
+.meganavwebinarsignup1-link2:hover {
+  gap: 1.25rem;
+}
+ 
+.meganavwebinarsignup1-text2 {
+  fill: var(--dl-color-text-white);
+  color: var(--dl-color-text-white);
+  font-size: 1rem;
+  font-family: "Arial";
+  font-weight: 700;
+  line-height: 1.45;
+}
+ 
+.meganavwebinarsignup1-fragment1 {
+  display: contents;
+}
+ 
+.meganavwebinarsignup1-text3 {
+  display: inline-block;
+}
+ 
+.meganavwebinarsignup1-fragment2 {
+  display: contents;
+}
+ 
+.meganavwebinarsignup1-text4 {
+  display: inline-block;
+  font-size: 1rem;
+}
+ 
+@media(max-width: 1280px) {
+  .meganavwebinarsignup1-container2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .meganavwebinarsignup1-container3 {
+    gap: 1rem;
+  }
+  .meganavwebinarsignup1-container5 {
+    align-items: center;
+  }
+  .meganavwebinarsignup1-link2 {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+}
+ 
+@media(max-width: 800px) {
+  .meganavwebinarsignup1-text1 {
+    text-align: left;
+  }
+}
+ 
+@media(max-width: 390px) {
+  .meganavwebinarsignup1-text1 {
+    color: var(--dl-color-text-white);
+    text-align: left;
+  }
+}

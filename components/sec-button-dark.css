@@ -1,0 +1,32 @@
+.sec-button-dark-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+@media(max-width: 390px) {
+  .sec-button-dark-container {
+    width: 100%;
+  }
+}

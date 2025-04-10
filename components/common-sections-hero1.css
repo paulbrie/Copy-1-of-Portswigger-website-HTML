@@ -1,0 +1,317 @@
+.common-button2-wrapper {
+  display: contents;
+}
+ 
+.common-button2-container {
+  display: flex;
+  align-items: stretch;
+  border-radius: var(--dl-layout-radius-rounded);
+  justify-content: center;
+}
+ 
+.common-sections-hero1-fragment2 {
+  display: contents;
+}
+ 
+.common-sections-hero1-text19 {
+  display: inline-block;
+}
+ 
+.common-sections-hero1-fragment3 {
+  display: contents;
+}
+ 
+.common-sections-hero1-text20 {
+  display: inline-block;
+}
+ 
+.common-sections-hero1-fragment4 {
+  display: contents;
+}
+ 
+.common-sections-hero1-text21 {
+  display: inline-block;
+}
+ 
+.common-sections-hero1-fragment5 {
+  display: contents;
+}
+ 
+.common-sections-hero1-text22 {
+  display: inline-block;
+}
+ 
+.common-sections-hero1-fragment6 {
+  display: contents;
+}
+ 
+.common-sections-hero1-text23 {
+  fill: var(--dl-color-theme-neutral-dark);
+  color: var(--dl-color-theme-neutral-dark);
+  display: inline-block;
+  font-size: 1.5rem;
+}
+ 
+.common-button2root-class-name {
+  height: 50px;
+}
+ 
+.common-button2root-class-name1 {
+  height: 50px;
+  align-self: center;
+}
+ 
+.common-button2root-class-name2 {
+  height: 50px;
+}
+ 
+
+ 
+
+ 
+
+ 
+.common-button2root-class-name6 {
+  height: 50px;
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+.common-button2root-class-name34 {
+  height: 50px;
+}
+ 
+.common-button2root-class-name35 {
+  align-self: flex-start;
+}
+ 
+
+ 
+.common-button2root-class-name37 {
+  height: 50px;
+}
+ 
+
+ 
+
+ 
+.common-button2root-class-name40 {
+  height: 50px;
+}
+ 
+
+ 
+
+ 
+.common-button2root-class-name43 {
+  height: 50px;
+}
+ 
+.common-button2root-class-name44 {
+  height: 50px;
+}
+ 
+.common-button2root-class-name45 {
+  height: 50px;
+}
+ 
+.common-button2root-class-name46 {
+  height: 50px;
+}
+ 
+@media(max-width: 1600px) {
+  .common-sections-hero1-text21 {
+    color: var(--dl-color-portswigger-default);
+  }
+}
+
+.common-sections-hero1-hero {
+  overflow: clip;
+  position: relative;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+ 
+.common-sections-hero1-content-container {
+  grid-column: 1/3;
+}
+ 
+.common-sections-hero1-btns-container {
+  align-items: flex-start;
+}
+ 
+.common-sections-hero1-image-container {
+  justify-content: center;
+}
+ 
+.common-sections-hero1-image1 {
+  width: 1189px;
+  object-fit: cover;
+}
+ 
+.common-sections-hero1-fragment2 {
+  display: contents;
+}
+ 
+.common-sections-hero1-text19 {
+  display: inline-block;
+}
+ 
+.common-sections-hero1-fragment3 {
+  display: contents;
+}
+ 
+.common-sections-hero1-text20 {
+  display: inline-block;
+}
+ 
+.common-sections-hero1-fragment4 {
+  display: contents;
+}
+ 
+.common-sections-hero1-text21 {
+  display: inline-block;
+}
+ 
+.common-sections-hero1-fragment5 {
+  display: contents;
+}
+ 
+.common-sections-hero1-text22 {
+  display: inline-block;
+}
+ 
+.common-sections-hero1-fragment6 {
+  display: contents;
+}
+ 
+.common-sections-hero1-text23 {
+  fill: var(--dl-color-theme-neutral-dark);
+  color: var(--dl-color-theme-neutral-dark);
+  display: inline-block;
+  font-size: 1.5rem;
+}
+ 
+.common-sections-hero1root-class-name {
+  fill: red;
+  color: red;
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+.common-sections-hero1root-class-name11 {
+  fill: red;
+  color: red;
+}
+ 
+
+ 
+
+ 
+.common-sections-hero1root-class-name14 {
+  background-image: linear-gradient(90deg, rgb(48, 119, 255) 0.00%,rgb(19, 19, 21) 100.00%);
+}
+ 
+
+ 
+
+ 
+.common-sections-hero1root-class-name17 {
+  height: auto;
+  align-self: flex-start;
+}
+ 
+@media(max-width: 1600px) {
+  .common-sections-hero1-text21 {
+    color: var(--dl-color-portswigger-default);
+  }
+}
+ 
+@media(max-width: 991px) {
+  .common-sections-hero1-max-width {
+    grid-template-columns: 1fr;
+  }
+  .common-sections-hero1-image-container {
+    align-items: center;
+    padding-left: 0;
+    padding-bottom: var(--dl-layout-space-three);
+  }
+  .common-sections-hero1-image1 {
+    width: 100%;
+  }
+}
+ 
+@media(max-width: 479px) {
+  .common-sections-hero1-content-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

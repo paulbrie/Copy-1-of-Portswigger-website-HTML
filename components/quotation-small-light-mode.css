@@ -1,0 +1,126 @@
+.quotation-small-light-mode-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.quotation-small-light-mode-frame5519 {
+  gap: 30px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 80px 30px;
+  align-self: stretch;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+.quotation-small-light-mode-text1 {
+  fill: var(--dl-color-text-text-headingnavy);
+  color: var(--dl-color-text-text-headingnavy);
+  width: 900px;
+}
+ 
+.quotation-small-light-mode-text2 {
+  fill: var(--dl-color-text-text-bodyprimary);
+  color: var(--dl-color-text-text-bodyprimary);
+  width: 900px;
+  line-height: 1.15;
+  text-transform: none;
+  text-decoration: none;
+}
+ 
+.quotation-small-light-moderoot-class-name {
+  background-color: var(--dl-color-backgrounds-purple5);
+}
+ 
+.quotation-small-light-moderoot-class-name1 {
+  background-color: var(--dl-color-backgrounds-purple5);
+}
+ 
+.quotation-small-light-moderoot-class-name2 {
+  background-color: var(--dl-color-backgrounds-purple5);
+}
+ 
+.quotation-small-light-moderoot-class-name3 {
+  background-color: var(--dl-color-backgrounds-purple5);
+}
+ 
+.quotation-small-light-moderoot-class-name4 {
+  background-color: var(--dl-color-backgrounds-purple5);
+}
+ 
+.quotation-small-light-moderoot-class-name5 {
+  background-color: var(--dl-color-backgrounds-purple5);
+}
+ 
+.quotation-small-light-moderoot-class-name6 {
+  background-color: var(--dl-color-backgrounds-purple5);
+}
+ 
+.quotation-small-light-moderoot-class-name7 {
+  background-color: var(--dl-color-backgrounds-purple5);
+}
+ 
+.quotation-small-light-moderoot-class-name8 {
+  background-color: var(--dl-color-backgrounds-purple5);
+}
+ 
+.quotation-small-light-moderoot-class-name9 {
+  background-color: var(--dl-color-backgrounds-purple5);
+}
+ 
+.quotation-small-light-moderoot-class-name10 {
+  background-color: var(--dl-color-backgrounds-purple5);
+}
+ 
+.quotation-small-light-moderoot-class-name11 {
+  background-color: var(--dl-color-backgrounds-purple5);
+}
+ 
+.quotation-small-light-moderoot-class-name12 {
+  background-color: var(--dl-color-backgrounds-purple5);
+}
+ 
+.quotation-small-light-moderoot-class-name13 {
+  background-color: var(--dl-color-backgrounds-purple5);
+}
+ 
+@media(max-width: 1536px) {
+  .quotation-small-light-mode-text1 {
+    color: var(--dl-color-text-text-headingnavy);
+  }
+}
+ 
+@media(max-width: 1280px) {
+  .quotation-small-light-mode-text1 {
+    width: 90%;
+    font-size: 26px;
+    line-height: 130%;
+    letter-spacing: -2%;
+  }
+  .quotation-small-light-mode-text2 {
+    width: 90%;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0%;
+  }
+}
+ 
+@media(max-width: 390px) {
+  .quotation-small-light-mode-text1 {
+    font-size: 26px;
+    line-height: 130%;
+    letter-spacing: -2%;
+  }
+  .quotation-small-light-mode-text2 {
+    width: 90%;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0%;
+  }
+}

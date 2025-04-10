@@ -1,0 +1,28 @@
+.conditional-rendering-test-container {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.conditional-rendering-test-fragment {
+  display: contents;
+}
+ 
+.conditional-rendering-test-text2 {
+  display: inline-block;
+}
+ 
+@media(max-width: 1536px) {
+  .conditional-rendering-test-container {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .conditional-rendering-test-textarea {
+    width: 947px;
+    height: 258px;
+  }
+}

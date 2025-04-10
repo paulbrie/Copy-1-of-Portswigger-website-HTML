@@ -1,0 +1,32 @@
+.banner11-container1 {
+  gap: var(--dl-layout-space-unit);
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+ 
+.banner11-max-width {
+  gap: var(--dl-layout-space-oneandhalfunits);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.banner11-container2 {
+  gap: var(--dl-layout-space-halfunit);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.banner11-title {
+  text-align: center;
+}
+ 
+.banner11-fragment {
+  display: contents;
+}
+ 
+.banner11-text {
+  display: inline-block;
+}

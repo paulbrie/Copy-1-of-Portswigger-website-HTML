@@ -1,0 +1,16 @@
+.mega-nav2-container1 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+}
+ 
+.mega-nav2-container2 {
+  display: none;
+}
+ 
+.mega-nav2-container3 {
+  display: contents;
+}
+ 
+

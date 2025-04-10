@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en"
+  ><head
+    ><title>Microsoft-Case-Study - Copy 1 of Portswigger website</title
+    ><meta
+      property="og:title"
+      content="Microsoft-Case-Study - Copy 1 of Portswigger website"
+    /><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    /><meta charset="utf-8" /><meta
+      property="twitter:card"
+      content="summary_large_image"
+    />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <link
+      rel="preload"
+      href="/mega-nav/images/mega-nav-portswigger-logo.svg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="/content/fonts/ps-main/ps-icons.woff?l1la2n"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/content/fonts/ps-icons-small/ps-icons-small.woff?td2uot"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link rel="preload" href="/mega-nav/meganav.css" as="style" />
+
+    <style>
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+    <script>
+      (function(window, document, dataLayerName, id) {
+      var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName);
+      var qPString=qP.length>0?("?"+qP.join("&")):"";
+      document.write('<nonce-script src="https://ps.containers.piwik.pro/'+id+'.sync.js' + qPString + '" nonce="NIFdcp1UaO0OFJv1ewzs2Putqt1LcUl0"></' + 'nonce-script>');
+      })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');
+    </script></head
+  >
+  <body
+    ><link rel="stylesheet" href="../style.css" /><div
+      ><link href="./microsoft-case-study.css" rel="stylesheet" /><div
+        class="microsoft-case-study-container10"
+        ><live-tag-production-wrapper
+          class="live-tag-production-wrapper"
+          rootclassname="live-tag-productionundefined"
+          ><!--LiveTagProduction component--><div
+            portswigger-live-tag-production="5a9e3886-3303-415c-a955-f221bb95905a"
+            class="live-tag-production-container live-tag-productionroot-class-name17"
+          ></div></live-tag-production-wrapper
+        ><mega-nav-wrapper
+          class="mega-nav-wrapper"
+          rootclassname="mega-navundefined"
+          ><!--MegaNav component--><div
+            id="ps-header"
+            class="mega-nav-container1 mega-navroot-class-name18"
+            ><div class="mega-nav-container2"
+              ><div class="mega-nav-container3"
+                ><style>
+                  .hamburger-menu-link,
+                  .hamburger-menu-desktop div {
+                      pointer-events: none;
+                  }
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-1,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-3,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-4,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-5,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-6,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-7 {
+                      pointer-events: all;
+                  }
+                  .hamburger-menu-desktop:hover div {
+                      pointer-events: all;
+                  }
+                  .mega-nav-input-1:checked ~ .hamburger-menu-desktop,
+                  .mega-nav-input-2:checked ~ .hamburger-menu-desktop,
+                  .mega-nav-input-6:checked ~ .hamburger-menu-desktop,
+                  .mega-nav-input-7:checked ~ .hamburger-menu-desktop {
+                      pointer-events: none;
+                  }
+
+                  .notification-banner {
+                      display: block;
+                      background-color: var(--background-color);
+                      color: var(--section-h5-text-color);
+                      width: 100%;
+                      text-align: center;
+                      text-decoration: none;
+                      transition: opacity .3s;
+                      padding: 8px;
+                  }
+
+                  .theme-enterprise-2, .is-enterprise {
+                      --background-color: #06c;
+                      --border-top-color: #06c;
+                      --label-text-color: #fff;
+                      --section-text-color: #fff;
+                      --section-h1-text-color: #fff;
+                      --section-h2-text-color: #fff;
+                      --section-h3-text-color: #fff;
+                      --section-h4-text-color: #fff;
+                      --section-h5-text-color: #fff;
+                      --section-link-color: #fff;
+                      --section-link-border-hover: #fff;
+                  }
+                </style>
+                <link rel="stylesheet" href="/mega-nav/meganav.css" />
+                <script>
+                  body = document.querySelector('body');
+                  if(body !== null){
+
+                  body.insertAdjacentHTML('afterbegin',`
+                  <header class='page-header' id='top'>
+                              <div class='container'>
+                      <a class='logo' href='/'></a>
+                      <div class='header-right'>
+                          <div class='login-buttons'>
+                                  <a class='button-orange-small' href='/users/youraccount/personaldetails'>My account</a>
+                          </div>
+
+
+                      <input type='checkbox' id='hamburger-mobile' class='hamburger-input-mobile'>
+                      <input type='radio' id='hamburger-desktop' class='hamburger-input-desktop' name='mega-nav-input'>
+                      <div class='hamburger-menu-mobile'>
+                          <label class='hamburger-menu-label header-hidden' for='hamburger-mobile'>
+                              <span class='hamburger-layers'></span>
+                          </label>
+                      </div>
+                      <div class='mega-nav'>
+                          <input type='radio' id='mega-nav-close' class='mega-nav-input-close' name='mega-nav-input'>
+                          <input type='radio' id='mega-nav-label-1' class='mega-nav-input-1' name='mega-nav-input'>
+                          <input type='radio' id='mega-nav-label-2' class='mega-nav-input-2' name='mega-nav-input'>
+                          <input type='radio' id='mega-nav-label-6' class='mega-nav-input-6' name='mega-nav-input'>
+                          <input type='radio' id='mega-nav-label-7' class='mega-nav-input-7' name='mega-nav-input'>
+
+                          <label for='mega-nav-close' class='mega-nav-close'></label>
+
+                          <label class='mega-nav-label mega-nav-label-1' for='mega-nav-label-1'>
+                              <span class='mega-nav-text'>Products</span>
+                              <span class='icon-arrow-head-down'></span>
+                          </label>
+                          <label class='mega-nav-label mega-nav-label-2' for='mega-nav-label-2'>
+                              <span class='mega-nav-text'>Solutions</span>
+                              <span class='icon-arrow-head-down'></span>
+                          </label>
+                          <a class='mega-nav-link' href='/research'><span class='mega-nav-text'>Research</span></a>
+                          <a class='mega-nav-link' href='/web-security'><span class='mega-nav-text'>Academy</span></a>
+                          <label class='mega-nav-label mega-nav-label-6' for='mega-nav-label-6'>
+                              <span class='mega-nav-text'>Support</span>
+                              <span class='icon-arrow-head-down'></span>
+                          </label>
+
+                          <label class='mega-nav-label mega-nav-label-7 header-hidden' for='mega-nav-label-7'>
+                              <span class='mega-nav-text'>Company</span>
+                              <span class='icon-arrow-head-down'></span>
+                          </label>
+                          <div class='hamburger-menu-desktop'>
+                              <label class='hamburger-menu-label header-show' for='hamburger-desktop'>
+                                  <span class='hamburger-layers'></span>
+                              </label>
+                              <div>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-1' href='/customers'><span class='mega-nav-text'>Customers</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-3' href='/about'><span class='mega-nav-text'>About</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-4' href='/blog'><span class='mega-nav-text'>Blog</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-5' href='/careers'><span class='mega-nav-text'>Careers</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-6' href='/legal'><span class='mega-nav-text'>Legal</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-7' href='/contact'><span class='mega-nav-text'>Contact</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-8' href='/support/reseller-faqs'><span class='mega-nav-text'>Resellers</span></a>
+                              </div>
+                          </div>
+
+                          <a class='mega-nav-link header-hidden' href='/users/youraccount'><span class='mega-nav-text'>My account</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-1' href='/customers'><span class='mega-nav-text'>Customers</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-3' href='/about'><span class='mega-nav-text'>About</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-4' href='/blog'><span class='mega-nav-text'>Blog</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-5' href='/careers'><span class='mega-nav-text'>Careers</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-6' href='/legal'><span class='mega-nav-text'>Legal</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-7' href='/contact'><span class='mega-nav-text'>Contact</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-8' href='/support/reseller-faqs'><span class='mega-nav-text'>Resellers</span></a>
+
+                          <div class='mega-nav-container'>
+
+                              <div class='mega-nav-content mega-nav-content-1'>
+                                  <div class='section-white-medium-no-padding'>
+                                      <div class='container-columns-66-percent-right'>
+                                          <div>
+                                              <a href='/burp/enterprise' class='link-block-white'>
+                                                  <img src='/mega-nav/images/mega-nav-enterprise.svg' alt='Burp Suite DAST'>
+                                                  <span><strong>Burp Suite DAST</strong></span>
+                                                  <span>The enterprise-enabled dynamic web vulnerability scanner.</span>
+                                              </a>
+
+                                              <a href='/burp/pro' class='link-block-white'>
+                                                  <img src='/mega-nav/images/mega-nav-professional.svg' alt='Burp Suite Professional'>
+                                                  <span><strong>Burp Suite Professional</strong></span>
+                                                  <span>The world's #1 web penetration testing toolkit.</span>
+                                              </a>
+
+                                              <a href='/burp/communitydownload' class='link-block-white'>
+                                                  <img src='/mega-nav/images/mega-nav-community.svg' alt='Burp Suite Community Edition'>
+                                                  <span><strong>Burp Suite Community Edition</strong></span>
+                                                  <span>The best manual tools to start web security testing.</span>
+                                              </a>
+
+                                              <a href='/burp' class='chevron-after'>View all product editions</a>
+                                          </div>
+
+                                          <div>
+                                              <div class='container-cards-lists-white'>
+                                                  <a href='/burp/vulnerability-scanner'>
+                                                      <p><strong>Burp Scanner</strong></p>
+                                                      <p>Burp Suite's web vulnerability scanner</p>
+                                                      <img src='/mega-nav/images/burp-suite-scanner.jpg' alt='Burp Suite's web vulnerability scanner''>
+                                                  </a>
+                                              </div>
+
+                                          </div>
+
+
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class='mega-nav-content mega-nav-content-2'>
+                                  <div class='section-white-medium-no-padding'>
+                                      <div class='container-columns-66-percent-right'>
+                                          <div>
+                                              <div class='container-columns'>
+                                                  <a href='/solutions/attack-surface-visibility' class='link-block-white'>
+                                                      <span><strong>Attack surface visibility</strong></span>
+                                                      <span>Improve security posture, prioritize manual testing, free up time.</span>
+                                                  </a>
+                                                  <a href='/solutions/ci-driven-scanning' class='link-block-white'>
+                                                      <span><strong>CI-driven scanning</strong></span>
+                                                      <span>More proactive security - find and fix vulnerabilities earlier.</span>
+                                                  </a>
+                                                  <a href='/solutions' class='link-block-white'>
+                                                      <span><strong>Application security testing</strong></span>
+                                                      <span>See how our software enables the world to secure the web.</span>
+                                                  </a>
+                                                  <a href='/solutions/devsecops' class='link-block-white'>
+                                                      <span><strong>DevSecOps</strong></span>
+                                                      <span>Catch critical bugs; ship more secure software, more quickly.</span>
+                                                  </a>
+
+                                                  <a href='/solutions/penetration-testing' class='link-block-white'>
+                                                      <span><strong>Penetration testing</strong></span>
+                                                      <span>Accelerate penetration testing - find more bugs, more quickly.</span>
+                                                  </a>
+                                                  <a href='/solutions/automated-security-testing' class='link-block-white'>
+                                                      <span><strong>Automated scanning</strong></span>
+                                                      <span>Scale dynamic scanning. Reduce risk. Save time/money.</span>
+                                                  </a>
+
+                                                  <a href='/solutions/bug-bounty-hunting' class='link-block-white'>
+                                                      <span><strong>Bug bounty hunting</strong></span>
+                                                      <span>Level up your hacking and earn more bug bounties.</span>
+                                                  </a>
+                                                  <a href='/solutions/compliance' class='link-block-white'>
+                                                      <span><strong>Compliance</strong></span>
+                                                      <span>Enhance security monitoring to comply with confidence.</span>
+                                                  </a>
+                                              </div>
+                                              <a href='/solutions' class='chevron-after'>View all solutions</a>
+                                          </div>
+
+                                          <div>
+                                              <div class='container-cards-lists-white'>
+                                                  <a href='/burp/enterprise/resources/enterprise-edition-vs-professional'>
+                                                      <p><strong>Product comparison</strong></p>
+                                                      <p>What's the difference between Pro and Enterprise Edition?</p>
+                                                      <img src='/mega-nav/images/burp-suite.jpg' alt='Burp Suite Professional vs Burp Suite Enterprise Edition'>
+                                                  </a>
+                                              </div>
+
+                                          </div>
+
+
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class='mega-nav-content mega-nav-content-6'>
+                                  <div class='section-white-medium-no-padding'>
+                                      <div class='container-columns-66-percent-right'>
+                                          <div>
+                                              <div class='container-columns'>
+                                                  <a href='/support' class='link-block-white'>
+                                                      <span><strong>Support Center</strong></span>
+                                                      <span>Get help and advice from our experts on all things Burp.</span>
+                                                  </a>
+                                                  <a href='/burp/documentation' class='link-block-white'>
+                                                      <span><strong>Documentation</strong></span>
+                                                      <span>Tutorials and guides for Burp Suite.</span>
+                                                  </a>
+                                                  <a href='/burp/documentation/desktop/getting-started' class='link-block-white'>
+                                                      <span><strong>Get Started - Professional</strong></span>
+                                                      <span>Get started with Burp Suite Professional.</span>
+                                                  </a>
+                                                  <a href='/burp/documentation/enterprise/getting-started' class='link-block-white'>
+                                                      <span><strong>Get Started - Enterprise</strong></span>
+                                                      <span>Get started with Burp Suite Enterprise Edition.</span>
+                                                  </a>
+                                                  <a href='https://forum.portswigger.net/' class='link-block-white'>
+                                                      <span><strong>User Forum</strong></span>
+                                                      <span>Get your questions answered in the User Forum.</span>
+                                                  </a>
+                                                  <a href='/burp/releases' class='link-block-white'>
+                                                      <span><strong>Downloads</strong></span>
+                                                      <span>Download the latest version of Burp Suite.</span>
+                                                  </a>
+                                              </div>
+                                              <a href='/support' class='chevron-after'>Visit the Support Center</a>
+                                          </div>
+
+                                          <div>
+                                              <div class='container-cards-lists-white'>
+                                                  <a href='/burp/releases'>
+                                                      <p><strong>Downloads</strong></p>
+                                                      <p>Download the latest version of Burp Suite.</p>
+                                                      <img src='/mega-nav/images/latest-burp-suite-software-download.jpg' alt='The latest version of Burp Suite software for download'>
+                                                  </a>
+                                              </div>
+
+                                          </div>
+
+
+                                      </div>
+                                  </div>
+                              </div>
+
+                          </div>
+
+                      </div>
+
+                      </div>
+                  </div>
+                          </header>`);
+                          }
+                </script></div
+              ></div
+            ></div
+          ></mega-nav-wrapper
+        ><div class="microsoft-case-study-head"
+          ><div class="microsoft-case-study-container11"
+            ><div class="microsoft-case-study-container12"
+              ><div class="microsoft-case-study-container13"
+                ><img
+                  alt="image"
+                  src="../public/microsoft-white-logo.svg"
+                  class="microsoft-case-study-image10"
+                /><h1 class="microsoft-case-study-heading1"
+                  ><span class="microsoft-case-study-text100"
+                    >Burp Suite Professional</span
+                  ><span>
+                    is the cornerstone of Microsoft’s pentesting toolkit</span
+                  ><br /></h1
+                ><p class="microsoft-case-study-text103"
+                  >Discover why Burp Suite Professional is indispensable for
+                  Microsoft Azure's security engineers, helping them navigate
+                  complex attack surfaces, streamline workflows, and secure
+                  thousands of applications and APIs.</p
+                ><div class="microsoft-case-study-container14"
+                  ><div class="microsoft-case-study-container15"
+                    ><h1 class="microsoft-case-study-heading2">93%</h1
+                    ><span class="microsoft-case-study-text104"
+                      >LOREM IPSUM DOLOR</span
+                    ></div
+                  ><div class="microsoft-case-study-container16"
+                    ><h1 class="microsoft-case-study-heading3">93%</h1
+                    ><span class="microsoft-case-study-text105"
+                      >LOREM IPSUM DOLOR</span
+                    ></div
+                  ><div class="microsoft-case-study-container17"
+                    ><h1 class="microsoft-case-study-heading4">93%</h1
+                    ><span class="microsoft-case-study-text106"
+                      >LOREM IPSUM DOLOR</span
+                    ></div
+                  ></div
+                ></div
+              ><div class="microsoft-case-study-container18"
+                ><img
+                  alt="image"
+                  src="../public/burp-pro-case-study-hero-1300w.png"
+                  class="microsoft-case-study-image11" /></div></div></div
+          ><div class="microsoft-case-study-container19"
+            ><div class="microsoft-case-study-container20"
+              ><div class="microsoft-case-study-container21"
+                ><div class="microsoft-case-study-container22"
+                  ><img
+                    alt="image"
+                    src="../public/microsoft.svg"
+                    class="microsoft-case-study-image12"
+                  /><h1 class="microsoft-case-study-heading5"
+                    >Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit.</h1
+                  ><span class="microsoft-case-study-text107"
+                    >Hands-on security testers need the best tools for the job.
+                    Tools you have faith in, and enjoy using all day long. The
+                    tools that other professionals trust.</span
+                  ><div class="microsoft-case-study-container23"
+                    ><div class="microsoft-case-study-container24"
+                      ><h1 class="microsoft-case-study-heading6">93%</h1
+                      ><span class="microsoft-case-study-text108"
+                        >LOREM IPSUM DOLOR</span
+                      ></div
+                    ><div class="microsoft-case-study-container25"
+                      ><h1 class="microsoft-case-study-heading7">93%</h1
+                      ><span class="microsoft-case-study-text109"
+                        >LOREM IPSUM DOLOR</span
+                      ></div
+                    ><div class="microsoft-case-study-container26"
+                      ><h1 class="microsoft-case-study-heading8">93%</h1
+                      ><span class="microsoft-case-study-text110"
+                        >LOREM IPSUM DOLOR</span
+                      ></div
+                    ></div
+                  ></div
+                ></div
+              ></div
+            ></div
+          ></div
+        ><div class="microsoft-case-study-container27"
+          ><div class="microsoft-case-study-main"
+            ><div
+              ><div class="microsoft-case-study-max-width"
+                ><div class="microsoft-case-study-aside-menu"
+                  ><div class="microsoft-case-study-title"
+                    ><h4 class="microsoft-case-study-text111 heading-4"
+                      >In this story</h4
+                    ></div
+                  ><div class="microsoft-case-study-links"
+                    ><a href="#section-1" class="microsoft-case-study-link10"
+                      ><p class="microsoft-case-study-text112"
+                        >Introduction</p
+                      ></a
+                    ><a href="#section-2" class="microsoft-case-study-link11"
+                      ><span>Key highlights</span><br /></a
+                    ><a href="#section-3" class="microsoft-case-study-link12"
+                      >Gaining visibility</a
+                    ><a href="#section-4" class="microsoft-case-study-link13"
+                      >Actionable insights</a
+                    ><a href="#section-5" class="microsoft-case-study-link14"
+                      >Detecting vulnerabilities</a
+                    ><a href="#section-6" class="microsoft-case-study-link15"
+                      >Power of the community</a
+                    ><a href="#section-7" class="microsoft-case-study-link16"
+                      >Impact and remediation</a
+                    ><a href="#section-8" class="microsoft-case-study-link17"
+                      >Indispensable toolkit</a
+                    ></div
+                  ></div
+                ><div class="microsoft-case-study-content"
+                  ><div id="section-1"></div
+                  ><div class="microsoft-case-study-quote"
+                    ><div class="microsoft-case-study-container29"
+                      ><div class="microsoft-case-study-left-quote1"
+                        ><img
+                          alt="image"
+                          src="../public/ps-quote-left-orange.svg"
+                          class="microsoft-case-study-image13" /></div
+                      ><div class="microsoft-case-study-container30"
+                        ><p class="microsoft-case-study-text115"
+                          >At Microsoft, Burp Suite is what you use. It’s not up
+                          for consideration.</p
+                        ><p class="microsoft-case-study-text116"
+                          ><span class="microsoft-case-study-text117"
+                            >Taylor O'Dell, Security Engineer, Microsoft</span
+                          ><br /></p></div
+                      ><div class="microsoft-case-study-right-quote1"
+                        ><img
+                          alt="image"
+                          src="../public/ps-quote-right-orange%201.svg"
+                          class="microsoft-case-study-image14" /></div></div></div
+                  ><div class="microsoft-case-study-section1"
+                    ><div class="microsoft-case-study-container31"
+                      ><p class="microsoft-case-study-text119 rich-text-root"
+                        ><span
+                          >Security teams at Microsoft work with multiple
+                          complex environments, and with thousands of
+                          applications and APIs to secure, keeping on top of
+                          this large portfolio is not easy. </span
+                        ><br /><br /><span>We caught up with </span
+                        ><a
+                          href="https://azure.microsoft.com/en-gb/"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          >Microsoft Azure's</a
+                        ><span>
+                          Taylor O'Dell as he shares his insights on how </span
+                        ><a
+                          href="https://portswigger.net/burp/pro"
+                          class="microsoft-case-study-link19"
+                          >Burp Suite Professional</a
+                        ><span>
+                          has become an indispensable tool in identifying and
+                          mitigating vulnerabilities in their web applications. </span
+                        ><br /></p></div></div
+                  ><div id="section-2"></div
+                  ><div
+                    ><div class="microsoft-case-study-container32"
+                      ><h2 class="microsoft-case-study-text127"
+                        >Key highlights</h2
+                      ><ul class="microsoft-case-study-ul list"
+                        ><li class="microsoft-case-study-li1 list-item"
+                          ><span class="microsoft-case-study-text128"
+                            >Using Burp Suite to help identify an application's
+                            endpoints and decide what is, and isn’t, in scope
+                            for testing.</span
+                          ></li
+                        ><li class="microsoft-case-study-li2 list-item"
+                          ><span class="microsoft-case-study-text129"
+                            ><span
+                              >Extending Burp Suite’s capabilities with
+                              community-created BApp extensions.</span
+                            ><br /></span></li
+                        ><li class="microsoft-case-study-li3 list-item"
+                          ><span class="microsoft-case-study-text132"
+                            ><span
+                              >The prevalence of Burp Suite amongst Microsoft
+                              Azure’s Security Engineers.</span
+                            ><br /></span></li></ul></div></div
+                  ><div id="section-3"></div
+                  ><div class="microsoft-case-study-section3"
+                    ><h2 class="microsoft-case-study-text135"
+                      >Gaining visibility over complex attack surface</h2
+                    ><p class="microsoft-case-study-text136 rich-text-root"
+                      >Due to the number of complex environments the Microsoft
+                      Azure team are working with, Taylor often needs to conduct
+                      thorough testing on applications he’s not familiar with.
+                      Here, Taylor’s goal is to map out the full attack surface,
+                      and understand what the scope is. Unfortunately, this
+                      proves a tedious and time consuming task, particularly as
+                      one single application might involve multiple different
+                      domains and APIs.</p
+                    ><div class="microsoft-case-study-container33"
+                      ><div class="microsoft-case-study-left-quote2"
+                        ><img
+                          alt="image"
+                          src="../public/ps-quote-left-orange.svg"
+                          class="microsoft-case-study-image15" /></div
+                      ><div class="microsoft-case-study-container34"
+                        ><p class="microsoft-case-study-text137"
+                          >It takes days to figure out what traffic you need to
+                          actually care about… we have a million different
+                          domains and the application that you're testing may
+                          use 20 different domains easily.</p
+                        ></div
+                      ><div class="microsoft-case-study-right-quote2"
+                        ><img
+                          alt="image"
+                          src="../public/ps-quote-right-orange%201.svg"
+                          class="microsoft-case-study-image16" /></div></div
+                    ><p class="microsoft-case-study-text138 rich-text-root"
+                      ><span
+                        >Taylor describes how he likes to maximize his
+                        efficiency by leveraging Burp Suite's automation
+                        features to supplement his own expertise. This proves
+                        invaluable in this initial Discovery phase, where he
+                        uses Burp's automated </span
+                      ><a
+                        href="https://portswigger.net/burp/documentation/desktop/tools/engagement-tools/content-discovery"
+                        >content discovery tool</a
+                      ><span>
+                        to enumerate additional, unlinked attack surface. </span
+                      ><a
+                        href="https://portswigger.net/burp/vulnerability-scanner"
+                        >Burp Scanner</a
+                      ><span>
+                        also forms an integral part of his workflow, as he
+                        typically runs a full crawl and audit across his entire
+                        scope, to ensure maximum coverage.</span
+                      ></p
+                    ><div class="microsoft-case-study-container35"
+                      ><div class="microsoft-case-study-left-quote3"
+                        ><img
+                          alt="image"
+                          src="../public/ps-quote-left-orange.svg"
+                          class="microsoft-case-study-image17" /></div
+                      ><div class="microsoft-case-study-container36"
+                        ><p class="microsoft-case-study-text142"
+                          >I always kick off with a content discovery session on
+                          the targets within scope and then run Burp’s automated
+                          web app scan across all of my targets. I do a full
+                          crawl and audit, always with the deepest setting.</p
+                        ></div
+                      ><div class="microsoft-case-study-right-quote3"
+                        ><img
+                          alt="image"
+                          src="../public/ps-quote-right-orange%201.svg"
+                          class="microsoft-case-study-image18" /></div></div
+                    ><p class="microsoft-case-study-text143 rich-text-root"
+                      ><span
+                        >Not only does this help to optimize the otherwise
+                        tedious process of mapping out the full attack surface,
+                        the initial findings serve as a useful starting point
+                        for prioritizing areas to focus on first.</span
+                      ><br /><br /><span
+                        >At this stage, features such as the advanced filtering
+                        options and global search help him remove some of the
+                        inevitable noise that comes from testing complex
+                        applications.</span
+                      ><br /></p></div
+                  ><div id="section-4"></div
+                  ><div class="microsoft-case-study-section4"
+                    ><h2 class="microsoft-case-study-text149"
+                      >Turning scan results into actionable insights</h2
+                    ><p class="microsoft-case-study-text150 rich-text-root"
+                      ><span
+                        >Taylor starts the Attack phase by reviewing the scan
+                        results on </span
+                      ><a
+                        href="https://portswigger.net/burp/documentation/desktop/tools/dashboard"
+                        >Burp's dashboard</a
+                      ><span
+                        >. Taylor is able to start working through this list,
+                        sending the ‘juiciest’ results to Intruder for fuzzing
+                        or to </span
+                      ><a
+                        href="https://portswigger.net/burp/documentation/desktop/tools/repeater"
+                        >Repeater</a
+                      ><span>
+                        to manually validate the reported issue. By doing this,
+                        Taylor is also able to quickly catch any low-hanging
+                        fruit and rule out any false positives, further
+                        eliminating noise.</span
+                      ></p
+                    ><div class="microsoft-case-study-container37"
+                      ><div class="microsoft-case-study-left-quote4"
+                        ><img
+                          alt="image"
+                          src="../public/ps-quote-left-orange.svg"
+                          class="microsoft-case-study-image19" /></div
+                      ><div class="microsoft-case-study-container38"
+                        ><p class="microsoft-case-study-text154"
+                          >I start with the dashboard, look for whatever looks
+                          the juiciest, and then work my way through,
+                          validating. Usually my workflow is to identify
+                          anything suspicious, and send it to Repeater. I'll
+                          switch over to Repeater and start looking one by one,
+                          asking myself, ‘what can I actually do with this
+                          request?’, ‘am I finding the same thing as the
+                          scanner?’, ‘is this a false positive?'.</p
+                        ></div
+                      ><div class="microsoft-case-study-right-quote4"
+                        ><img
+                          alt="image"
+                          src="../public/ps-quote-right-orange%201.svg"
+                          class="microsoft-case-study-image20" /></div></div></div
+                  ><div id="section-5"></div
+                  ><div class="microsoft-case-study-section5"
+                    ><h2 class="microsoft-case-study-text155"
+                      >Detecting invisible, asynchronous vulnerabilities</h2
+                    ><p class="microsoft-case-study-text156 rich-text-root"
+                      ><span
+                        >Burp Suite's Collaborator is also an invaluable tool in
+                        Taylor's arsenal, providing an out-of-the-box solution
+                        for </span
+                      ><a
+                        href="https://portswigger.net/burp/application-security-testing/oast"
+                        >out-of-band testing (OAST)</a
+                      ><span>
+                        techniques. By inducing the target to interact with
+                        external network services, he's able to easily find
+                        clues that otherwise invisible vulnerabilities may be
+                        present, especially blind </span
+                      ><a href="https://portswigger.net/web-security/ssrf"
+                        >SSRF</a
+                      ><span>.</span></p
+                    ><div class="microsoft-case-study-container39"
+                      ><div class="microsoft-case-study-left-quote5"
+                        ><img
+                          alt="image"
+                          src="../public/ps-quote-left-orange.svg"
+                          class="microsoft-case-study-image21" /></div
+                      ><div class="microsoft-case-study-container40"
+                        ><p class="microsoft-case-study-text160"
+                          >I do use Burp Collaborator quite a bit for testing
+                          those external service interactions or SSRF issues. We
+                          use the public Collaborator server most of the
+                          time.</p
+                        ></div
+                      ><div class="microsoft-case-study-right-quote5"
+                        ><img
+                          alt="image"
+                          src="../public/ps-quote-right-orange%201.svg"
+                          class="microsoft-case-study-image22" /></div></div></div
+                  ><div class="microsoft-case-study-image-box"
+                    ><img
+                      alt="image"
+                      src="https://play.teleporthq.io/static/svg/default-img.svg"
+                      class="microsoft-case-study-image23" /></div
+                  ><div id="section-6"></div
+                  ><div class="microsoft-case-study-section6"
+                    ><h2 class="microsoft-case-study-text161"
+                      >Harnessing the power of the community</h2
+                    ><p class="microsoft-case-study-text162 rich-text-root"
+                      ><span
+                        >Taylor also describes how the team at Microsoft benefit
+                        from </span
+                      ><a href="https://portswigger.net/bappstore"
+                        >Burp Suite’s extensibility</a
+                      ><span
+                        >. The thriving community of extension developers means
+                        they're able to further enhance Burp's already powerful
+                        features. For example, Taylor often uses </span
+                      ><a
+                        href="https://portswigger.net/bappstore/3123d5b5f25c4128894d97ea1acc4976"
+                        >ActiveScan++</a
+                      ><span>
+                        to extend Burp’s active and passive scanning
+                        capabilities, along with </span
+                      ><a
+                        href="https://portswigger.net/bappstore/f9bbac8c4acf4aefa4d7dc92a991af2f"
+                        >Autorize</a
+                      ><span>
+                        to do some of the heavy lifting when testing for broken
+                        access controls. </span
+                      ><br /><br /><span
+                        >The library of community-created extensions also allows
+                        him to add specific functionality to Burp that
+                        simplifies testing specific technologies. For example,
+                        he uses the </span
+                      ><a
+                        href="https://portswigger.net/bappstore/26aaa5ded2f74beea19e2ed8345a93dd"
+                        >JSON Web Tokens</a
+                      ><span>
+                        extension when testing applications that use JWTs as
+                        part of an authentication flow or session management
+                        mechanism. This enables him to more easily spot when the
+                        server issues JWTs and provides additional Repeater
+                        views for manipulating tokens without having to manually
+                        decode and re-encode them.</span
+                      ><br /></p></div
+                  ><div id="section-7"></div
+                  ><div class="microsoft-case-study-section7"
+                    ><h2 class="microsoft-case-study-text172"
+                      >Demonstrating impact and enabling remediation</h2
+                    ><p class="microsoft-case-study-text173 rich-text-root"
+                      ><span
+                        >After conducting testing on Microsoft’s Azure
+                        applications, it’s crucial for Taylor to effectively
+                        communicate his findings to both internal stakeholders
+                        and development teams. Taylor often has to explain the
+                        impact of vulnerabilities, and make this information
+                        more digestible for even the least technical team
+                        member.</span
+                      ><br /><br /><span
+                        >Burp Suite provides details for any issues identified
+                        during scanning, along with evidence for the issue in
+                        the form of the request/response sequence that forms the
+                        attack vector. Taylor uses these, along with the free
+                        content on PortSwigger's </span
+                      ><a href="https://portswigger.net/web-security"
+                        >Web Security Academy</a
+                      ><span
+                        >, to help him document his findings and create clear
+                        and detailed tickets for the developers charged with
+                        remediating the issue.</span
+                      ><br /></p></div
+                  ><div id="section-8"></div
+                  ><div class="microsoft-case-study-section8"
+                    ><h2 class="microsoft-case-study-text180"
+                      >An indispensable toolkit for real-world testing</h2
+                    ><p class="microsoft-case-study-text181"
+                      >Taylor’s reliance on Burp Suite highlights its
+                      versatility and effectiveness in real-world,
+                      enterprise-grade security operations.</p
+                    ><div class="microsoft-case-study-container41"
+                      ><div class="microsoft-case-study-left-quote6"
+                        ><img
+                          alt="image"
+                          src="../public/ps-quote-left-orange.svg"
+                          class="microsoft-case-study-image24" /></div
+                      ><div class="microsoft-case-study-container42"
+                        ><p class="microsoft-case-study-text182"
+                          >I would be surprised if all penetration testers are
+                          not exclusively using Burp Suite… [at Microsoft] it’s
+                          not even up for consideration. Burp Suite is what you
+                          use.</p
+                        ></div
+                      ><div class="microsoft-case-study-right-quote6"
+                        ><img
+                          alt="image"
+                          src="../public/ps-quote-right-orange%201.svg"
+                          class="microsoft-case-study-image25" /></div></div
+                    ><p class="microsoft-case-study-text183"
+                      >Burp Suite’s flexibility as an intercepting proxy,
+                      unrivaled vulnerability scanner, and toolkit of
+                      out-of-the-box solutions for performing testing of all
+                      kinds of technologies, allows Microsoft’s pentesters to
+                      navigate complex infrastructure, validate vulnerabilities,
+                      and streamline their workflows.
+                    </p></div
+                  ><div class="microsoft-case-study-section9"
+                    ><h2 class="microsoft-case-study-text184"
+                      >Ready to implement Burp Suite into your own pentesting
+                      work flow?</h2
+                    ><p class="microsoft-case-study-text185 rich-text-root"
+                      ><span
+                        >Request a free trial of Burp Suite Professional, or
+                        find out more about how Burp Suite Professional can help
+                        you find, and inspect, the vulnerabilities that matter
+                        the most </span
+                      ><a href="https://portswigger.net/burp/pro">here</a
+                      ><span>.</span></p
+                    ><div class="microsoft-case-study-container43"
+                      ><a
+                        href="https://portswigger.net/burp/pro/trial"
+                        class="microsoft-case-study-button button"
+                        ><span
+                          buttontext="TQ_TH6-S_dqix"
+                          class="microsoft-case-study-text188"
+                          >TRY FOR FREE</span
+                        ></a
+                      ></div
+                    ></div
+                  ></div
+                ></div
+              ></div
+            ></div
+          ></div
+        ><footer-final-wrapper
+          class="footer-final-wrapper"
+          rootclassname="footer-finalundefined"
+          ><!--FooterFinal component--><div
+            class="footer-final-footer1 footer-finalroot-class-name16"
+            ><div class="footer-final-container10"
+              ><div class="footer-final-container11"
+                ><div class="footer-final-footer2"
+                  ><div class="footer-final-container12"
+                    ><div class="footer-final-container13"
+                      ><div class="footer-final-section1"
+                        ><div class="footer-final-container14"
+                          ><footer-column-title-wrapper
+                            class="footer-column-title-wrapper"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container footer-column-titleroot-class-name261"
+                              ><p class="footer-column-title-text"
+                                ><span>Burp Suite</span></p
+                              ></div
+                            ></footer-column-title-wrapper
+                          ><a
+                            href="https://portswigger.net/burp/vulnerability-scanner"
+                            class="footer-final-link10"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text10 Footer"
+                              ><fragment class="microsoft-case-study-fragment10"
+                                ><span class="microsoft-case-study-text189"
+                                  >Web vulnerability scanner</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/burp"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            class="footer-final-link11"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text11 Footer"
+                              ><fragment class="microsoft-case-study-fragment11"
+                                ><span class="microsoft-case-study-text190"
+                                  >Burp Suite Editions</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/burp/releases"
+                            class="footer-final-link12"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text12 Footer"
+                              ><fragment class="microsoft-case-study-fragment12"
+                                ><span class="microsoft-case-study-text191"
+                                  >Release Notes</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container15"
+                          ><footer-column-title-wrapper-zow0
+                            class="footer-column-title-wrapper-zow0"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container1 footer-column-titleroot-class-name262"
+                              ><p class="footer-column-title-text1"
+                                ><span>Vulnerabilities</span></p
+                              ></div
+                            ></footer-column-title-wrapper-zow0
+                          ><a
+                            href="https://portswigger.net/web-security/cross-site-scripting"
+                            class="footer-final-link13"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text13 Footer"
+                              ><fragment class="microsoft-case-study-fragment13"
+                                ><span class="microsoft-case-study-text192"
+                                  >Cross-site scripting (XSS)</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/sql-injection"
+                            class="footer-final-link14"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text14 Footer"
+                              ><fragment class="microsoft-case-study-fragment14"
+                                ><span class="microsoft-case-study-text193"
+                                  >SQL injection</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/csrf"
+                            class="footer-final-link15"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text15 Footer"
+                              ><fragment class="microsoft-case-study-fragment15"
+                                ><span class="microsoft-case-study-text194"
+                                  >Cross-site request forgery</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/xxe"
+                            class="footer-final-link16"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text16 Footer"
+                              ><fragment class="microsoft-case-study-fragment16"
+                                ><span class="microsoft-case-study-text195"
+                                  >XML external entity injection</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/file-path-traversal"
+                            class="footer-final-link17"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text17 Footer"
+                              ><fragment class="microsoft-case-study-fragment17"
+                                ><span class="microsoft-case-study-text196"
+                                  >Directory traversal</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/ssrf"
+                            class="footer-final-link18"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text18 Footer"
+                              ><fragment class="microsoft-case-study-fragment18"
+                                ><span class="microsoft-case-study-text197"
+                                  >Server-side request forgery</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ></div
+                      ><div class="footer-final-section2"
+                        ><div class="footer-final-container16"
+                          ><footer-column-title-wrapper-m6p5
+                            class="footer-column-title-wrapper-m6p5"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container2 footer-column-titleroot-class-name263"
+                              ><p class="footer-column-title-text2"
+                                ><span>Customers</span></p
+                              ></div
+                            ></footer-column-title-wrapper-m6p5
+                          ><a
+                            href="https://portswigger.net/organizations"
+                            class="footer-final-link19"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text19 Footer"
+                              ><fragment class="microsoft-case-study-fragment19"
+                                ><span class="microsoft-case-study-text198"
+                                  >Organizations</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/testers"
+                            class="footer-final-link20"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text20 Footer"
+                              ><fragment class="microsoft-case-study-fragment20"
+                                ><span class="microsoft-case-study-text199"
+                                  >Testers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/developers"
+                            class="footer-final-link21"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text21 Footer"
+                              ><fragment class="microsoft-case-study-fragment21"
+                                ><span class="microsoft-case-study-text200"
+                                  >Developers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container17"
+                          ><footer-column-title-wrapper-sr7w
+                            class="footer-column-title-wrapper-sr7w"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container3 footer-column-titleroot-class-name264"
+                              ><p class="footer-column-title-text3"
+                                ><span>Company</span></p
+                              ></div
+                            ></footer-column-title-wrapper-sr7w
+                          ><a
+                            href="https://portswigger.net/about"
+                            class="footer-final-link22"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text22 Footer"
+                              ><fragment class="microsoft-case-study-fragment22"
+                                ><span class="microsoft-case-study-text201"
+                                  >About</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/careers"
+                            class="footer-final-link23"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text23 Footer"
+                              ><fragment class="microsoft-case-study-fragment23"
+                                ><span class="microsoft-case-study-text202"
+                                  >Careers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/about/contact"
+                            class="footer-final-link24"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text24 Footer"
+                              ><fragment class="microsoft-case-study-fragment24"
+                                ><span class="microsoft-case-study-text203"
+                                  >Contact</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/legal"
+                            class="footer-final-link25"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text25 Footer"
+                              ><fragment class="microsoft-case-study-fragment25"
+                                ><span class="microsoft-case-study-text204"
+                                  >Legal</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/privacy"
+                            class="footer-final-link26"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text26 Footer"
+                              ><fragment class="microsoft-case-study-fragment26"
+                                ><span class="microsoft-case-study-text205"
+                                  >Privacy Notice</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ></div
+                      ><div class="footer-final-section3"
+                        ><div class="footer-final-container18"
+                          ><footer-column-title-wrapper-egec
+                            class="footer-column-title-wrapper-egec"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container4 footer-column-titleroot-class-name265"
+                              ><p class="footer-column-title-text4"
+                                ><span>Insights</span></p
+                              ></div
+                            ></footer-column-title-wrapper-egec
+                          ><a
+                            href="https://portswigger.net/web-security"
+                            class="footer-final-link27"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text27 Footer"
+                              ><fragment class="microsoft-case-study-fragment27"
+                                ><span class="microsoft-case-study-text206"
+                                  >Web Security Academy</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/blog"
+                            class="footer-final-link28"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text28 Footer"
+                              ><fragment class="microsoft-case-study-fragment28"
+                                ><span class="microsoft-case-study-text207"
+                                  >Blog</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/research"
+                            class="footer-final-link29"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text29 Footer"
+                              ><fragment class="microsoft-case-study-fragment29"
+                                ><span class="microsoft-case-study-text208"
+                                  >Research</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container19"
+                          ><a
+                            href="https://portswigger.net"
+                            class="footer-final-link30"
+                            ><img
+                              alt="image"
+                              src="../public/portswigger-logo.svg"
+                              class="footer-final-image" /></a
+                          ><a
+                            href="https://x.com/PortSwigger"
+                            class="footer-final-link31"
+                            ><twitter-button-wrapper
+                              class="footer-final-component6"
+                              rootclassname="twitter-buttonundefined"
+                              ><!--TwitterButton component--><div
+                                class="twitter-button-container twitter-buttonroot-class-name50"
+                                ><div
+                                  href="https://twitter.com/Burp_Suite"
+                                  class="twitter-button-frame5622"
+                                  ><div class="twitter-button-frame5626"
+                                    ><img
+                                      alt="TwitterandXlogossvg14713"
+                                      src="../public/external/twitterandxlogossvg14713-0pok-200h.png"
+                                      class="twitter-button-twitterand-xlogossvg1"
+                                    /><span class="twitter-button-text"
+                                      ><span>Follow us</span></span
+                                    ></div
+                                  ></div
+                                ></div
+                              ></twitter-button-wrapper
+                            ></a
+                          ><p class="footer-final-text30 Footer"
+                            ><fragment class="microsoft-case-study-fragment30"
+                              ><span class="microsoft-case-study-text209"
+                                >© 2025 PortSwigger Ltd.</span
+                              ></fragment
+                            ></p
+                          ></div
+                        ></div
+                      ></div
+                    ></div
+                  ></div
+                ></div
+              ></div
+            ></div
+          ></footer-final-wrapper
+        ></div
+      ></div
+    >
+    <script>
+      (function(window, document, dataLayerName, id) {
+          window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});
+          var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+          var qP = [];
+          dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), tags.nonce = "@Html.Raw(Context.GetNonce())";
+      var qPString=qP.length>0?("?"+qP.join("&")):"";
+          tags.async=!0,tags.src="https://ps.containers.piwik.pro/"+id+".js"+qPString,
+          scripts.parentNode.insertBefore(tags,scripts);
+          !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){
+          var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+          })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');</script
+    ><script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script></body
+></html>

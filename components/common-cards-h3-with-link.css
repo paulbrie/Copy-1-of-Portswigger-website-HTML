@@ -1,0 +1,116 @@
+.common-link-wrapper {
+  display: contents;
+}
+ 
+.common-link-container1 {
+  gap: var(--dl-layout-space-half);
+}
+ 
+.common-link-label {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+}
+ 
+.common-link-container2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+.common-link-icon1 {
+  transition: transform .2s ease;
+}
+ 
+.common-link-icon3 {
+  transform: rotate(90deg);
+}
+ 
+.common-link-icon5 {
+  transition: transform .2s ease;
+}
+ 
+.common-cards-h3-with-link-fragment1 {
+  display: contents;
+}
+ 
+.common-cards-h3-with-link-fragment2 {
+  display: contents;
+}
+ 
+.common-cards-h3-with-link-fragment3 {
+  display: contents;
+}
+ 
+.common-cards-h3-with-link-fragment1 {
+  display: contents;
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+.common-linkroot-class-name4 {
+  align-self: flex-start;
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+.common-cards-h3-with-link-common-h3-card {
+  transition: 0.3s;
+}
+ 
+.common-cards-h3-with-link-common-h3-card:hover {
+  box-shadow: 0 0 6px #00000029;
+}
+ 
+.common-cards-h3-with-link-fragment1 {
+  display: contents;
+}
+ 
+.common-cards-h3-with-link-fragment2 {
+  display: contents;
+}
+ 
+.common-cards-h3-with-link-fragment3 {
+  display: contents;
+}
+ 
+

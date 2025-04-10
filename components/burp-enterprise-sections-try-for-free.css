@@ -1,0 +1,224 @@
+.common-h21-wrapper {
+  display: contents;
+}
+ 
+.common-h21-icon {
+  width: 4rem;
+  object-fit: cover;
+}
+ 
+.burp-enterprise-sections-try-for-free-fragment {
+  display: contents;
+}
+ 
+.burp-enterprise-sections-try-for-free-text1 {
+  color: var(--dl-color-grays-white);
+  display: inline-block;
+}
+ 
+
+ 
+.common-h21root-class-name1 {
+  align-self: center;
+}
+ 
+.common-h21root-class-name2 {
+  align-self: center;
+}
+ 
+
+ 
+.common-h21root-class-name4 {
+  align-self: center;
+}
+ 
+
+ 
+
+ 
+.common-h21root-class-name7 {
+  align-self: center;
+}
+ 
+.common-h21root-class-name8 {
+  align-self: center;
+}
+ 
+
+ 
+.common-h21root-class-name10 {
+  align-self: center;
+}
+ 
+
+
+.common-button1-wrapper {
+  display: contents;
+}
+ 
+.common-button1-container {
+  display: flex;
+  align-items: stretch;
+  border-radius: var(--dl-layout-radius-rounded);
+  justify-content: center;
+}
+ 
+.common-button1root-class-name {
+  height: 50px;
+}
+ 
+.common-button1root-class-name1 {
+  height: 50px;
+  align-self: center;
+}
+ 
+.common-button1root-class-name2 {
+  height: 50px;
+}
+ 
+
+ 
+
+ 
+
+ 
+.common-button1root-class-name6 {
+  height: 50px;
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+.common-button1root-class-name34 {
+  height: 50px;
+}
+ 
+.common-button1root-class-name35 {
+  align-self: flex-start;
+}
+ 
+
+ 
+.common-button1root-class-name37 {
+  height: 50px;
+}
+ 
+
+ 
+
+ 
+.common-button1root-class-name40 {
+  height: 50px;
+}
+ 
+
+ 
+
+ 
+.common-button1root-class-name43 {
+  height: 50px;
+}
+ 
+.common-button1root-class-name44 {
+  height: 50px;
+}
+
+.burp-enterprise-sections-try-for-free-burp-enterprise-sections-try-for-free {
+  position: relative;
+  background-size: cover;
+  background-image: url("public/external/hero-background-darkblue-orange-dots-1500w-1500w.jpg");
+}
+ 
+.burp-enterprise-sections-try-for-free-fragment {
+  display: contents;
+}
+ 
+.burp-enterprise-sections-try-for-free-text1 {
+  color: var(--dl-color-grays-white);
+  display: inline-block;
+}
+ 
+.burp-enterprise-sections-try-for-free-text2 {
+  fill: var(--dl-color-grays-white);
+  color: var(--dl-color-grays-white);
+  font-style: normal;
+  text-align: center;
+  font-weight: 700;
+}
+ 
+.burp-enterprise-sections-try-for-free-benefits {
+  justify-content: space-between;
+}
+ 
+.burp-enterprise-sections-try-for-free-icon1 {
+  min-width: 2rem;
+  min-height: 2rem;
+}
+ 
+.burp-enterprise-sections-try-for-free-icon3 {
+  min-width: 2rem;
+  min-height: 2rem;
+}
+ 
+.burp-enterprise-sections-try-for-free-icon5 {
+  min-width: 2rem;
+  min-height: 2rem;
+}
+ 
+@media(max-width: 991px) {
+  .burp-enterprise-sections-try-for-free-benefits {
+    align-items: center;
+    flex-direction: column;
+  }
+}

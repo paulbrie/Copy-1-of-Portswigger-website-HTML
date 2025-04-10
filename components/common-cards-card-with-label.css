@@ -1,0 +1,105 @@
+.common-cards-card-with-label-image1 {
+  width: 180px;
+  height: 140px;
+  object-fit: contain;
+}
+ 
+.common-cards-card-with-label-content {
+  gap: var(--dl-layout-space-one);
+  flex: 1;
+  width: 100%;
+  display: flex;
+  padding: var(--dl-layout-space-half);
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+ 
+.common-cards-card-with-label-image2 {
+  width: 100%;
+  height: 91px;
+  object-fit: contain;
+}
+ 
+.common-cards-card-with-label-container2 {
+  gap: var(--dl-layout-space-one);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.common-cards-card-with-label-text1 {
+  font-size: 18px;
+  line-height: 1.875rem;
+}
+ 
+.common-cards-card-with-label-container3 {
+  gap: var(--dl-layout-space-half);
+  color: var(--dl-color-portswigger-accent-orange);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+ 
+.common-cards-card-with-label-link {
+  fill: var(--dl-color-portswigger-accent-orange);
+  color: var(--dl-color-portswigger-accent-orange);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+}
+ 
+.common-cards-card-with-label-icon1 {
+  transition: transform .2s ease;
+}
+ 
+.common-cards-card-with-label-container4 {
+  top: -20px;
+  left: 20px;
+  color: white;
+  width: auto;
+  height: auto;
+  display: flex;
+  position: absolute;
+  box-shadow: 3px 3px 6px #00000029;
+  align-items: flex-start;
+  border-radius: var(--dl-layout-radius-inputradius);
+  flex-direction: column;
+}
+ 
+.common-cards-card-with-label-container5 {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-layout-space-half);
+  padding-left: var(--dl-layout-space-two);
+  border-radius: var(--dl-layout-radius-cardradius);
+  padding-right: var(--dl-layout-space-two);
+  flex-direction: column;
+  padding-bottom: var(--dl-layout-space-half);
+  background-color: #0094ff;
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+

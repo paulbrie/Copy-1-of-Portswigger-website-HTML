@@ -1,0 +1,163 @@
+.quaternary-link-wrapper {
+  display: contents;
+}
+ 
+.quaternary-link-container {
+  gap: 8PX;
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+.card-horizontal-light-container1 {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.card-horizontal-light-frame5496 {
+  gap: 20px;
+  width: 1140px;
+  height: auto;
+  display: flex;
+  padding: 28px;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: var(--dl-color-stroke-grey5);
+  border-width: 1px;
+  border-radius: 8px;
+}
+ 
+.card-horizontal-light-image10 {
+  width: 526px;
+  height: 220px;
+}
+ 
+.card-horizontal-light-container2 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.card-horizontal-light-frame5495 {
+  gap: 20px;
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.card-horizontal-light-text1 {
+  fill: var(--dl-color-text-text-headingnavy);
+  color: var(--dl-color-text-text-headingnavy);
+}
+ 
+.card-horizontal-light-text2 {
+  fill: var(--dl-color-default-textsecondary);
+  color: var(--dl-color-default-textsecondary);
+  width: auto;
+}
+ 
+.card-horizontal-lightroot-class-name {
+  margin-top: var(--dl-layout-space-fiveunits);
+  margin-bottom: var(--dl-layout-space-fiveunits);
+}
+ 
+.card-horizontal-lightroot-class-name1 {
+  margin-top: var(--dl-layout-space-fiveunits);
+  margin-bottom: var(--dl-layout-space-fiveunits);
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+@media(max-width: 1280px) {
+  .card-horizontal-light-container1 {
+    width: 100%;
+    align-items: center;
+  }
+  .card-horizontal-light-frame5496 {
+    width: 95%;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .card-horizontal-light-image10 {
+    width: 100%;
+  }
+  .card-horizontal-light-frame5495 {
+    width: 100%;
+  }
+}

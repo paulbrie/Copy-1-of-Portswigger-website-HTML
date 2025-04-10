@@ -1,0 +1,25 @@
+.common-sections-h1-commone-sections-h1 {
+  position: relative;
+}
+ 
+.common-sections-h1-container {
+  padding-left: var(--dl-layout-space-six);
+  padding-right: var(--dl-layout-space-six);
+}
+ 
+.common-sections-h1-text1 {
+  align-self: center;
+  text-align: center;
+}
+ 
+.common-sections-h1-fragment {
+  display: contents;
+}
+ 
+.common-sections-h1root-class-name1 {
+  padding-top: 0px;
+}
+ 
+
+ 
+

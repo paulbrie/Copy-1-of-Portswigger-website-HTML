@@ -1,0 +1,36 @@
+.existing-ds-list-item-with-icon-container1 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.existing-ds-list-item-with-icon-container2 {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+ 
+.existing-ds-list-item-with-icon-image {
+  width: 24px;
+  margin-top: 3px;
+  object-fit: cover;
+}
+ 
+.existing-ds-list-item-with-icon-text1 {
+  fill: #5C5C5B;
+  color: #5C5C5B;
+  font-size: 18px;
+  font-family: "Arial";
+  line-height: 30px;
+  margin-left: 20px;
+}
+ 
+.existing-ds-list-item-with-icon-text2 {
+  font-style: normal;
+  font-weight: 700;
+}

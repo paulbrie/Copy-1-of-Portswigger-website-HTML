@@ -1,0 +1,135 @@
+.common-cards-security-resource-card1-hero-card {
+  gap: var(--dl-layout-space-oneandquarter);
+  flex: 0 0 auto;
+  display: flex;
+  padding: var(--dl-layout-space-oneandquarter);
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px, rgba(0, 0, 0, 0.03) 0px -6px 16px -6px;
+  align-items: flex-start;
+  border-radius: var(--dl-layout-radius-radius-6);
+  flex-direction: column;
+  background-color: var(--dl-color-grays-white);
+}
+ 
+.common-cards-security-resource-card1-container1 {
+  gap: var(--dl-layout-space-oneandquarter);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+ 
+.common-cards-security-resource-card1-image-container {
+  flex: 1;
+  display: flex;
+}
+ 
+.common-cards-security-resource-card1-image1 {
+  width: 100%;
+}
+ 
+.common-cards-security-resource-card1-container2 {
+  gap: var(--dl-layout-space-twothirds);
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.common-cards-security-resource-card1-text1 {
+  color: var(--dl-color-portswigger-primary);
+}
+ 
+.common-cards-security-resource-card1-description1 {
+  fill: var(--dl-color-portswigger-system);
+  color: var(--dl-color-portswigger-system);
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+ 
+.common-cards-security-resource-card1-link1 {
+  display: contents;
+}
+ 
+.common-cards-security-resource-card1-link2 {
+  gap: var(--dl-layout-space-twothirds);
+  color: var(--dl-color-portswigger-accent-orange);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-decoration: none;
+}
+ 
+.common-cards-security-resource-card1-text2 {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+}
+ 
+.common-cards-security-resource-card1-icon1 {
+  transition: transform .2s ease;
+}
+ 
+.common-cards-security-resource-card1-container3 {
+  gap: var(--dl-layout-space-oneandquarter);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.common-cards-security-resource-card1-image2 {
+  width: 100%;
+}
+ 
+.common-cards-security-resource-card1-container4 {
+  gap: var(--dl-layout-space-oneandquarter);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.common-cards-security-resource-card1-container5 {
+  gap: var(--dl-layout-space-half);
+  display: flex;
+  flex-direction: column;
+}
+ 
+.common-cards-security-resource-card1-text3 {
+  color: var(--dl-color-portswigger-primary);
+  line-height: 2rem;
+}
+ 
+.common-cards-security-resource-card1-description2 {
+  fill: var(--dl-color-portswigger-system);
+  color: var(--dl-color-portswigger-system);
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+ 
+.common-cards-security-resource-card1-container6 {
+  gap: var(--dl-layout-space-twothirds);
+  color: var(--dl-color-portswigger-accent-orange);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+ 
+.common-cards-security-resource-card1-text4 {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+}
+ 
+.common-cards-security-resource-card1-icon3 {
+  transition: transform .2s ease;
+}
+ 
+
+ 
+@media(max-width: 767px) {
+  .common-cards-security-resource-card1-container1 {
+    flex-direction: column;
+  }
+  .common-cards-security-resource-card1-image-container {
+    width: 100%;
+  }
+}

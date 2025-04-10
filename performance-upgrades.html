@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en"
+  ><head
+    ><title>Burp Suite performance upgrades</title
+    ><meta
+      name="description"
+      content="Hands-on security testers need the best tools for the job. Tools you have faith in, and enjoy using all day long. Burp Suite has long been that tool, and now, it's faster than ever."
+    /><meta
+      property="og:title"
+      content="Burp Suite performance upgrades"
+    /><meta
+      property="og:description"
+      content="Hands-on security testers need the best tools for the job. Tools you have faith in, and enjoy using all day long. Burp Suite has long been that tool, and now, it's faster than ever."
+    /><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    /><meta charset="utf-8" /><meta
+      property="twitter:card"
+      content="summary_large_image"
+    />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <link
+      rel="preload"
+      href="/mega-nav/images/mega-nav-portswigger-logo.svg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="/content/fonts/ps-main/ps-icons.woff?l1la2n"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/content/fonts/ps-icons-small/ps-icons-small.woff?td2uot"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link rel="preload" href="/mega-nav/meganav.css" as="style" />
+
+    <style>
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+    <script>
+      (function(window, document, dataLayerName, id) {
+      var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName);
+      var qPString=qP.length>0?("?"+qP.join("&")):"";
+      document.write('<nonce-script src="https://ps.containers.piwik.pro/'+id+'.sync.js' + qPString + '" nonce="NIFdcp1UaO0OFJv1ewzs2Putqt1LcUl0"></' + 'nonce-script>');
+      })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');
+    </script></head
+  >
+  <body
+    ><link rel="stylesheet" href="./style.css" /><div
+      ><link href="./performance-upgrades.css" rel="stylesheet" /><div
+        class="burp-suite-performance-upgrades-container10"
+        ><live-tag-production-wrapper
+          class="live-tag-production-wrapper"
+          rootclassname="live-tag-productionundefined"
+          ><!--LiveTagProduction component--><div
+            portswigger-live-tag-production="5a9e3886-3303-415c-a955-f221bb95905a"
+            class="live-tag-production-container live-tag-productionroot-class-name8"
+          ></div></live-tag-production-wrapper
+        ><minimal-header-wrapper
+          class="minimal-header-wrapper"
+          rootclassname="minimal-headerundefined"
+          ><!--MinimalHeader component--><div
+            class="minimal-header-container minimal-headerroot-class-name9"
+            ><a href="http://portswigger.net" class="minimal-header-link"
+              ><img
+                alt="image"
+                src="public/portswigger-dark-logo.svg"
+                class="minimal-header-image" /></a></div></minimal-header-wrapper
+        ><div class="burp-suite-performance-upgrades-container11"
+          ><div class="burp-suite-performance-upgrades-container12"
+            ><div class="burp-suite-performance-upgrades-container13"
+              ><div class="burp-suite-performance-upgrades-container14"
+                ><div class="burp-suite-performance-upgrades-container15"
+                  ><h2 class="burp-suite-performance-upgrades-text10"
+                    >Burp Suite Professional</h2
+                  ><h1 class="burp-suite-performance-upgrades-text11"
+                    >Performance upgrades, making your workflow more
+                    efficient.</h1
+                  ><span class="burp-suite-performance-upgrades-text12"
+                    >Hands-on security testers need the best tools for the job.
+                    Tools you have faith in, and enjoy using all day long. Burp
+                    Suite has long been that tool, and now, it's faster than
+                    ever.</span
+                  ><div class="burp-suite-performance-upgrades-container16"
+                    ><a
+                      href="https://portswigger.net/burp/releases"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="burp-suite-performance-upgrades-button1 button"
+                      ><span
+                        buttontext="TQ_TH6-S_dqix"
+                        class="burp-suite-performance-upgrades-text13"
+                        >UPDATE TO THE LATEST VERSION</span
+                      ></a
+                    ></div
+                  ></div
+                ><div class="burp-suite-performance-upgrades-container17"
+                  ><img
+                    alt="image"
+                    src="public/pro-performance-image-1200w.png"
+                    class="burp-suite-performance-upgrades-image10" /></div></div
+              ><div class="burp-suite-performance-upgrades-container18"
+                ><div class="burp-suite-performance-upgrades-container19"
+                  ><img
+                    alt="image"
+                    src="public/icon-check-white.svg"
+                    class="burp-suite-performance-upgrades-image11"
+                  /><span class="burp-suite-performance-upgrades-text14"
+                    >Reduced lag/load times</span
+                  ></div
+                ><div class="burp-suite-performance-upgrades-container20"
+                  ><img
+                    alt="image"
+                    src="public/icon-check-white.svg"
+                    class="burp-suite-performance-upgrades-image12"
+                  /><span class="burp-suite-performance-upgrades-text15"
+                    >Reduced memory usage</span
+                  ></div
+                ><div class="burp-suite-performance-upgrades-container21"
+                  ><img
+                    alt="image"
+                    src="public/icon-check-white.svg"
+                    class="burp-suite-performance-upgrades-image13"
+                  /><span class="burp-suite-performance-upgrades-text16"
+                    >Faster site map filtering</span
+                  ></div
+                ><div class="burp-suite-performance-upgrades-container22"
+                  ><img
+                    alt="image"
+                    src="public/icon-check-white.svg"
+                    class="burp-suite-performance-upgrades-image14"
+                  /><span class="burp-suite-performance-upgrades-text17"
+                    >Efficiency changes</span
+                  ></div
+                ></div
+              ></div
+            ></div
+          ></div
+        ><div class="burp-suite-performance-upgrades-container23"
+          ><div class="burp-suite-performance-upgrades-container24"
+            ><div class="burp-suite-performance-upgrades-container25"
+              ><div class="burp-suite-performance-upgrades-container26"
+                ><h3 class="burp-suite-performance-upgrades-text18"
+                  >Reduced Intruder memory usage</h3
+                ><span
+                  class="burp-suite-performance-upgrades-text19 rich-text-root"
+                  >Memory usage in Intruder has been significantly reduced,
+                  improving loading times and minimizing the possibility of UI
+                  freezes.</span
+                ></div
+              ><div class="burp-suite-performance-upgrades-container27"
+                ><img
+                  alt="image"
+                  src="public/memory-usage.svg"
+                  class="burp-suite-performance-upgrades-image15" /></div></div></div></div
+        ><div class="burp-suite-performance-upgrades-container28"
+          ><div class="burp-suite-performance-upgrades-container29"
+            ><img
+              alt="image"
+              src="public/tib3rius-discord-post.svg"
+              class="burp-suite-performance-upgrades-image16" /></div></div
+        ><div class="burp-suite-performance-upgrades-container30"
+          ><div class="burp-suite-performance-upgrades-container31"
+            ><div class="burp-suite-performance-upgrades-container32"
+              ><div class="burp-suite-performance-upgrades-container33"
+                ><h3 class="burp-suite-performance-upgrades-text20"
+                  ><span>Reduced UI lag and load times</span><br /></h3
+                ><span
+                  class="burp-suite-performance-upgrades-text23 rich-text-root"
+                  ><span
+                    >In Burp Suite, your large project files now load faster,
+                    even if you’ve got a large number of Repeater tabs. These
+                    new changes have significantly reduced memory usage, and
+                    will noticeably reduce UI lagging.</span
+                  ><br class="Paragraph" /></span></div
+              ><div class="burp-suite-performance-upgrades-container34"
+                ><h3 class="burp-suite-performance-upgrades-text26"
+                  >Improved loading times in the HTTP history</h3
+                ><span class="burp-suite-performance-upgrades-text27"
+                  >Multiple changes have been introduced to improve loading
+                  times when viewing requests and responses in the HTTP
+                  history.</span
+                ></div
+              ></div
+            ><div class="burp-suite-performance-upgrades-container35"
+              ><img
+                alt="image"
+                src="public/ui-lag.svg"
+                class="burp-suite-performance-upgrades-image17" /></div></div></div
+        ><div class="burp-suite-performance-upgrades-container36"
+          ><div class="burp-suite-performance-upgrades-container37"
+            ><div class="burp-suite-performance-upgrades-container38"
+              ><div class="burp-suite-performance-upgrades-container39"
+                ><h3 class="burp-suite-performance-upgrades-text28"
+                  ><span>Drastically reduced sorting time for tables</span
+                  ><br /></h3
+                ><span
+                  class="burp-suite-performance-upgrades-text31 rich-text-root"
+                  ><span
+                    >Tables which previously would take minutes to sort, are now
+                    sorted in a matter of seconds, increasing responsiveness and
+                    reducing UI freezes.</span
+                  ><br class="Paragraph" /></span></div
+              ><div class="burp-suite-performance-upgrades-container40"
+                ><h3 class="burp-suite-performance-upgrades-text34"
+                  >Faster site map filtering</h3
+                ><span class="burp-suite-performance-upgrades-text35"
+                  >Similarly, site map filtering time has been significantly
+                  minimized. Large sitemaps, which potentially may have taken
+                  hours to filter, can now be filtered in a matter of
+                  minutes.</span
+                ></div
+              ></div
+            ><div class="burp-suite-performance-upgrades-container41"
+              ><img
+                alt="image"
+                src="public/table-sorting-times.svg"
+                class="burp-suite-performance-upgrades-image18" /></div></div></div
+        ><div class="burp-suite-performance-upgrades-container42"
+          ><div class="burp-suite-performance-upgrades-container43"
+            ><h2 class="burp-suite-performance-upgrades-text36"
+              >Improve your workflow efficiency</h2
+            ><span class="burp-suite-performance-upgrades-text37 rich-text-root"
+              ><span
+                >The new and improved Proxy Intercept view allows you to have
+                better control when working with websites and functionality that
+                trigger a large number of requests, helping you work more
+                efficiently and at pace.</span
+              ><br /><br /><span>This new update now allows you to…</span></span
+            ></div
+          ><div class="burp-suite-performance-upgrades-container44"
+            ><div class="burp-suite-performance-upgrades-container45"
+              ><div class="burp-suite-performance-upgrades-container46"
+                ><div class="burp-suite-performance-upgrades-container47"
+                  ><img
+                    alt="image"
+                    src="public/penetration-testing1.svg"
+                    class="burp-suite-performance-upgrades-image19"
+                  /><div class="burp-suite-performance-upgrades-container48"
+                    ><p class="burp-suite-performance-upgrades-text42"
+                      >View multiple queued requests in a table and manage them
+                      in bulk.</p
+                    ></div
+                  ></div
+                ><div class="burp-suite-performance-upgrades-container49"
+                  ><img
+                    alt="image"
+                    src="public/penetration-testing1.svg"
+                    class="burp-suite-performance-upgrades-image20"
+                  /><div class="burp-suite-performance-upgrades-container50"
+                    ><p class="burp-suite-performance-upgrades-text43"
+                      >Forward all requests with a single click.</p
+                    ></div
+                  ></div
+                ></div
+              ><div class="burp-suite-performance-upgrades-container51"
+                ><div class="burp-suite-performance-upgrades-container52"
+                  ><img
+                    alt="image"
+                    src="public/penetration-testing1.svg"
+                    class="burp-suite-performance-upgrades-image21"
+                  /><div class="burp-suite-performance-upgrades-container53"
+                    ><p class="burp-suite-performance-upgrades-text44"
+                      >View intercepted responses alongside the matching
+                      request.</p
+                    ></div
+                  ></div
+                ><div class="burp-suite-performance-upgrades-container54"
+                  ><img
+                    alt="image"
+                    src="public/penetration-testing1.svg"
+                    class="burp-suite-performance-upgrades-image22"
+                  /><div class="burp-suite-performance-upgrades-container55"
+                    ><p class="burp-suite-performance-upgrades-text45"
+                      >Highlight and comment on requests and responses.</p
+                    ></div
+                  ></div
+                ></div
+              ></div
+            ><div class="burp-suite-performance-upgrades-container56"
+              ><div class="burp-suite-performance-upgrades-container57"
+                ><a
+                  href="https://www.youtube.com/watch?v=v5rWTgBrckc"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="burp-suite-performance-upgrades-link1"
+                  ><img
+                    alt="image"
+                    src="public/burp-suite-shorts-1400w.jpg"
+                    class="burp-suite-performance-upgrades-image23" /></a
+                ><span
+                  class="burp-suite-performance-upgrades-text46 rich-text-root"
+                  ><span>Take a look at the new Proxy Intercept View in </span
+                  ><a
+                    href="https://www.youtube.com/watch?v=v5rWTgBrckc"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >this video</a
+                  ><span>.</span></span
+                ></div
+              ></div
+            ></div
+          ></div
+        ><div class="burp-suite-performance-upgrades-container58"
+          ><div class="burp-suite-performance-upgrades-container59"
+            ><h2 class="burp-suite-performance-upgrades-text49 H3"
+              >Burp's future, driven by performance</h2
+            ><span class="burp-suite-performance-upgrades-text50 rich-text-root"
+              >Say goodbye to frustrating performance blockers - update to the
+              latest version of Burp Suite Professional and conduct your manual
+              testing with increased efficiency and confidence.</span
+            ><a
+              href="https://portswigger.net/burp/releases"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="burp-suite-performance-upgrades-button2 button"
+              ><span
+                buttontext="TQ_TH6-S_dqix"
+                class="burp-suite-performance-upgrades-text51"
+                >UPDATE TO THE LATEST VERSION</span
+              ></a
+            ></div
+          ></div
+        ><div class="burp-suite-performance-upgrades-container60"
+          ><div class="burp-suite-performance-upgrades-container61"
+            ><div class="burp-suite-performance-upgrades-container62"
+              ><div class="burp-suite-performance-upgrades-container63"
+                ><div class="burp-suite-performance-upgrades-container64"
+                  ><a
+                    href="https://discord.gg/portswigger"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="burp-suite-performance-upgrades-link3"
+                    ><img
+                      alt="image"
+                      src="public/discord-logo-white.svg"
+                      class="burp-suite-performance-upgrades-image24" /></a
+                  ><h1 class="burp-suite-performance-upgrades-text52"
+                    >Join the official PortSwigger Discord</h1
+                  ><span class="burp-suite-performance-upgrades-text53"
+                    >Keep up to date with the latest Burp Suite performance
+                    upgrades.</span
+                  ><div class="burp-suite-performance-upgrades-container65"
+                    ><a
+                      href="https://discord.com/invite/portswigger"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="burp-suite-performance-upgrades-button3 ButtonFont button"
+                      ><img
+                        alt="image"
+                        src="public/discord-mark-white.svg"
+                        class="burp-suite-performance-upgrades-image25"
+                      /><span
+                        buttontext="TQ_TH6-S_dqix"
+                        class="burp-suite-performance-upgrades-text54"
+                        >JOIN THE DISCORD</span
+                      ></a
+                    ></div
+                  ></div
+                ></div
+              ><div class="burp-suite-performance-upgrades-container66"
+                ><div class="burp-suite-performance-upgrades-container67"
+                  ><img
+                    alt="image"
+                    src="public/icon-check-white.svg"
+                    class="burp-suite-performance-upgrades-image26"
+                  /><span class="burp-suite-performance-upgrades-text55"
+                    >Exclusive events</span
+                  ></div
+                ><div class="burp-suite-performance-upgrades-container68"
+                  ><img
+                    alt="image"
+                    src="public/icon-check-white.svg"
+                    class="burp-suite-performance-upgrades-image27"
+                  /><span class="burp-suite-performance-upgrades-text56"
+                    >Chat with Burp developers and researchers</span
+                  ></div
+                ><div class="burp-suite-performance-upgrades-container69"
+                  ><img
+                    alt="image"
+                    src="public/icon-check-white.svg"
+                    class="burp-suite-performance-upgrades-image28"
+                  /><span class="burp-suite-performance-upgrades-text57"
+                    >Feature previews</span
+                  ></div
+                ><div class="burp-suite-performance-upgrades-container70"
+                  ><img
+                    alt="image"
+                    src="public/icon-check-white.svg"
+                    class="burp-suite-performance-upgrades-image29"
+                  /><span class="burp-suite-performance-upgrades-text58"
+                    >And much more</span
+                  ></div
+                ></div
+              ></div
+            ></div
+          ></div
+        ><footer-final-wrapper
+          class="footer-final-wrapper"
+          rootclassname="footer-finalundefined"
+          ><!--FooterFinal component--><div
+            class="footer-final-footer1 footer-finalroot-class-name7"
+            ><div class="footer-final-container10"
+              ><div class="footer-final-container11"
+                ><div class="footer-final-footer2"
+                  ><div class="footer-final-container12"
+                    ><div class="footer-final-container13"
+                      ><div class="footer-final-section1"
+                        ><div class="footer-final-container14"
+                          ><footer-column-title-wrapper
+                            class="footer-column-title-wrapper"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container footer-column-titleroot-class-name261"
+                              ><p class="footer-column-title-text"
+                                ><span>Burp Suite</span></p
+                              ></div
+                            ></footer-column-title-wrapper
+                          ><a
+                            href="https://portswigger.net/burp/vulnerability-scanner"
+                            class="footer-final-link10"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text10 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment10"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text59"
+                                  >Web vulnerability scanner</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/burp"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            class="footer-final-link11"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text11 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment11"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text60"
+                                  >Burp Suite Editions</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/burp/releases"
+                            class="footer-final-link12"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text12 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment12"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text61"
+                                  >Release Notes</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container15"
+                          ><footer-column-title-wrapper-j4fl
+                            class="footer-column-title-wrapper-j4fl"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container1 footer-column-titleroot-class-name262"
+                              ><p class="footer-column-title-text1"
+                                ><span>Vulnerabilities</span></p
+                              ></div
+                            ></footer-column-title-wrapper-j4fl
+                          ><a
+                            href="https://portswigger.net/web-security/cross-site-scripting"
+                            class="footer-final-link13"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text13 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment13"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text62"
+                                  >Cross-site scripting (XSS)</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/sql-injection"
+                            class="footer-final-link14"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text14 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment14"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text63"
+                                  >SQL injection</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/csrf"
+                            class="footer-final-link15"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text15 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment15"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text64"
+                                  >Cross-site request forgery</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/xxe"
+                            class="footer-final-link16"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text16 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment16"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text65"
+                                  >XML external entity injection</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/file-path-traversal"
+                            class="footer-final-link17"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text17 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment17"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text66"
+                                  >Directory traversal</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/ssrf"
+                            class="footer-final-link18"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text18 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment18"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text67"
+                                  >Server-side request forgery</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ></div
+                      ><div class="footer-final-section2"
+                        ><div class="footer-final-container16"
+                          ><footer-column-title-wrapper-doqt
+                            class="footer-column-title-wrapper-doqt"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container2 footer-column-titleroot-class-name263"
+                              ><p class="footer-column-title-text2"
+                                ><span>Customers</span></p
+                              ></div
+                            ></footer-column-title-wrapper-doqt
+                          ><a
+                            href="https://portswigger.net/organizations"
+                            class="footer-final-link19"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text19 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment19"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text68"
+                                  >Organizations</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/testers"
+                            class="footer-final-link20"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text20 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment20"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text69"
+                                  >Testers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/developers"
+                            class="footer-final-link21"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text21 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment21"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text70"
+                                  >Developers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container17"
+                          ><footer-column-title-wrapper-u68z
+                            class="footer-column-title-wrapper-u68z"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container3 footer-column-titleroot-class-name264"
+                              ><p class="footer-column-title-text3"
+                                ><span>Company</span></p
+                              ></div
+                            ></footer-column-title-wrapper-u68z
+                          ><a
+                            href="https://portswigger.net/about"
+                            class="footer-final-link22"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text22 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment22"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text71"
+                                  >About</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/careers"
+                            class="footer-final-link23"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text23 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment23"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text72"
+                                  >Careers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/about/contact"
+                            class="footer-final-link24"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text24 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment24"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text73"
+                                  >Contact</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/legal"
+                            class="footer-final-link25"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text25 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment25"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text74"
+                                  >Legal</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/privacy"
+                            class="footer-final-link26"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text26 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment26"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text75"
+                                  >Privacy Notice</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ></div
+                      ><div class="footer-final-section3"
+                        ><div class="footer-final-container18"
+                          ><footer-column-title-wrapper-31eb
+                            class="footer-column-title-wrapper-31eb"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container4 footer-column-titleroot-class-name265"
+                              ><p class="footer-column-title-text4"
+                                ><span>Insights</span></p
+                              ></div
+                            ></footer-column-title-wrapper-31eb
+                          ><a
+                            href="https://portswigger.net/web-security"
+                            class="footer-final-link27"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text27 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment27"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text76"
+                                  >Web Security Academy</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/blog"
+                            class="footer-final-link28"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text28 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment28"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text77"
+                                  >Blog</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/research"
+                            class="footer-final-link29"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text29 Footer"
+                              ><fragment
+                                class="burp-suite-performance-upgrades-fragment29"
+                                ><span
+                                  class="burp-suite-performance-upgrades-text78"
+                                  >Research</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container19"
+                          ><a
+                            href="https://portswigger.net"
+                            class="footer-final-link30"
+                            ><img
+                              alt="image"
+                              src="public/portswigger-logo.svg"
+                              class="footer-final-image" /></a
+                          ><a
+                            href="https://x.com/PortSwigger"
+                            class="footer-final-link31"
+                            ><twitter-button-wrapper
+                              class="footer-final-component6"
+                              rootclassname="twitter-buttonundefined"
+                              ><!--TwitterButton component--><div
+                                class="twitter-button-container twitter-buttonroot-class-name50"
+                                ><div
+                                  href="https://twitter.com/Burp_Suite"
+                                  class="twitter-button-frame5622"
+                                  ><div class="twitter-button-frame5626"
+                                    ><img
+                                      alt="TwitterandXlogossvg14713"
+                                      src="public/external/twitterandxlogossvg14713-0pok-200h.png"
+                                      class="twitter-button-twitterand-xlogossvg1"
+                                    /><span class="twitter-button-text"
+                                      ><span>Follow us</span></span
+                                    ></div
+                                  ></div
+                                ></div
+                              ></twitter-button-wrapper
+                            ></a
+                          ><p class="footer-final-text30 Footer"
+                            ><fragment
+                              class="burp-suite-performance-upgrades-fragment30"
+                              ><span
+                                class="burp-suite-performance-upgrades-text79"
+                                >© 2025 PortSwigger Ltd.</span
+                              ></fragment
+                            ></p
+                          ></div
+                        ></div
+                      ></div
+                    ></div
+                  ></div
+                ></div
+              ></div
+            ></div
+          ></footer-final-wrapper
+        ></div
+      ></div
+    >
+    <script>
+      (function(window, document, dataLayerName, id) {
+          window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});
+          var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+          var qP = [];
+          dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), tags.nonce = "@Html.Raw(Context.GetNonce())";
+      var qPString=qP.length>0?("?"+qP.join("&")):"";
+          tags.async=!0,tags.src="https://ps.containers.piwik.pro/"+id+".js"+qPString,
+          scripts.parentNode.insertBefore(tags,scripts);
+          !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){
+          var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+          })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');</script
+    ><script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script></body
+></html>

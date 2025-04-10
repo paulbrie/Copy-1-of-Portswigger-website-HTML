@@ -1,0 +1,66 @@
+.minimal-header-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: var(--dl-layout-space-oneandhalfunits);
+  flex-direction: row;
+  padding-bottom: var(--dl-layout-space-oneandhalfunits);
+  justify-content: center;
+}
+ 
+.minimal-header-link {
+  display: contents;
+}
+ 
+.minimal-header-image {
+  width: 253px;
+  height: 40px;
+  object-fit: cover;
+  text-decoration: none;
+}
+ 
+.minimal-headerroot-class-name {
+  background-color: #1A1A39;
+}
+ 
+.minimal-headerroot-class-name1 {
+  background-color: #1A1A39;
+}
+ 
+.minimal-headerroot-class-name2 {
+  background-color: #1A1A39;
+}
+ 
+.minimal-headerroot-class-name3 {
+  background-color: #1A1A39;
+}
+ 
+.minimal-headerroot-class-name4 {
+  background-color: #1A1A39;
+}
+ 
+.minimal-headerroot-class-name5 {
+  background-color: #1A1A39;
+}
+ 
+.minimal-headerroot-class-name6 {
+  background-color: #1A1A39;
+}
+ 
+.minimal-headerroot-class-name7 {
+  background-color: #1A1A39;
+}
+ 
+.minimal-headerroot-class-name8 {
+  background-color: #1A1A39;
+}
+ 
+.minimal-headerroot-class-name9 {
+  background-color: #1A1A39;
+}
+ 
+.minimal-headerroot-class-name10 {
+  background-color: #1A1A39;
+}

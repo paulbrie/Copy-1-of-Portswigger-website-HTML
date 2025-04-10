@@ -1,0 +1,18 @@
+.widget-script-container1 {
+  display: flex;
+  position: relative;
+}
+ 
+.widget-script-container2 {
+  display: none;
+}
+ 
+.widget-script-container3 {
+  display: contents;
+}
+ 
+@media(max-width: 1536px) {
+  .widget-script-container2 {
+    display: none;
+  }
+}

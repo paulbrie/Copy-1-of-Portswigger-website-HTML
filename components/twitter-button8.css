@@ -1,0 +1,46 @@
+.twitter-button8-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.twitter-button8-frame5622 {
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 2px 20px;
+  align-items: center;
+  border-color: rgba(0, 172, 238, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  justify-content: center;
+}
+ 
+.twitter-button8-frame5626 {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+ 
+.twitter-button8-twitterand-xlogossvg1 {
+  width: 18px;
+  height: 14px;
+}
+ 
+.twitter-button8-text {
+  fill: rgba(0, 172, 238, 1);
+  color: rgba(0, 172, 238, 1);
+  font-size: 14px;
+  font-family: "Arial";
+  line-height: 24px;
+}
+ 
+.twitter-button8root-class-name {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en"
+  ><head
+    ><title>Copy 1 of Portswigger website</title
+    ><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    /><meta charset="utf-8" /><meta
+      property="twitter:card"
+      content="summary_large_image"
+    />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <link
+      rel="preload"
+      href="/mega-nav/images/mega-nav-portswigger-logo.svg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="/content/fonts/ps-main/ps-icons.woff?l1la2n"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/content/fonts/ps-icons-small/ps-icons-small.woff?td2uot"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link rel="preload" href="/mega-nav/meganav.css" as="style" />
+
+    <style>
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+    <script>
+      (function(window, document, dataLayerName, id) {
+      var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName);
+      var qPString=qP.length>0?("?"+qP.join("&")):"";
+      document.write('<nonce-script src="https://ps.containers.piwik.pro/'+id+'.sync.js' + qPString + '" nonce="NIFdcp1UaO0OFJv1ewzs2Putqt1LcUl0"></' + 'nonce-script>');
+      })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');
+    </script></head
+  >
+  <body
+    ><link rel="stylesheet" href="../style.css" /><div
+      ><link
+        href="./common-sections-cards-with-links.css"
+        rel="stylesheet" /><div
+        class="common-sections-cards-with-links-careers3-links section-full common-sections-cards-with-links"
+        ><div class="section-max-width gap-2"
+          ><div class="gap-2 grid-3-cols lg-flex-col"
+            ><common-cards-h3-with-link-wrapper
+              class="common-cards-h3-with-link-wrapper"
+              ><!--CommonCardsH3WithLink component--><div
+                class="common-cards-h3-with-link-common-h3-card h3-card gap-1 flex-col p-2 bg-white rounded-sm translate-child-svg-right common-cards-h3-with-link"
+                ><h3 class="text-primary heading-3"
+                  ><fragment class="common-sections-cards-with-links-fragment8"
+                    ><span>What we look for</span></fragment
+                  ></h3
+                ><span class="text-base"
+                  ><fragment class="common-sections-cards-with-links-fragment2"
+                    ><span
+                      >Become part of one of the most innovative Java teams in
+                      the country as a founding member of our new office in
+                      London.</span
+                    ></fragment
+                  ></span
+                ><common-link-wrapper
+                  class="common-link-wrapper"
+                  rootclassname="common-linkundefined"
+                  ><!--CommonLink component--><div
+                    class="common-link-container1 items-center flex-row common-linkroot-class-name15"
+                    ><span class="common-link-label"
+                      ><fragment
+                        class="common-sections-cards-with-links-fragment1"
+                        ><span>Read more </span></fragment
+                      ></span
+                    ><div class="common-link-container2"
+                      ><svg class="common-link-icon1">
+                        <path
+                          d="m10 16l4-4l-4-4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path></svg
+                      ><svg class="common-link-icon3">
+                        <path
+                          d="m10 16l4-4l-4-4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path></svg></div
+                    ><svg class="common-link-icon5">
+                      <path
+                        d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                        fill="currentColor"
+                      ></path></svg></div></common-link-wrapper></div></common-cards-h3-with-link-wrapper
+            ><common-cards-h3-with-link-wrapper-7d9e
+              class="common-cards-h3-with-link-wrapper-7d9e"
+              ><!--CommonCardsH3WithLink component--><div
+                class="common-cards-h3-with-link-common-h3-card1 h3-card gap-1 flex-col p-2 bg-white rounded-sm translate-child-svg-right common-cards-h3-with-link"
+                ><h3 class="text-primary heading-3"
+                  ><fragment class="common-sections-cards-with-links-fragment7"
+                    ><span>Rewards</span></fragment
+                  ></h3
+                ><span class="text-base"
+                  ><fragment class="common-sections-cards-with-links-fragment4"
+                    ><span
+                      >An opportunity to kick-start your software development
+                      career at an innovative and agile software company in the
+                      North West of England.</span
+                    ></fragment
+                  ></span
+                ><common-link-wrapper-sweg
+                  class="common-link-wrapper-sweg"
+                  rootclassname="common-linkundefined"
+                  ><!--CommonLink component--><div
+                    class="common-link-container3 items-center flex-row common-linkroot-class-name15"
+                    ><span class="common-link-label1"
+                      ><fragment
+                        class="common-sections-cards-with-links-fragment3"
+                        ><span>Read more</span></fragment
+                      ></span
+                    ><div class="common-link-container4"
+                      ><svg class="common-link-icon7">
+                        <path
+                          d="m10 16l4-4l-4-4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path></svg
+                      ><svg class="common-link-icon9">
+                        <path
+                          d="m10 16l4-4l-4-4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path></svg></div
+                    ><svg class="common-link-icon11">
+                      <path
+                        d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                        fill="currentColor"
+                      ></path></svg></div></common-link-wrapper-sweg></div></common-cards-h3-with-link-wrapper-7d9e
+            ><common-cards-h3-with-link-wrapper-citd
+              class="common-cards-h3-with-link-wrapper-citd"
+              ><!--CommonCardsH3WithLink component--><div
+                class="common-cards-h3-with-link-common-h3-card2 h3-card gap-1 flex-col p-2 bg-white rounded-sm translate-child-svg-right common-cards-h3-with-link"
+                ><h3 class="text-primary heading-3"
+                  ><fragment class="common-sections-cards-with-links-fragment9"
+                    ><span>Application Process</span></fragment
+                  ></h3
+                ><span class="text-base"
+                  ><fragment class="common-sections-cards-with-links-fragment6"
+                    ><span
+                      >An opportunity for young women to kick-start their tech
+                      career at a market-leading high-tech North West software
+                      business.</span
+                    ></fragment
+                  ></span
+                ><common-link-wrapper-x91j
+                  class="common-link-wrapper-x91j"
+                  rootclassname="common-linkundefined"
+                  ><!--CommonLink component--><div
+                    class="common-link-container5 items-center flex-row common-linkroot-class-name15"
+                    ><span class="common-link-label2"
+                      ><fragment
+                        class="common-sections-cards-with-links-fragment5"
+                        ><span>Read more</span></fragment
+                      ></span
+                    ><div class="common-link-container6"
+                      ><svg class="common-link-icon13">
+                        <path
+                          d="m10 16l4-4l-4-4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path></svg
+                      ><svg class="common-link-icon15">
+                        <path
+                          d="m10 16l4-4l-4-4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path></svg></div
+                    ><svg class="common-link-icon17">
+                      <path
+                        d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                        fill="currentColor"
+                      ></path></svg></div></common-link-wrapper-x91j></div></common-cards-h3-with-link-wrapper-citd></div></div></div
+    ></div>
+    <script>
+      (function(window, document, dataLayerName, id) {
+          window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});
+          var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+          var qP = [];
+          dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), tags.nonce = "@Html.Raw(Context.GetNonce())";
+      var qPString=qP.length>0?("?"+qP.join("&")):"";
+          tags.async=!0,tags.src="https://ps.containers.piwik.pro/"+id+".js"+qPString,
+          scripts.parentNode.insertBefore(tags,scripts);
+          !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){
+          var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+          })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');</script
+    ><script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script></body
+></html>

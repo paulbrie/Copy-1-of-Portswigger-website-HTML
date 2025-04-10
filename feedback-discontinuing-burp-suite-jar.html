@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en"
+  ><head
+    ><title>Feedback: Discontinuing Burp Suite Jar</title
+    ><meta
+      name="description"
+      content="We're considering removing the option to download each version of Burp Suite as a standalone JAR file and want your feedback."
+    /><meta
+      property="og:title"
+      content="Feedback: Discontinuing Burp Suite Jar"
+    /><meta
+      property="og:description"
+      content="We're considering removing the option to download each version of Burp Suite as a standalone JAR file and want your feedback."
+    /><meta name="robots" content="noindex" /><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    /><meta charset="utf-8" /><meta
+      property="twitter:card"
+      content="summary_large_image"
+    />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <link
+      rel="preload"
+      href="/mega-nav/images/mega-nav-portswigger-logo.svg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="/content/fonts/ps-main/ps-icons.woff?l1la2n"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/content/fonts/ps-icons-small/ps-icons-small.woff?td2uot"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link rel="preload" href="/mega-nav/meganav.css" as="style" />
+
+    <style>
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+    <script>
+      (function(window, document, dataLayerName, id) {
+      var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName);
+      var qPString=qP.length>0?("?"+qP.join("&")):"";
+      document.write('<nonce-script src="https://ps.containers.piwik.pro/'+id+'.sync.js' + qPString + '" nonce="NIFdcp1UaO0OFJv1ewzs2Putqt1LcUl0"></' + 'nonce-script>');
+      })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');
+    </script></head
+  >
+  <body
+    ><link rel="stylesheet" href="./style.css" /><div
+      ><link
+        href="./feedback-discontinuing-burp-suite-jar.css"
+        rel="stylesheet"
+      /><div class="feedback-discontinuing-burp-suite-jar-container10"
+        ><live-tag-production-wrapper
+          class="live-tag-production-wrapper"
+          rootclassname="live-tag-productionundefined"
+          ><!--LiveTagProduction component--><div
+            portswigger-live-tag-production="5a9e3886-3303-415c-a955-f221bb95905a"
+            class="live-tag-production-container live-tag-productionroot-class-name13"
+          ></div></live-tag-production-wrapper
+        ><mega-nav-wrapper
+          class="mega-nav-wrapper"
+          rootclassname="mega-navundefined"
+          ><!--MegaNav component--><div
+            id="ps-header"
+            class="mega-nav-container1 mega-navroot-class-name11"
+            ><div class="mega-nav-container2"
+              ><div class="mega-nav-container3"
+                ><style>
+                  .hamburger-menu-link,
+                  .hamburger-menu-desktop div {
+                      pointer-events: none;
+                  }
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-1,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-3,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-4,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-5,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-6,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-7 {
+                      pointer-events: all;
+                  }
+                  .hamburger-menu-desktop:hover div {
+                      pointer-events: all;
+                  }
+                  .mega-nav-input-1:checked ~ .hamburger-menu-desktop,
+                  .mega-nav-input-2:checked ~ .hamburger-menu-desktop,
+                  .mega-nav-input-6:checked ~ .hamburger-menu-desktop,
+                  .mega-nav-input-7:checked ~ .hamburger-menu-desktop {
+                      pointer-events: none;
+                  }
+
+                  .notification-banner {
+                      display: block;
+                      background-color: var(--background-color);
+                      color: var(--section-h5-text-color);
+                      width: 100%;
+                      text-align: center;
+                      text-decoration: none;
+                      transition: opacity .3s;
+                      padding: 8px;
+                  }
+
+                  .theme-enterprise-2, .is-enterprise {
+                      --background-color: #06c;
+                      --border-top-color: #06c;
+                      --label-text-color: #fff;
+                      --section-text-color: #fff;
+                      --section-h1-text-color: #fff;
+                      --section-h2-text-color: #fff;
+                      --section-h3-text-color: #fff;
+                      --section-h4-text-color: #fff;
+                      --section-h5-text-color: #fff;
+                      --section-link-color: #fff;
+                      --section-link-border-hover: #fff;
+                  }
+                </style>
+                <link rel="stylesheet" href="/mega-nav/meganav.css" />
+                <script>
+                  body = document.querySelector('body');
+                  if(body !== null){
+
+                  body.insertAdjacentHTML('afterbegin',`
+                  <header class='page-header' id='top'>
+                              <div class='container'>
+                      <a class='logo' href='/'></a>
+                      <div class='header-right'>
+                          <div class='login-buttons'>
+                                  <a class='button-orange-small' href='/users/youraccount/personaldetails'>My account</a>
+                          </div>
+
+
+                      <input type='checkbox' id='hamburger-mobile' class='hamburger-input-mobile'>
+                      <input type='radio' id='hamburger-desktop' class='hamburger-input-desktop' name='mega-nav-input'>
+                      <div class='hamburger-menu-mobile'>
+                          <label class='hamburger-menu-label header-hidden' for='hamburger-mobile'>
+                              <span class='hamburger-layers'></span>
+                          </label>
+                      </div>
+                      <div class='mega-nav'>
+                          <input type='radio' id='mega-nav-close' class='mega-nav-input-close' name='mega-nav-input'>
+                          <input type='radio' id='mega-nav-label-1' class='mega-nav-input-1' name='mega-nav-input'>
+                          <input type='radio' id='mega-nav-label-2' class='mega-nav-input-2' name='mega-nav-input'>
+                          <input type='radio' id='mega-nav-label-6' class='mega-nav-input-6' name='mega-nav-input'>
+                          <input type='radio' id='mega-nav-label-7' class='mega-nav-input-7' name='mega-nav-input'>
+
+                          <label for='mega-nav-close' class='mega-nav-close'></label>
+
+                          <label class='mega-nav-label mega-nav-label-1' for='mega-nav-label-1'>
+                              <span class='mega-nav-text'>Products</span>
+                              <span class='icon-arrow-head-down'></span>
+                          </label>
+                          <label class='mega-nav-label mega-nav-label-2' for='mega-nav-label-2'>
+                              <span class='mega-nav-text'>Solutions</span>
+                              <span class='icon-arrow-head-down'></span>
+                          </label>
+                          <a class='mega-nav-link' href='/research'><span class='mega-nav-text'>Research</span></a>
+                          <a class='mega-nav-link' href='/web-security'><span class='mega-nav-text'>Academy</span></a>
+                          <label class='mega-nav-label mega-nav-label-6' for='mega-nav-label-6'>
+                              <span class='mega-nav-text'>Support</span>
+                              <span class='icon-arrow-head-down'></span>
+                          </label>
+
+                          <label class='mega-nav-label mega-nav-label-7 header-hidden' for='mega-nav-label-7'>
+                              <span class='mega-nav-text'>Company</span>
+                              <span class='icon-arrow-head-down'></span>
+                          </label>
+                          <div class='hamburger-menu-desktop'>
+                              <label class='hamburger-menu-label header-show' for='hamburger-desktop'>
+                                  <span class='hamburger-layers'></span>
+                              </label>
+                              <div>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-1' href='/customers'><span class='mega-nav-text'>Customers</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-3' href='/about'><span class='mega-nav-text'>About</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-4' href='/blog'><span class='mega-nav-text'>Blog</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-5' href='/careers'><span class='mega-nav-text'>Careers</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-6' href='/legal'><span class='mega-nav-text'>Legal</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-7' href='/contact'><span class='mega-nav-text'>Contact</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-8' href='/support/reseller-faqs'><span class='mega-nav-text'>Resellers</span></a>
+                              </div>
+                          </div>
+
+                          <a class='mega-nav-link header-hidden' href='/users/youraccount'><span class='mega-nav-text'>My account</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-1' href='/customers'><span class='mega-nav-text'>Customers</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-3' href='/about'><span class='mega-nav-text'>About</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-4' href='/blog'><span class='mega-nav-text'>Blog</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-5' href='/careers'><span class='mega-nav-text'>Careers</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-6' href='/legal'><span class='mega-nav-text'>Legal</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-7' href='/contact'><span class='mega-nav-text'>Contact</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-8' href='/support/reseller-faqs'><span class='mega-nav-text'>Resellers</span></a>
+
+                          <div class='mega-nav-container'>
+
+                              <div class='mega-nav-content mega-nav-content-1'>
+                                  <div class='section-white-medium-no-padding'>
+                                      <div class='container-columns-66-percent-right'>
+                                          <div>
+                                              <a href='/burp/enterprise' class='link-block-white'>
+                                                  <img src='/mega-nav/images/mega-nav-enterprise.svg' alt='Burp Suite DAST'>
+                                                  <span><strong>Burp Suite DAST</strong></span>
+                                                  <span>The enterprise-enabled dynamic web vulnerability scanner.</span>
+                                              </a>
+
+                                              <a href='/burp/pro' class='link-block-white'>
+                                                  <img src='/mega-nav/images/mega-nav-professional.svg' alt='Burp Suite Professional'>
+                                                  <span><strong>Burp Suite Professional</strong></span>
+                                                  <span>The world's #1 web penetration testing toolkit.</span>
+                                              </a>
+
+                                              <a href='/burp/communitydownload' class='link-block-white'>
+                                                  <img src='/mega-nav/images/mega-nav-community.svg' alt='Burp Suite Community Edition'>
+                                                  <span><strong>Burp Suite Community Edition</strong></span>
+                                                  <span>The best manual tools to start web security testing.</span>
+                                              </a>
+
+                                              <a href='/burp' class='chevron-after'>View all product editions</a>
+                                          </div>
+
+                                          <div>
+                                              <div class='container-cards-lists-white'>
+                                                  <a href='/burp/vulnerability-scanner'>
+                                                      <p><strong>Burp Scanner</strong></p>
+                                                      <p>Burp Suite's web vulnerability scanner</p>
+                                                      <img src='/mega-nav/images/burp-suite-scanner.jpg' alt='Burp Suite's web vulnerability scanner''>
+                                                  </a>
+                                              </div>
+
+                                          </div>
+
+
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class='mega-nav-content mega-nav-content-2'>
+                                  <div class='section-white-medium-no-padding'>
+                                      <div class='container-columns-66-percent-right'>
+                                          <div>
+                                              <div class='container-columns'>
+                                                  <a href='/solutions/attack-surface-visibility' class='link-block-white'>
+                                                      <span><strong>Attack surface visibility</strong></span>
+                                                      <span>Improve security posture, prioritize manual testing, free up time.</span>
+                                                  </a>
+                                                  <a href='/solutions/ci-driven-scanning' class='link-block-white'>
+                                                      <span><strong>CI-driven scanning</strong></span>
+                                                      <span>More proactive security - find and fix vulnerabilities earlier.</span>
+                                                  </a>
+                                                  <a href='/solutions' class='link-block-white'>
+                                                      <span><strong>Application security testing</strong></span>
+                                                      <span>See how our software enables the world to secure the web.</span>
+                                                  </a>
+                                                  <a href='/solutions/devsecops' class='link-block-white'>
+                                                      <span><strong>DevSecOps</strong></span>
+                                                      <span>Catch critical bugs; ship more secure software, more quickly.</span>
+                                                  </a>
+
+                                                  <a href='/solutions/penetration-testing' class='link-block-white'>
+                                                      <span><strong>Penetration testing</strong></span>
+                                                      <span>Accelerate penetration testing - find more bugs, more quickly.</span>
+                                                  </a>
+                                                  <a href='/solutions/automated-security-testing' class='link-block-white'>
+                                                      <span><strong>Automated scanning</strong></span>
+                                                      <span>Scale dynamic scanning. Reduce risk. Save time/money.</span>
+                                                  </a>
+
+                                                  <a href='/solutions/bug-bounty-hunting' class='link-block-white'>
+                                                      <span><strong>Bug bounty hunting</strong></span>
+                                                      <span>Level up your hacking and earn more bug bounties.</span>
+                                                  </a>
+                                                  <a href='/solutions/compliance' class='link-block-white'>
+                                                      <span><strong>Compliance</strong></span>
+                                                      <span>Enhance security monitoring to comply with confidence.</span>
+                                                  </a>
+                                              </div>
+                                              <a href='/solutions' class='chevron-after'>View all solutions</a>
+                                          </div>
+
+                                          <div>
+                                              <div class='container-cards-lists-white'>
+                                                  <a href='/burp/enterprise/resources/enterprise-edition-vs-professional'>
+                                                      <p><strong>Product comparison</strong></p>
+                                                      <p>What's the difference between Pro and Enterprise Edition?</p>
+                                                      <img src='/mega-nav/images/burp-suite.jpg' alt='Burp Suite Professional vs Burp Suite Enterprise Edition'>
+                                                  </a>
+                                              </div>
+
+                                          </div>
+
+
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class='mega-nav-content mega-nav-content-6'>
+                                  <div class='section-white-medium-no-padding'>
+                                      <div class='container-columns-66-percent-right'>
+                                          <div>
+                                              <div class='container-columns'>
+                                                  <a href='/support' class='link-block-white'>
+                                                      <span><strong>Support Center</strong></span>
+                                                      <span>Get help and advice from our experts on all things Burp.</span>
+                                                  </a>
+                                                  <a href='/burp/documentation' class='link-block-white'>
+                                                      <span><strong>Documentation</strong></span>
+                                                      <span>Tutorials and guides for Burp Suite.</span>
+                                                  </a>
+                                                  <a href='/burp/documentation/desktop/getting-started' class='link-block-white'>
+                                                      <span><strong>Get Started - Professional</strong></span>
+                                                      <span>Get started with Burp Suite Professional.</span>
+                                                  </a>
+                                                  <a href='/burp/documentation/enterprise/getting-started' class='link-block-white'>
+                                                      <span><strong>Get Started - Enterprise</strong></span>
+                                                      <span>Get started with Burp Suite Enterprise Edition.</span>
+                                                  </a>
+                                                  <a href='https://forum.portswigger.net/' class='link-block-white'>
+                                                      <span><strong>User Forum</strong></span>
+                                                      <span>Get your questions answered in the User Forum.</span>
+                                                  </a>
+                                                  <a href='/burp/releases' class='link-block-white'>
+                                                      <span><strong>Downloads</strong></span>
+                                                      <span>Download the latest version of Burp Suite.</span>
+                                                  </a>
+                                              </div>
+                                              <a href='/support' class='chevron-after'>Visit the Support Center</a>
+                                          </div>
+
+                                          <div>
+                                              <div class='container-cards-lists-white'>
+                                                  <a href='/burp/releases'>
+                                                      <p><strong>Downloads</strong></p>
+                                                      <p>Download the latest version of Burp Suite.</p>
+                                                      <img src='/mega-nav/images/latest-burp-suite-software-download.jpg' alt='The latest version of Burp Suite software for download'>
+                                                  </a>
+                                              </div>
+
+                                          </div>
+
+
+                                      </div>
+                                  </div>
+                              </div>
+
+                          </div>
+
+                      </div>
+
+                      </div>
+                  </div>
+                          </header>`);
+                          }
+                </script></div
+              ></div
+            ></div
+          ></mega-nav-wrapper
+        ><div class="feedback-discontinuing-burp-suite-jar-container11"
+          ><div class="feedback-discontinuing-burp-suite-jar-container12"
+            ><div class="feedback-discontinuing-burp-suite-jar-container13"
+              ><div class="feedback-discontinuing-burp-suite-jar-container14"
+                ><div class="feedback-discontinuing-burp-suite-jar-container15"
+                  ><h2 class="feedback-discontinuing-burp-suite-jar-text100"
+                    >Feedback wanted: </h2
+                  ><h1 class="feedback-discontinuing-burp-suite-jar-text101">
+                    Discontinuing the Burp Suite JAR to improve security and
+                    performance</h1
+                  ><div
+                    class="feedback-discontinuing-burp-suite-jar-container16"
+                  ></div></div
+                ><div class="feedback-discontinuing-burp-suite-jar-container17"
+                  ><a
+                    href="https://discord.com/invite/portswigger"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="feedback-discontinuing-burp-suite-jar-link10"
+                    ><img
+                      alt="image"
+                      src="public/mega-nav-portswigger-logo-mobile.svg"
+                      class="feedback-discontinuing-burp-suite-jar-image" /></a></div></div></div></div></div
+        ><div class="feedback-discontinuing-burp-suite-jar-container18"
+          ><div class="feedback-discontinuing-burp-suite-jar-container19"
+            ><div class="feedback-discontinuing-burp-suite-jar-container20"
+              ><div class="feedback-discontinuing-burp-suite-jar-container21"
+                ><div class="feedback-discontinuing-burp-suite-jar-container22"
+                  ><span
+                    class="feedback-discontinuing-burp-suite-jar-text102 rich-text-root"
+                    ><span
+                      >We're considering removing the option to download each
+                      version of Burp Suite as a standalone JAR file. We're
+                      aware that some users may be impacted by this change. To
+                      ensure that you have a chance to share any concerns, we're
+                      reaching out to those who we think may be affected.</span
+                    ><br /><br /><span>We'll explore the </span
+                    ><a
+                      href="#removing-jar-option"
+                      class="feedback-discontinuing-burp-suite-jar-link11"
+                      >reasons why we're looking into this</a
+                    ><span> and explain </span
+                    ><a
+                      href="#customizing-jvm-settings"
+                      class="feedback-discontinuing-burp-suite-jar-link12"
+                      >why you might not need to use the JAR</a
+                    ><span> after all. We'll also share </span
+                    ><a
+                      href="#what-if-i-still-need-jar"
+                      class="feedback-discontinuing-burp-suite-jar-link13"
+                      >workarounds for common JAR use cases</a
+                    ><span>, including how to </span
+                    ><a
+                      href="#deploying-private-collaborator-server"
+                      class="feedback-discontinuing-burp-suite-jar-link14"
+                      >deploy a private Collaborator server</a
+                    ><span>.</span><br /><br /><span
+                      >Finally, we'd like to give you the opportunity to </span
+                    ><a
+                      href="#share-your-thoughts"
+                      class="feedback-discontinuing-burp-suite-jar-link15"
+                      >share your thoughts on whether this will work for you</a
+                    ><span>
+                      so that we can take steps to mitigate the impact this
+                      might have.</span
+                    ><br /></span></div
+                ><div
+                  id="removing-jar-option"
+                  class="feedback-discontinuing-burp-suite-jar-container23"
+                  ><h2 class="feedback-discontinuing-burp-suite-jar-text116"
+                    >Why are we considering this change?</h2
+                  ><span class="feedback-discontinuing-burp-suite-jar-text117"
+                    ><span
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text118"
+                    >
+                    </span
+                    ><span
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text119"
+                      >The following are some of the key reasons why we're
+                      considering removing the JAR option from the
+                      website.</span
+                    ></span
+                  ></div
+                ><div class="feedback-discontinuing-burp-suite-jar-container24"
+                  ><h3 class="feedback-discontinuing-burp-suite-jar-text120"
+                    >Exposure through missed security updates</h3
+                  ><span class="feedback-discontinuing-burp-suite-jar-text121"
+                    ><span
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text122"
+                    >
+                    </span
+                    ><span
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text123"
+                      >As every security professional knows, timely updates are
+                      crucial for application security. Without them, users run
+                      the risk of attackers using known vulnerabilities to
+                      exploit them.</span
+                    ><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text124" /><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text125" /><span
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text126"
+                      >In particular, Burp's embedded Chromium browser
+                      represents a significant attack surface and frequently
+                      needs critical security updates. That's why we aim to
+                      include the most recent stable version of Chromium with
+                      each release of Burp, and even fast-track releases just to
+                      update Chromium when necessary.</span
+                    ><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text127" /><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text128" /><span
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text129"
+                      >While analyzing the versions of Burp Suite in active use,
+                      we noticed that the majority of versions with unpatched
+                      vulnerabilities were running Burp from a JAR. We suspect
+                      that this is largely due to the JAR version lacking the
+                      auto-update functionality, meaning you have to manually
+                      download a new JAR every time we release.</span
+                    ><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text130" /><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text131" /><span
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text132"
+                      >If you use one of the standard, package-based
+                      installations we provide for Linux, macOS, and Windows
+                      respectively, you benefit from auto-updates, ensuring that
+                      you never miss a security patch.</span
+                    ><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text133" /></span></div
+                ><div class="feedback-discontinuing-burp-suite-jar-container25"
+                  ><h3 class="feedback-discontinuing-burp-suite-jar-text134"
+                    >Use of insecure, outdated runtime environments</h3
+                  ><span
+                    class="feedback-discontinuing-burp-suite-jar-text135 rich-text-root"
+                    ><span
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text136"
+                    >
+                    </span
+                    ><span
+                      >Our platform-specific installations include their own
+                      Java Runtime Environment (JRE). </span
+                    ><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text138" /><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text139" /><span
+                      >If you run Burp from a JAR file, you need to maintain
+                      your own environment, which in practice means that many
+                      JAR users are relying on older JREs. Not only is this a
+                      common source of bugs and performance issues - </span
+                    ><a
+                      href="https://portswigger.net/blog/introducing-burp-suites-game-changing-performance-update"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >a topic that we know is close to your heart</a
+                    ><span>
+                      - it introduces another security weakness as you may be
+                      exposed to known vulnerabilities in outdated JRE
+                      versions.</span
+                    ><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text142" /><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text143" /><span
+                      >Just like Burp Suite itself, if you use one of the
+                      platform-specific installers and auto-updates, we keep the
+                      JRE up to date on your behalf, ensuring the most stable
+                      and secure experience.</span
+                    ><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text145" /></span></div
+                ><div class="feedback-discontinuing-burp-suite-jar-container26"
+                  ><h3 class="feedback-discontinuing-burp-suite-jar-text146"
+                    >Bloated file size</h3
+                  ><span class="feedback-discontinuing-burp-suite-jar-text147"
+                    ><span
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text148"
+                    >
+                    </span
+                    ><span
+                      >In addition to potential security and performance issues,
+                      the JAR file also takes up excessive disk space. Although
+                      the app itself runs on the platform-agnostic JVM, the
+                      built-in Chromium browser is platform-specific, meaning
+                      the all-in-one JAR download contains three entire
+                      browsers, one for each OS.</span
+                    ><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text150" /><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text151" /><span
+                      >Our platform-specific installers are much leaner by
+                      comparison, and only contain what's necessary for your
+                      environment.</span
+                    ><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text153" /></span></div
+                ><div
+                  id="customizing-jvm-settings"
+                  class="feedback-discontinuing-burp-suite-jar-container27"
+                  ><h2 class="feedback-discontinuing-burp-suite-jar-text154"
+                    >Customizing JVM settings without the JAR</h2
+                  ><span class="feedback-discontinuing-burp-suite-jar-text155"
+                    ><span
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text156"
+                    >
+                    </span
+                    ><span
+                      >Users often run Burp from a JAR so that they have more
+                      granular control of the JVM. If this applies to you, the
+                      good news is that you can still do this with our
+                      installer-based versions of Burp.</span
+                    ><br /><br /><span
+                      >Some options that were previously only available as
+                      command-line arguments, such as being able to specify how
+                      much memory is allocated to the JVM, you can now control
+                      from the regular settings menu (</span
+                    ><span class="feedback-discontinuing-burp-suite-jar-text161"
+                      >Settings &gt; Suite &gt; Startup behavior &gt; Maximum
+                      Java memory usage</span
+                    ><span>).</span><br /><br /><span
+                      >Alternatively, you can pass all of the same arguments to
+                      the JVM by creating an options file in the installation
+                      directory. To do this:</span
+                    ><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text166" /></span
+                  ><ol class="feedback-discontinuing-burp-suite-jar-ul1 list"
+                    ><li class="list-item"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text167 rich-text-root"
+                        ><span>Either </span
+                        ><a
+                          href="https://portswigger.net/burp/releases#professional"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="feedback-discontinuing-burp-suite-jar-link17"
+                          >download the relevant Burp Suite installer</a
+                        ><span
+                          >&nbsp;and run it, or go to your existing Burp Suite
+                          installation directory. By default, you can find this
+                          in the following location:
+                        </span></span
+                      ><ul
+                        class="feedback-discontinuing-burp-suite-jar-ul2 list"
+                        ><li class="list-item"
+                          ><strong
+                            class="feedback-discontinuing-burp-suite-jar-text170"
+                            >Linux:</strong
+                          ><code
+                            class="feedback-discontinuing-burp-suite-jar-text171"
+                            >/home/&lt;user&gt;/BurpSuite</code
+                          ></li
+                        ><li class="list-item"
+                          ><strong
+                            class="feedback-discontinuing-burp-suite-jar-text172"
+                            >macOS:</strong
+                          ><code
+                            class="feedback-discontinuing-burp-suite-jar-text173"
+                            >/Users/&lt;user&gt;/Applications/Burp Suite
+                            Professional</code
+                          ></li
+                        ><li class="list-item"
+                          ><strong
+                            class="feedback-discontinuing-burp-suite-jar-text174"
+                            >Windows:</strong
+                          ><code
+                            class="feedback-discontinuing-burp-suite-jar-text175"
+                            >C:\Program Files\BurpSuitePro</code
+                          ></li
+                        ></ul
+                      ></li
+                    ><li class="list-item"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text176"
+                        >In the installation directory, locate the JAR
+                        file.</span
+                      ></li
+                    ><li class="list-item"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text177"
+                        >In the same directory as the JAR, create a file called </span
+                      ><code
+                        class="feedback-discontinuing-burp-suite-jar-text178"
+                        >user.vmoptions</code
+                      ></li
+                    ><li class="list-item"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text179"
+                        >In the </span
+                      ><code
+                        class="feedback-discontinuing-burp-suite-jar-text180"
+                        >user.vmoptions</code
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text181"
+                      >
+                        file, list all of the arguments that you normally pass
+                        via the command line, separating each with a
+                        newline.</span
+                      ></li
+                    ></ol
+                  ><span class="feedback-discontinuing-burp-suite-jar-text182"
+                    >From now on, when you launch the installed version of Burp,
+                    it runs on the JVM using your specified configuration.</span
+                  ><div
+                    class="feedback-discontinuing-burp-suite-jar-container28"
+                    ><span class="feedback-discontinuing-burp-suite-jar-text183"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text184"
+                        >Example</span
+                      ><br /><span>If you normally run:</span></span
+                    ><div
+                      class="feedback-discontinuing-burp-suite-jar-container29"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text187"
+                        >java -Xmx4g -Xms128m -Dsun.java2d.uiScale.enable=false
+                        -jar /path/to/burp.jar</span
+                      ></div
+                    ><span class="feedback-discontinuing-burp-suite-jar-text188"
+                      ><span>You can instead just create a </span
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text190"
+                        >user.vmoptions</span
+                      ><span> file with the following contents:</span
+                      ><br /></span
+                    ><span class="feedback-discontinuing-burp-suite-jar-text193"
+                      ><span>-Xmx4g</span><br /><span>-Xms128m</span
+                      ><br /><span> -Dsun.java2d.uiScale.enable=false</span
+                      ><br /></span></div
+                  ><span class="feedback-discontinuing-burp-suite-jar-text200"
+                    ><span class="feedback-discontinuing-burp-suite-jar-text201"
+                      >Note:</span
+                    ><span> Do not modify the </span
+                    ><span class="feedback-discontinuing-burp-suite-jar-text203"
+                      >vmoptions.txt</span
+                    ><span> or </span
+                    ><span class="feedback-discontinuing-burp-suite-jar-text205"
+                      >settings.vmoptions</span
+                    ><span>
+                      files. These are often overwritten during updates, meaning
+                      any changes you make will be lost. We never modify the </span
+                    ><span class="feedback-discontinuing-burp-suite-jar-text207"
+                      >user.vmoptions</span
+                    ><span> file.</span></span
+                  ></div
+                ><div
+                  id="what-if-i-still-need-jar"
+                  class="feedback-discontinuing-burp-suite-jar-container30"
+                  ><h2 class="feedback-discontinuing-burp-suite-jar-text209"
+                    >What if I still need the JAR?</h2
+                  ><span class="feedback-discontinuing-burp-suite-jar-text210"
+                    ><span
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text211"
+                    >
+                    </span
+                    ><span
+                      >While the workarounds above remove the need for most
+                      people to use the JAR, we're aware that there are some
+                      specialist use cases that may be impacted.</span
+                    ><br /><br /><span
+                      >If you do still need to use the JAR, for example, to
+                      support custom workflows and automation, to help with
+                      developing extensions, or to deploy a private Collaborator
+                      server, there is a simple workaround - the installation
+                      package also contains a JAR that you can use
+                      instead.</span
+                    ><br
+                      class="Paragraph feedback-discontinuing-burp-suite-jar-text216" /></span></div
+                ><div class="feedback-discontinuing-burp-suite-jar-container31"
+                  ><h3
+                    id="Professional-guide"
+                    class="feedback-discontinuing-burp-suite-jar-text217"
+                    >Using the JAR from a Burp Suite Professional or Community
+                    Edition installation</h3
+                  ><span class="feedback-discontinuing-burp-suite-jar-text218"
+                    ><span
+                      >This method provides much of the same flexibility, while
+                      leveraging the security and convenience of the
+                      installer-based version. This way, you can keep the JAR
+                      version up to date by simply launching Burp Suite and
+                      letting the auto-update kick in.</span
+                    ><br /></span
+                  ><ol class="feedback-discontinuing-burp-suite-jar-ul3 list"
+                    ><li class="list-item"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text221 rich-text-root"
+                        ><span>Either </span
+                        ><a
+                          href="https://portswigger.net/burp/releases#professional"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="feedback-discontinuing-burp-suite-jar-link18"
+                          >download</a
+                        ><a
+                          href="https://portswigger.net/burp/releases#professional"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="feedback-discontinuing-burp-suite-jar-link19"
+                        >
+                          the relevant Burp Suite installer</a
+                        ><span>
+                          and run it, or go to your existing Burp Suite
+                          installation directory. By default, you can find this
+                          in the following location:
+                        </span></span
+                      ><ul
+                        class="feedback-discontinuing-burp-suite-jar-ul4 list"
+                        ><li class="list-item"
+                          ><strong
+                            class="feedback-discontinuing-burp-suite-jar-text224"
+                            >Linux:</strong
+                          ><code
+                            class="feedback-discontinuing-burp-suite-jar-text225"
+                            >/home/&lt;user&gt;/BurpSuite</code
+                          ></li
+                        ><li class="list-item"
+                          ><strong
+                            class="feedback-discontinuing-burp-suite-jar-text226"
+                            >macOS:</strong
+                          ><code
+                            class="feedback-discontinuing-burp-suite-jar-text227"
+                            >/Users/&lt;user&gt;/Applications/Burp Suite
+                            Professional</code
+                          ></li
+                        ><li class="list-item"
+                          ><strong
+                            class="feedback-discontinuing-burp-suite-jar-text228"
+                            >Windows:</strong
+                          ><code
+                            class="feedback-discontinuing-burp-suite-jar-text229"
+                            >C:\Program Files\BurpSuitePro</code
+                          ></li
+                        ></ul
+                      ></li
+                    ><li class="list-item"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text230"
+                        >In the installation directory, locate the JAR
+                        file.</span
+                      ></li
+                    ><li class="list-item"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text231"
+                        >Refactor your existing scripts to point to the new JAR
+                        location, or manually invoke the JAR from the command
+                        line as you normally would.
+                      </span></li
+                    ></ol
+                  ><span class="feedback-discontinuing-burp-suite-jar-text232"
+                    ><span class="feedback-discontinuing-burp-suite-jar-text233"
+                      >Note:&nbsp;</span
+                    ><span
+                      >Avoid running the JAR from the installation directory
+                      while simultaneously running the installed version of Burp
+                      Suite as this can cause unexpected behavior. If you want
+                      to run both versions concurrently, we recommend copying
+                      the JAR to a different location outside of the
+                      installation package. However, note that this means you
+                      won't benefit from auto-updates to your copy of the JAR
+                      file.</span
+                    ><br /></span></div
+                ><div
+                  id="Enterprise-guide"
+                  class="feedback-discontinuing-burp-suite-jar-container32"
+                  ><h3 class="feedback-discontinuing-burp-suite-jar-text236"
+                    >Using the JAR from a Burp Suite Enterprise Edition
+                    installation</h3
+                  ><span
+                    class="feedback-discontinuing-burp-suite-jar-text237 rich-text-root"
+                    ><span
+                      >If you are a Burp Suite Enterprise Edition user, you can
+                      follow the </span
+                    ><a
+                      href="#Professional-guide"
+                      class="feedback-discontinuing-burp-suite-jar-link20"
+                      >same process as Burp Suite Professional users</a
+                    ><span
+                      >. However, if you don't want to or are unable to install
+                      Burp Suite Professional, you can also use the JAR file
+                      from your Burp Suite Enterprise Edition
+                      installation.</span
+                    ><br /></span
+                  ><ol class="feedback-discontinuing-burp-suite-jar-ul5 list"
+                    ><li class="list-item"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text241 rich-text-root"
+                        ><span
+                          >From the machine on which your Enterprise server is
+                          running, locate the JAR file in the installation
+                          directory. By default, you can find this in the
+                          following location:</span
+                        ><span> </span></span
+                      ><ul
+                        class="feedback-discontinuing-burp-suite-jar-ul6 list"
+                        ><li
+                          class="list-item feedback-discontinuing-burp-suite-jar-li24"
+                          ><strong
+                            class="feedback-discontinuing-burp-suite-jar-text244"
+                            >Linux:</strong
+                          ><code
+                            class="feedback-discontinuing-burp-suite-jar-text245"
+                            >/opt/burpsuite_enterprise/burp/burpsuite_pro_&lt;build-number&gt;.jar</code
+                          ></li
+                        ><li class="list-item"
+                          ><strong
+                            class="feedback-discontinuing-burp-suite-jar-text246"
+                            >Windows:</strong
+                          ><code
+                            class="feedback-discontinuing-burp-suite-jar-text247"
+                            >C:\ProgramFiles\burpsuite_enterprise\burp\burpsuite_pro_&lt;build-number&gt;.jar</code
+                          ></li
+                        ></ul
+                      ></li
+                    ><li class="list-item"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text248"
+                        >Copy the JAR to a different machine or a location
+                        outside the installation directory.</span
+                      ></li
+                    ><li class="list-item"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text249"
+                        >Invoke the JAR from the command line as you normally
+                        would.
+                      </span></li
+                    ></ol
+                  ><span class="feedback-discontinuing-burp-suite-jar-text250"
+                    ><span class="feedback-discontinuing-burp-suite-jar-text251"
+                      >Note:&nbsp;</span
+                    ><span
+                      >Do not invoke the JAR directly from the installation
+                      directory. This can cause unexpected issues if your Burp
+                      Suite Enterprise Edition instance is running
+                      simultaneously.</span
+                    ><br /></span></div
+                ><div
+                  id="deploying-private-collaborator-server"
+                  class="feedback-discontinuing-burp-suite-jar-container33"
+                  ><h3 class="feedback-discontinuing-burp-suite-jar-text254"
+                    >Deploying a private Collaborator server</h3
+                  ><span
+                    class="feedback-discontinuing-burp-suite-jar-text255 rich-text-root"
+                    ><span
+                      >Deploying a private Collaborator server requires you to
+                      run Burp from a JAR file using the </span
+                    ><span class="feedback-discontinuing-burp-suite-jar-text257"
+                      >--collaborator-server</span
+                    ><span>
+                      command-line flag. If we remove the option to download the
+                      JAR from the website, you can still deploy a private
+                      Collaborator server using the JAR provided in either the
+                      Burp Suite Professional or Burp Suite Enterprise Edition
+                      installation package.</span
+                    ><br /><br /><span
+                      class="feedback-discontinuing-burp-suite-jar-text261"
+                      >Note: </span
+                    ><span
+                      >This applies to Collaborator servers that you intend to
+                      use with either Burp Suite Professional or Burp Suite
+                      Enterprise Edition.</span
+                    ><br /></span
+                  ><ol class="feedback-discontinuing-burp-suite-jar-ul7 list"
+                    ><li class="rich-text-root list-item"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text264 rich-text-root"
+                        ><span>Locate the JAR from a </span
+                        ><a
+                          href="#Professional-guide"
+                          class="feedback-discontinuing-burp-suite-jar-link21"
+                          >Burp Suite Professional</a
+                        ><span> or </span
+                        ><a
+                          href="#Enterprise-guide"
+                          class="feedback-discontinuing-burp-suite-jar-link22"
+                          >Enterprise Edition installation</a
+                        ><span
+                          >, as described above. If you want to deploy the
+                          Collaborator server on a different OS to your existing
+                          Burp Suite installation, </span
+                        ><a
+                          href="https://portswigger.net/burp/releases#professional"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="feedback-discontinuing-burp-suite-jar-link23"
+                          >download and run the relevant Burp Suite Professional
+                          installer</a
+                        ><span>.</span><br /><span> </span></span></li
+                    ><li class="list-item"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text271"
+                        >Copy the JAR to the machine on which you want to run
+                        the Collaborator server.</span
+                      ></li
+                    ><li class="list-item"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text272"
+                        >(Optional) If you ran the installer purely to extract
+                        the JAR, run the uninstaller to remove the leftover
+                        files from your system.
+                      </span></li
+                    ><li
+                      class="rich-text-root list-item feedback-discontinuing-burp-suite-jar-li31"
+                      ><span
+                        class="feedback-discontinuing-burp-suite-jar-text273"
+                        ><span>Invoke the JAR using the </span
+                        ><span
+                          class="feedback-discontinuing-burp-suite-jar-text275"
+                          >--collaborator-server</span
+                        ><span>
+                          flag as you normally would. For detailed instructions
+                          on the rest of the process, see </span
+                        ><a
+                          href="https://portswigger.net/burp/documentation/collaborator/server/private"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="feedback-discontinuing-burp-suite-jar-link24"
+                          >Deploying a private Collaborator server</a
+                        ><span>. </span></span
+                      ></li
+                    ></ol
+                  ></div
+                ><div
+                  id="share-your-thoughts"
+                  class="feedback-discontinuing-burp-suite-jar-container34"
+                  ><h3 class="feedback-discontinuing-burp-suite-jar-text278"
+                    >Share your thoughts</h3
+                  ><span
+                    class="feedback-discontinuing-burp-suite-jar-text279 rich-text-root"
+                    ><span
+                      >We recognize that there is no one-size-fits-all solution,
+                      which is why we're inviting your feedback. If none of the
+                      suggested alternatives address your specific use case,
+                      please share your thoughts and concerns using the
+                      following link:</span
+                    ><br /></span
+                  ><a
+                    href="https://usabi.li/do/f96c8a5374e5/8e66"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="feedback-discontinuing-burp-suite-jar-button button"
+                    ><span
+                      buttontext="TQ_TH6-S_dqix"
+                      class="feedback-discontinuing-burp-suite-jar-text282"
+                      >SHARE YOUR THOUGHTS</span
+                    ></a
+                  ><span
+                    class="feedback-discontinuing-burp-suite-jar-text283 rich-text-root"
+                    ><span
+                      >Your feedback is invaluable and will help us make an
+                      informed decision.</span
+                    ><br /></span></div></div></div></div></div
+        ><footer-final-wrapper
+          class="footer-final-wrapper"
+          rootclassname="footer-finalundefined"
+          ><!--FooterFinal component--><div
+            class="footer-final-footer1 footer-finalroot-class-name14"
+            ><div class="footer-final-container10"
+              ><div class="footer-final-container11"
+                ><div class="footer-final-footer2"
+                  ><div class="footer-final-container12"
+                    ><div class="footer-final-container13"
+                      ><div class="footer-final-section1"
+                        ><div class="footer-final-container14"
+                          ><footer-column-title-wrapper
+                            class="footer-column-title-wrapper"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container footer-column-titleroot-class-name261"
+                              ><p class="footer-column-title-text"
+                                ><span>Burp Suite</span></p
+                              ></div
+                            ></footer-column-title-wrapper
+                          ><a
+                            href="https://portswigger.net/burp/vulnerability-scanner"
+                            class="footer-final-link10"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text10 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment10"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text286"
+                                  >Web vulnerability scanner</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/burp"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            class="footer-final-link11"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text11 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment11"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text287"
+                                  >Burp Suite Editions</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/burp/releases"
+                            class="footer-final-link12"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text12 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment12"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text288"
+                                  >Release Notes</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container15"
+                          ><footer-column-title-wrapper-t55s
+                            class="footer-column-title-wrapper-t55s"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container1 footer-column-titleroot-class-name262"
+                              ><p class="footer-column-title-text1"
+                                ><span>Vulnerabilities</span></p
+                              ></div
+                            ></footer-column-title-wrapper-t55s
+                          ><a
+                            href="https://portswigger.net/web-security/cross-site-scripting"
+                            class="footer-final-link13"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text13 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment13"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text289"
+                                  >Cross-site scripting (XSS)</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/sql-injection"
+                            class="footer-final-link14"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text14 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment14"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text290"
+                                  >SQL injection</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/csrf"
+                            class="footer-final-link15"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text15 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment15"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text291"
+                                  >Cross-site request forgery</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/xxe"
+                            class="footer-final-link16"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text16 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment16"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text292"
+                                  >XML external entity injection</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/file-path-traversal"
+                            class="footer-final-link17"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text17 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment17"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text293"
+                                  >Directory traversal</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/ssrf"
+                            class="footer-final-link18"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text18 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment18"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text294"
+                                  >Server-side request forgery</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ></div
+                      ><div class="footer-final-section2"
+                        ><div class="footer-final-container16"
+                          ><footer-column-title-wrapper-2a6d
+                            class="footer-column-title-wrapper-2a6d"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container2 footer-column-titleroot-class-name263"
+                              ><p class="footer-column-title-text2"
+                                ><span>Customers</span></p
+                              ></div
+                            ></footer-column-title-wrapper-2a6d
+                          ><a
+                            href="https://portswigger.net/organizations"
+                            class="footer-final-link19"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text19 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment19"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text295"
+                                  >Organizations</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/testers"
+                            class="footer-final-link20"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text20 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment20"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text296"
+                                  >Testers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/developers"
+                            class="footer-final-link21"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text21 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment21"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text297"
+                                  >Developers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container17"
+                          ><footer-column-title-wrapper-4sf1
+                            class="footer-column-title-wrapper-4sf1"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container3 footer-column-titleroot-class-name264"
+                              ><p class="footer-column-title-text3"
+                                ><span>Company</span></p
+                              ></div
+                            ></footer-column-title-wrapper-4sf1
+                          ><a
+                            href="https://portswigger.net/about"
+                            class="footer-final-link22"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text22 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment22"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text298"
+                                  >About</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/careers"
+                            class="footer-final-link23"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text23 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment23"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text299"
+                                  >Careers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/about/contact"
+                            class="footer-final-link24"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text24 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment24"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text300"
+                                  >Contact</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/legal"
+                            class="footer-final-link25"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text25 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment25"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text301"
+                                  >Legal</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/privacy"
+                            class="footer-final-link26"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text26 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment26"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text302"
+                                  >Privacy Notice</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ></div
+                      ><div class="footer-final-section3"
+                        ><div class="footer-final-container18"
+                          ><footer-column-title-wrapper-48ty
+                            class="footer-column-title-wrapper-48ty"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container4 footer-column-titleroot-class-name265"
+                              ><p class="footer-column-title-text4"
+                                ><span>Insights</span></p
+                              ></div
+                            ></footer-column-title-wrapper-48ty
+                          ><a
+                            href="https://portswigger.net/web-security"
+                            class="footer-final-link27"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text27 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment27"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text303"
+                                  >Web Security Academy</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/blog"
+                            class="footer-final-link28"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text28 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment28"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text304"
+                                  >Blog</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/research"
+                            class="footer-final-link29"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text29 Footer"
+                              ><fragment
+                                class="feedback-discontinuing-burp-suite-jar-fragment29"
+                                ><span
+                                  class="feedback-discontinuing-burp-suite-jar-text305"
+                                  >Research</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container19"
+                          ><a
+                            href="https://portswigger.net"
+                            class="footer-final-link30"
+                            ><img
+                              alt="image"
+                              src="public/portswigger-logo.svg"
+                              class="footer-final-image" /></a
+                          ><a
+                            href="https://x.com/PortSwigger"
+                            class="footer-final-link31"
+                            ><twitter-button-wrapper
+                              class="footer-final-component6"
+                              rootclassname="twitter-buttonundefined"
+                              ><!--TwitterButton component--><div
+                                class="twitter-button-container twitter-buttonroot-class-name50"
+                                ><div
+                                  href="https://twitter.com/Burp_Suite"
+                                  class="twitter-button-frame5622"
+                                  ><div class="twitter-button-frame5626"
+                                    ><img
+                                      alt="TwitterandXlogossvg14713"
+                                      src="public/external/twitterandxlogossvg14713-0pok-200h.png"
+                                      class="twitter-button-twitterand-xlogossvg1"
+                                    /><span class="twitter-button-text"
+                                      ><span>Follow us</span></span
+                                    ></div
+                                  ></div
+                                ></div
+                              ></twitter-button-wrapper
+                            ></a
+                          ><p class="footer-final-text30 Footer"
+                            ><fragment
+                              class="feedback-discontinuing-burp-suite-jar-fragment30"
+                              ><span
+                                class="feedback-discontinuing-burp-suite-jar-text306"
+                                >© 2025 PortSwigger Ltd.</span
+                              ></fragment
+                            ></p
+                          ></div
+                        ></div
+                      ></div
+                    ></div
+                  ></div
+                ></div
+              ></div
+            ></div
+          ></footer-final-wrapper
+        ></div
+      ></div
+    >
+    <script>
+      (function(window, document, dataLayerName, id) {
+          window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});
+          var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+          var qP = [];
+          dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), tags.nonce = "@Html.Raw(Context.GetNonce())";
+      var qPString=qP.length>0?("?"+qP.join("&")):"";
+          tags.async=!0,tags.src="https://ps.containers.piwik.pro/"+id+".js"+qPString,
+          scripts.parentNode.insertBefore(tags,scripts);
+          !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){
+          var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+          })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');</script
+    ><script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script></body
+></html>

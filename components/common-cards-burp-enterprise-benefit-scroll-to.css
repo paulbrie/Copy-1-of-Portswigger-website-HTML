@@ -1,0 +1,51 @@
+.common-cards-burp-enterprise-benefit-scroll-to-benefit-scroll-to {
+  gap: var(--dl-layout-space-two);
+  cursor: pointer;
+  padding: var(--dl-layout-space-two);
+  overflow: hidden;
+  position: relative;
+  border-color: var(--dl-color-separators-gray);
+  border-width: 1px;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-icon1 {
+  width: 4rem;
+  object-fit: cover;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-content {
+  display: flex;
+  transition: all 0.3s;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-text1 {
+  text-align: left;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-text2 {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+ 
+
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-chevron {
+  width: 4rem;
+  height: 4rem;
+  transform: rotate(90deg);
+  align-self: flex-end;
+}
+ 
+@media(max-width: 991px) {
+  .common-cards-burp-enterprise-benefit-scroll-to-benefit-scroll-to {
+    width: 100%;
+    max-width: unset;
+  }
+}
+ 
+
+ 
+

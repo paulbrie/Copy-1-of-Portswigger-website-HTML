@@ -1,0 +1,23 @@
+.common-sections-features-feature-entry-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+.common-sections-features-feature-entry-fragment1 {
+  display: contents;
+}
+ 
+.common-sections-features-feature-entry-text3 {
+  display: inline-block;
+}
+ 
+.common-sections-features-feature-entry-fragment2 {
+  display: contents;
+}
+ 
+.common-sections-features-feature-entry-text4 {
+  display: inline-block;
+}

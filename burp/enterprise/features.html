@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="en"
+  ><head
+    ><title>Features - Burp Suite Enterprise Edition</title
+    ><meta
+      name="description"
+      content="Burp Suite Enterprise Edition comes with an extensive set of features, including reporting, a rich API, and CI/CD integration. Find out more."
+    /><meta
+      property="og:title"
+      content="Features - Burp Suite Enterprise Edition"
+    /><meta
+      property="og:description"
+      content="Burp Suite Enterprise Edition comes with an extensive set of features, including reporting, a rich API, and CI/CD integration. Find out more."
+    /><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    /><meta charset="utf-8" /><meta
+      property="twitter:card"
+      content="summary_large_image"
+    />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <link
+      rel="preload"
+      href="/mega-nav/images/mega-nav-portswigger-logo.svg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="/content/fonts/ps-main/ps-icons.woff?l1la2n"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/content/fonts/ps-icons-small/ps-icons-small.woff?td2uot"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link rel="preload" href="/mega-nav/meganav.css" as="style" />
+
+    <style>
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+    <script>
+      (function(window, document, dataLayerName, id) {
+      var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName);
+      var qPString=qP.length>0?("?"+qP.join("&")):"";
+      document.write('<nonce-script src="https://ps.containers.piwik.pro/'+id+'.sync.js' + qPString + '" nonce="NIFdcp1UaO0OFJv1ewzs2Putqt1LcUl0"></' + 'nonce-script>');
+      })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');
+    </script></head
+  >
+  <body
+    ><link rel="stylesheet" href="../../style.css" /><div
+      ><link href="./features.css" rel="stylesheet" /><div
+        class="burp-suite-enterprise-features-container100"
+        ><mega-nav-wrapper
+          class="mega-nav-wrapper"
+          rootclassname="mega-navundefined"
+          ><!--MegaNav component--><div
+            id="ps-header"
+            class="mega-nav-container1 mega-navroot-class-name24"
+            ><div class="mega-nav-container2"
+              ><div class="mega-nav-container3"
+                ><style>
+                  .hamburger-menu-link,
+                  .hamburger-menu-desktop div {
+                      pointer-events: none;
+                  }
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-1,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-3,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-4,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-5,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-6,
+                  .hamburger-input-mobile:checked ~ .mega-nav .hamburger-menu-link-7 {
+                      pointer-events: all;
+                  }
+                  .hamburger-menu-desktop:hover div {
+                      pointer-events: all;
+                  }
+                  .mega-nav-input-1:checked ~ .hamburger-menu-desktop,
+                  .mega-nav-input-2:checked ~ .hamburger-menu-desktop,
+                  .mega-nav-input-6:checked ~ .hamburger-menu-desktop,
+                  .mega-nav-input-7:checked ~ .hamburger-menu-desktop {
+                      pointer-events: none;
+                  }
+
+                  .notification-banner {
+                      display: block;
+                      background-color: var(--background-color);
+                      color: var(--section-h5-text-color);
+                      width: 100%;
+                      text-align: center;
+                      text-decoration: none;
+                      transition: opacity .3s;
+                      padding: 8px;
+                  }
+
+                  .theme-enterprise-2, .is-enterprise {
+                      --background-color: #06c;
+                      --border-top-color: #06c;
+                      --label-text-color: #fff;
+                      --section-text-color: #fff;
+                      --section-h1-text-color: #fff;
+                      --section-h2-text-color: #fff;
+                      --section-h3-text-color: #fff;
+                      --section-h4-text-color: #fff;
+                      --section-h5-text-color: #fff;
+                      --section-link-color: #fff;
+                      --section-link-border-hover: #fff;
+                  }
+                </style>
+                <link rel="stylesheet" href="/mega-nav/meganav.css" />
+                <script>
+                  body = document.querySelector('body');
+                  if(body !== null){
+
+                  body.insertAdjacentHTML('afterbegin',`
+                  <header class='page-header' id='top'>
+                              <div class='container'>
+                      <a class='logo' href='/'></a>
+                      <div class='header-right'>
+                          <div class='login-buttons'>
+                                  <a class='button-orange-small' href='/users/youraccount/personaldetails'>My account</a>
+                          </div>
+
+
+                      <input type='checkbox' id='hamburger-mobile' class='hamburger-input-mobile'>
+                      <input type='radio' id='hamburger-desktop' class='hamburger-input-desktop' name='mega-nav-input'>
+                      <div class='hamburger-menu-mobile'>
+                          <label class='hamburger-menu-label header-hidden' for='hamburger-mobile'>
+                              <span class='hamburger-layers'></span>
+                          </label>
+                      </div>
+                      <div class='mega-nav'>
+                          <input type='radio' id='mega-nav-close' class='mega-nav-input-close' name='mega-nav-input'>
+                          <input type='radio' id='mega-nav-label-1' class='mega-nav-input-1' name='mega-nav-input'>
+                          <input type='radio' id='mega-nav-label-2' class='mega-nav-input-2' name='mega-nav-input'>
+                          <input type='radio' id='mega-nav-label-6' class='mega-nav-input-6' name='mega-nav-input'>
+                          <input type='radio' id='mega-nav-label-7' class='mega-nav-input-7' name='mega-nav-input'>
+
+                          <label for='mega-nav-close' class='mega-nav-close'></label>
+
+                          <label class='mega-nav-label mega-nav-label-1' for='mega-nav-label-1'>
+                              <span class='mega-nav-text'>Products</span>
+                              <span class='icon-arrow-head-down'></span>
+                          </label>
+                          <label class='mega-nav-label mega-nav-label-2' for='mega-nav-label-2'>
+                              <span class='mega-nav-text'>Solutions</span>
+                              <span class='icon-arrow-head-down'></span>
+                          </label>
+                          <a class='mega-nav-link' href='/research'><span class='mega-nav-text'>Research</span></a>
+                          <a class='mega-nav-link' href='/web-security'><span class='mega-nav-text'>Academy</span></a>
+                          <label class='mega-nav-label mega-nav-label-6' for='mega-nav-label-6'>
+                              <span class='mega-nav-text'>Support</span>
+                              <span class='icon-arrow-head-down'></span>
+                          </label>
+
+                          <label class='mega-nav-label mega-nav-label-7 header-hidden' for='mega-nav-label-7'>
+                              <span class='mega-nav-text'>Company</span>
+                              <span class='icon-arrow-head-down'></span>
+                          </label>
+                          <div class='hamburger-menu-desktop'>
+                              <label class='hamburger-menu-label header-show' for='hamburger-desktop'>
+                                  <span class='hamburger-layers'></span>
+                              </label>
+                              <div>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-1' href='/customers'><span class='mega-nav-text'>Customers</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-3' href='/about'><span class='mega-nav-text'>About</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-4' href='/blog'><span class='mega-nav-text'>Blog</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-5' href='/careers'><span class='mega-nav-text'>Careers</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-6' href='/legal'><span class='mega-nav-text'>Legal</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-7' href='/contact'><span class='mega-nav-text'>Contact</span></a>
+                                  <a class='hamburger-menu-desktop-link hamburger-menu-desktop-link-8' href='/support/reseller-faqs'><span class='mega-nav-text'>Resellers</span></a>
+                              </div>
+                          </div>
+
+                          <a class='mega-nav-link header-hidden' href='/users/youraccount'><span class='mega-nav-text'>My account</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-1' href='/customers'><span class='mega-nav-text'>Customers</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-3' href='/about'><span class='mega-nav-text'>About</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-4' href='/blog'><span class='mega-nav-text'>Blog</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-5' href='/careers'><span class='mega-nav-text'>Careers</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-6' href='/legal'><span class='mega-nav-text'>Legal</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-7' href='/contact'><span class='mega-nav-text'>Contact</span></a>
+                          <a class='hamburger-menu-link hamburger-menu-link-8' href='/support/reseller-faqs'><span class='mega-nav-text'>Resellers</span></a>
+
+                          <div class='mega-nav-container'>
+
+                              <div class='mega-nav-content mega-nav-content-1'>
+                                  <div class='section-white-medium-no-padding'>
+                                      <div class='container-columns-66-percent-right'>
+                                          <div>
+                                              <a href='/burp/enterprise' class='link-block-white'>
+                                                  <img src='/mega-nav/images/mega-nav-enterprise.svg' alt='Burp Suite DAST'>
+                                                  <span><strong>Burp Suite DAST</strong></span>
+                                                  <span>The enterprise-enabled dynamic web vulnerability scanner.</span>
+                                              </a>
+
+                                              <a href='/burp/pro' class='link-block-white'>
+                                                  <img src='/mega-nav/images/mega-nav-professional.svg' alt='Burp Suite Professional'>
+                                                  <span><strong>Burp Suite Professional</strong></span>
+                                                  <span>The world's #1 web penetration testing toolkit.</span>
+                                              </a>
+
+                                              <a href='/burp/communitydownload' class='link-block-white'>
+                                                  <img src='/mega-nav/images/mega-nav-community.svg' alt='Burp Suite Community Edition'>
+                                                  <span><strong>Burp Suite Community Edition</strong></span>
+                                                  <span>The best manual tools to start web security testing.</span>
+                                              </a>
+
+                                              <a href='/burp' class='chevron-after'>View all product editions</a>
+                                          </div>
+
+                                          <div>
+                                              <div class='container-cards-lists-white'>
+                                                  <a href='/burp/vulnerability-scanner'>
+                                                      <p><strong>Burp Scanner</strong></p>
+                                                      <p>Burp Suite's web vulnerability scanner</p>
+                                                      <img src='/mega-nav/images/burp-suite-scanner.jpg' alt='Burp Suite's web vulnerability scanner''>
+                                                  </a>
+                                              </div>
+
+                                          </div>
+
+
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class='mega-nav-content mega-nav-content-2'>
+                                  <div class='section-white-medium-no-padding'>
+                                      <div class='container-columns-66-percent-right'>
+                                          <div>
+                                              <div class='container-columns'>
+                                                  <a href='/solutions/attack-surface-visibility' class='link-block-white'>
+                                                      <span><strong>Attack surface visibility</strong></span>
+                                                      <span>Improve security posture, prioritize manual testing, free up time.</span>
+                                                  </a>
+                                                  <a href='/solutions/ci-driven-scanning' class='link-block-white'>
+                                                      <span><strong>CI-driven scanning</strong></span>
+                                                      <span>More proactive security - find and fix vulnerabilities earlier.</span>
+                                                  </a>
+                                                  <a href='/solutions' class='link-block-white'>
+                                                      <span><strong>Application security testing</strong></span>
+                                                      <span>See how our software enables the world to secure the web.</span>
+                                                  </a>
+                                                  <a href='/solutions/devsecops' class='link-block-white'>
+                                                      <span><strong>DevSecOps</strong></span>
+                                                      <span>Catch critical bugs; ship more secure software, more quickly.</span>
+                                                  </a>
+
+                                                  <a href='/solutions/penetration-testing' class='link-block-white'>
+                                                      <span><strong>Penetration testing</strong></span>
+                                                      <span>Accelerate penetration testing - find more bugs, more quickly.</span>
+                                                  </a>
+                                                  <a href='/solutions/automated-security-testing' class='link-block-white'>
+                                                      <span><strong>Automated scanning</strong></span>
+                                                      <span>Scale dynamic scanning. Reduce risk. Save time/money.</span>
+                                                  </a>
+
+                                                  <a href='/solutions/bug-bounty-hunting' class='link-block-white'>
+                                                      <span><strong>Bug bounty hunting</strong></span>
+                                                      <span>Level up your hacking and earn more bug bounties.</span>
+                                                  </a>
+                                                  <a href='/solutions/compliance' class='link-block-white'>
+                                                      <span><strong>Compliance</strong></span>
+                                                      <span>Enhance security monitoring to comply with confidence.</span>
+                                                  </a>
+                                              </div>
+                                              <a href='/solutions' class='chevron-after'>View all solutions</a>
+                                          </div>
+
+                                          <div>
+                                              <div class='container-cards-lists-white'>
+                                                  <a href='/burp/enterprise/resources/enterprise-edition-vs-professional'>
+                                                      <p><strong>Product comparison</strong></p>
+                                                      <p>What's the difference between Pro and Enterprise Edition?</p>
+                                                      <img src='/mega-nav/images/burp-suite.jpg' alt='Burp Suite Professional vs Burp Suite Enterprise Edition'>
+                                                  </a>
+                                              </div>
+
+                                          </div>
+
+
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class='mega-nav-content mega-nav-content-6'>
+                                  <div class='section-white-medium-no-padding'>
+                                      <div class='container-columns-66-percent-right'>
+                                          <div>
+                                              <div class='container-columns'>
+                                                  <a href='/support' class='link-block-white'>
+                                                      <span><strong>Support Center</strong></span>
+                                                      <span>Get help and advice from our experts on all things Burp.</span>
+                                                  </a>
+                                                  <a href='/burp/documentation' class='link-block-white'>
+                                                      <span><strong>Documentation</strong></span>
+                                                      <span>Tutorials and guides for Burp Suite.</span>
+                                                  </a>
+                                                  <a href='/burp/documentation/desktop/getting-started' class='link-block-white'>
+                                                      <span><strong>Get Started - Professional</strong></span>
+                                                      <span>Get started with Burp Suite Professional.</span>
+                                                  </a>
+                                                  <a href='/burp/documentation/enterprise/getting-started' class='link-block-white'>
+                                                      <span><strong>Get Started - Enterprise</strong></span>
+                                                      <span>Get started with Burp Suite Enterprise Edition.</span>
+                                                  </a>
+                                                  <a href='https://forum.portswigger.net/' class='link-block-white'>
+                                                      <span><strong>User Forum</strong></span>
+                                                      <span>Get your questions answered in the User Forum.</span>
+                                                  </a>
+                                                  <a href='/burp/releases' class='link-block-white'>
+                                                      <span><strong>Downloads</strong></span>
+                                                      <span>Download the latest version of Burp Suite.</span>
+                                                  </a>
+                                              </div>
+                                              <a href='/support' class='chevron-after'>Visit the Support Center</a>
+                                          </div>
+
+                                          <div>
+                                              <div class='container-cards-lists-white'>
+                                                  <a href='/burp/releases'>
+                                                      <p><strong>Downloads</strong></p>
+                                                      <p>Download the latest version of Burp Suite.</p>
+                                                      <img src='/mega-nav/images/latest-burp-suite-software-download.jpg' alt='The latest version of Burp Suite software for download'>
+                                                  </a>
+                                              </div>
+
+                                          </div>
+
+
+                                      </div>
+                                  </div>
+                              </div>
+
+                          </div>
+
+                      </div>
+
+                      </div>
+                  </div>
+                          </header>`);
+                          }
+                </script></div
+              ></div
+            ></div
+          ></mega-nav-wrapper
+        ><live-tag-production-wrapper
+          class="live-tag-production-wrapper"
+          rootclassname="live-tag-productionundefined"
+          ><!--LiveTagProduction component--><div
+            portswigger-live-tag-production="5a9e3886-3303-415c-a955-f221bb95905a"
+            class="live-tag-production-container live-tag-productionroot-class-name24"
+          ></div></live-tag-production-wrapper
+        ><div class="burp-suite-enterprise-features-subnav-enterprise"
+          ><div class="burp-suite-enterprise-features-container101"
+            ><div class="burp-suite-enterprise-features-container102"
+              ><div class="burp-suite-enterprise-features-container103"
+                ><div class="burp-suite-enterprise-features-container104"
+                  ><a
+                    href=".html"
+                    class="burp-suite-enterprise-features-link10 BodyLarge"
+                    >Product Overview</a
+                  ><a
+                    href="trial.html"
+                    class="burp-suite-enterprise-features-link11 BodyLarge"
+                    >Request a demo</a
+                  ><a
+                    href="pricing.html"
+                    class="burp-suite-enterprise-features-link12"
+                    >Pricing </a
+                  ><div
+                    data-thq="thq-dropdown"
+                    class="burp-suite-enterprise-features-thq-dropdown1 list-item"
+                    ><div
+                      data-thq="thq-dropdown-toggle"
+                      class="burp-suite-enterprise-features-dropdown-toggle10"
+                      ><span class="burp-suite-enterprise-features-text100"
+                        >Explore Burp Suite DAST</span
+                      ><div
+                        data-thq="thq-dropdown-arrow"
+                        class="burp-suite-enterprise-features-dropdown-arrow1"
+                        ><svg
+                          viewBox="0 0 1024 1024"
+                          class="burp-suite-enterprise-features-icon10"
+                        >
+                          <path
+                            d="M426 726v-428l214 214z"
+                          ></path></svg></div></div
+                    ><ul
+                      data-thq="thq-dropdown-list"
+                      class="burp-suite-enterprise-features-dropdown-list1"
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown10 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle11"
+                          ><a
+                            href="https://portswigger.net/burp/enterprise/features"
+                            class="burp-suite-enterprise-features-link13"
+                            >Features</a
+                          ></div
+                        ></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown11 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle12"
+                          ><a
+                            href="../vulnerability-scanner.html"
+                            class="burp-suite-enterprise-features-link14"
+                            >Burp Scanner</a
+                          ></div
+                        ></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown12 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle13"
+                          ><a
+                            href="resources/hosted-environment.html"
+                            class="burp-suite-enterprise-features-link15"
+                            >Live product demo</a
+                          ></div
+                        ></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown13 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle14"
+                          ><a
+                            href="hosting-options.html"
+                            class="burp-suite-enterprise-features-link16"
+                            >Hosting options</a
+                          ></div
+                        ></li
+                      ></ul
+                    ></div
+                  ><div
+                    data-thq="thq-dropdown"
+                    class="burp-suite-enterprise-features-thq-dropdown2 list-item"
+                    ><div
+                      data-thq="thq-dropdown-toggle"
+                      class="burp-suite-enterprise-features-dropdown-toggle15"
+                      ><span class="burp-suite-enterprise-features-text101"
+                        >Resources</span
+                      ><div
+                        data-thq="thq-dropdown-arrow"
+                        class="burp-suite-enterprise-features-dropdown-arrow2"
+                        ><svg
+                          viewBox="0 0 1024 1024"
+                          class="burp-suite-enterprise-features-icon12"
+                        >
+                          <path
+                            d="M426 726v-428l214 214z"
+                          ></path></svg></div></div
+                    ><ul
+                      data-thq="thq-dropdown-list"
+                      class="burp-suite-enterprise-features-dropdown-list2"
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown14 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle16"
+                          ><a
+                            href="resources.html"
+                            class="burp-suite-enterprise-features-link17"
+                            >Getting started</a
+                          ></div
+                        ></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown15 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle17"
+                          ><a
+                            href="resources/enterprise-edition-vs-professional.html"
+                            class="burp-suite-enterprise-features-link18"
+                            >Product information</a
+                          ></div
+                        ></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown16 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle18"
+                          ><a
+                            href="resources/use-cases.html"
+                            class="burp-suite-enterprise-features-link19"
+                            ><span>Use cases</span><br /></a></div></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown17 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle19"
+                          ><a
+                            href="resources/customer-support.html"
+                            class="burp-suite-enterprise-features-link20 BodyLarge"
+                            >Customer support</a
+                          ></div
+                        ></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown18 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle20"
+                          ><a
+                            href="resources/video-tutorials.html"
+                            class="burp-suite-enterprise-features-link21 BodyLarge"
+                            >Video tutorials</a
+                          ></div
+                        ></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown19 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle21"
+                          ><a
+                            href="resources/faqs.html"
+                            class="burp-suite-enterprise-features-link22 BodyLarge"
+                            >FAQs</a
+                          ></div
+                        ></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown20 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle22"
+                          ><a
+                            href="resources/introduce-enterprise-edition.html"
+                            class="burp-suite-enterprise-features-link23 BodyLarge"
+                            >Stakeholder intro template</a
+                          ></div
+                        ></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown21 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle23"
+                          ><a
+                            href="resources/how-to-evaluate-a-web-vulnerability-scanner.html"
+                            class="burp-suite-enterprise-features-link24 BodyLarge"
+                            >How to evaluate a scanner</a
+                          ></div
+                        ></li
+                      ></ul
+                    ></div
+                  ><a
+                    href="../documentation/enterprise.html"
+                    class="burp-suite-enterprise-features-link25"
+                    >Prepare to set up</a
+                  ></div
+                ></div
+              ></div
+            ></div
+          ><div class="burp-suite-enterprise-features-container105"
+            ><div class="burp-suite-enterprise-features-container106"
+              ><div class="burp-suite-enterprise-features-container107"
+                ><div class="burp-suite-enterprise-features-container108"
+                  ><div
+                    data-thq="thq-dropdown"
+                    class="burp-suite-enterprise-features-thq-dropdown3 list-item"
+                    ><div
+                      data-thq="thq-dropdown-toggle"
+                      class="burp-suite-enterprise-features-dropdown-toggle24"
+                      ><div
+                        data-thq="thq-dropdown-arrow"
+                        class="burp-suite-enterprise-features-dropdown-arrow3"
+                        ><img
+                          alt="image"
+                          src="../../public/external/chevrondowni542-vuzo.svg"
+                          class="burp-suite-enterprise-features-image10" /></div></div
+                    ><ul
+                      data-thq="thq-dropdown-list"
+                      class="burp-suite-enterprise-features-dropdown-list3"
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown22 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle25"
+                          ><a
+                            href="https://portswigger.net/burp/pro"
+                            class="burp-suite-enterprise-features-link26"
+                            >Product overview</a
+                          ></div
+                        ></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown23 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle26"
+                          ><a
+                            href="https://portswigger.net/burp/pro/features"
+                            class="burp-suite-enterprise-features-link27"
+                            >Request a demo</a
+                          ></div
+                        ></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown24 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle27"
+                          ><a
+                            href="https://portswigger.net/burp/pro/features"
+                            class="burp-suite-enterprise-features-link28"
+                            >Pricing</a
+                          ></div
+                        ></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown25 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle28"
+                          ><span class="burp-suite-enterprise-features-text104"
+                            >Explore Burp Suiten DAST</span
+                          ><div
+                            data-thq="thq-dropdown-arrow"
+                            class="burp-suite-enterprise-features-dropdown-arrow4"
+                            ><svg
+                              viewBox="0 0 1024 1024"
+                              class="burp-suite-enterprise-features-icon14"
+                            >
+                              <path
+                                d="M426 726v-428l214 214z"
+                              ></path></svg></div></div
+                        ><ul
+                          data-thq="thq-dropdown-list"
+                          class="burp-suite-enterprise-features-dropdown-list4"
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown26 list-item"
+                          ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown27 list-item"
+                          ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown28 list-item"
+                            ><div
+                              data-thq="thq-dropdown-toggle"
+                              class="burp-suite-enterprise-features-dropdown-toggle29"
+                              ><a
+                                href="https://portswigger.net/web-security/certification"
+                                class="burp-suite-enterprise-features-link29 BodyLarge"
+                                >Features</a
+                              ></div
+                            ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown29 list-item"
+                            ><div
+                              data-thq="thq-dropdown-toggle"
+                              class="burp-suite-enterprise-features-dropdown-toggle30"
+                              ><a
+                                href="https://portswigger.net/web-security/certification/how-to-prepare"
+                                class="burp-suite-enterprise-features-link30 BodyLarge"
+                                >Burp Scanner</a
+                              ></div
+                            ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown30 list-item"
+                            ><div
+                              data-thq="thq-dropdown-toggle"
+                              class="burp-suite-enterprise-features-dropdown-toggle31"
+                              ><a
+                                href="https://portswigger.net/web-security/certification/how-it-works"
+                                class="burp-suite-enterprise-features-link31 BodyLarge"
+                                >Live product demo</a
+                              ></div
+                            ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown31 list-item"
+                            ><div
+                              data-thq="thq-dropdown-toggle"
+                              class="burp-suite-enterprise-features-dropdown-toggle32"
+                              ><a
+                                href="https://portswigger.net/web-security/certification/practice-exam"
+                                class="burp-suite-enterprise-features-link32 BodyLarge"
+                                >Hosting options</a
+                              ></div
+                            ></li
+                          ></ul
+                        ></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown32 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle33"
+                          ><span class="burp-suite-enterprise-features-text105"
+                            >Resources</span
+                          ><div
+                            data-thq="thq-dropdown-arrow"
+                            class="burp-suite-enterprise-features-dropdown-arrow5"
+                            ><svg
+                              viewBox="0 0 1024 1024"
+                              class="burp-suite-enterprise-features-icon16"
+                            >
+                              <path
+                                d="M426 726v-428l214 214z"
+                              ></path></svg></div></div
+                        ><ul
+                          data-thq="thq-dropdown-list"
+                          class="burp-suite-enterprise-features-dropdown-list5"
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown33 list-item"
+                          ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown34 list-item"
+                          ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown35 list-item"
+                            ><div
+                              data-thq="thq-dropdown-toggle"
+                              class="burp-suite-enterprise-features-dropdown-toggle34"
+                              ><a
+                                href="resources.html"
+                                class="burp-suite-enterprise-features-link33 BodyLarge"
+                                >Getting started</a
+                              ></div
+                            ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown36 list-item"
+                            ><div
+                              data-thq="thq-dropdown-toggle"
+                              class="burp-suite-enterprise-features-dropdown-toggle35"
+                              ><a
+                                href="roadmap.html"
+                                class="burp-suite-enterprise-features-link34 BodyLarge"
+                                >Roadmap</a
+                              ></div
+                            ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown37 list-item"
+                            ><div
+                              data-thq="thq-dropdown-toggle"
+                              class="burp-suite-enterprise-features-dropdown-toggle36"
+                              ><a
+                                href="resources/enterprise-edition-vs-professional.html"
+                                class="burp-suite-enterprise-features-link35 BodyLarge"
+                                >Product comparison</a
+                              ></div
+                            ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown38 list-item"
+                            ><div
+                              data-thq="thq-dropdown-toggle"
+                              class="burp-suite-enterprise-features-dropdown-toggle37"
+                              ><a
+                                href="https://burp/enterprise/resources/use-cases"
+                                class="burp-suite-enterprise-features-link36 BodyLarge"
+                                >Use cases</a
+                              ></div
+                            ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown39 list-item"
+                            ><div
+                              data-thq="thq-dropdown-toggle"
+                              class="burp-suite-enterprise-features-dropdown-toggle38"
+                              ><a
+                                href="resources/customer-support.html"
+                                class="burp-suite-enterprise-features-link37 BodyLarge"
+                                >Customer support</a
+                              ></div
+                            ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown40 list-item"
+                            ><div
+                              data-thq="thq-dropdown-toggle"
+                              class="burp-suite-enterprise-features-dropdown-toggle39"
+                              ><a
+                                href="resources/video-tutorials.html"
+                                class="burp-suite-enterprise-features-link38 BodyLarge"
+                                >Video tutorials</a
+                              ></div
+                            ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown41 list-item"
+                            ><div
+                              data-thq="thq-dropdown-toggle"
+                              class="burp-suite-enterprise-features-dropdown-toggle40"
+                              ><a
+                                href="resources/faqs.html"
+                                class="burp-suite-enterprise-features-link39 BodyLarge"
+                                >FAQs</a
+                              ></div
+                            ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown42 list-item"
+                            ><div
+                              data-thq="thq-dropdown-toggle"
+                              class="burp-suite-enterprise-features-dropdown-toggle41"
+                              ><a
+                                href="resources/introduce-enterprise-edition.html"
+                                class="burp-suite-enterprise-features-link40 BodyLarge"
+                                >Stakeholder intro template</a
+                              ></div
+                            ></li
+                          ><li
+                            data-thq="thq-dropdown"
+                            class="burp-suite-enterprise-features-dropdown43 list-item"
+                            ><div
+                              data-thq="thq-dropdown-toggle"
+                              class="burp-suite-enterprise-features-dropdown-toggle42"
+                              ><a
+                                href="resources/how-to-evaluate-a-web-vulnerability-scanner.html"
+                                class="burp-suite-enterprise-features-link41 BodyLarge"
+                                >How to evaluate a scanner</a
+                              ></div
+                            ></li
+                          ></ul
+                        ></li
+                      ><li
+                        data-thq="thq-dropdown"
+                        class="burp-suite-enterprise-features-dropdown44 list-item"
+                        ><div
+                          data-thq="thq-dropdown-toggle"
+                          class="burp-suite-enterprise-features-dropdown-toggle43"
+                          ><a
+                            href="https://portswigger.net/burp/releases/professional-community-2024-9-4?requestededition=professional&amp;requestedplatform="
+                            class="burp-suite-enterprise-features-link42"
+                            >Prepare to set up</a
+                          ></div
+                        ></li
+                      ></ul
+                    ></div
+                  ></div
+                ></div
+              ></div
+            ></div
+          ></div
+        ><div class="burp-suite-enterprise-features-container109"
+          ><div class="burp-suite-enterprise-features-container110"
+            ><div class="burp-suite-enterprise-features-container111"
+              ><div class="burp-suite-enterprise-features-container112"
+                ><div class="burp-suite-enterprise-features-container113"
+                  ><h2 class="burp-suite-enterprise-features-text106"
+                    >Burp Suite DAST</h2
+                  ><h1 class="burp-suite-enterprise-features-text107"
+                    >Features</h1
+                  ><span class="burp-suite-enterprise-features-text108"
+                    >Scan it all. With the enterprise-enabled dynamic web
+                    vulnerability scanner.</span
+                  ><div class="burp-suite-enterprise-features-container114"
+                    ><a
+                      href="https://portswigger.net/burp/enterprise/trial"
+                      class="burp-suite-enterprise-features-button1 button"
+                      ><span
+                        buttontext="TQ_TH6-S_dqix"
+                        class="burp-suite-enterprise-features-text109"
+                        >REQUEST A DEMO</span
+                      ></a
+                    ><a
+                      href="https://portswigger.net/burp/enterprise/pricing"
+                      class="burp-suite-enterprise-features-button2 button"
+                      ><span
+                        buttontext="TQ_TH6-S_dqix"
+                        class="burp-suite-enterprise-features-text110"
+                        >PRICING AND PLANS</span
+                      ></a
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container115"
+                  ><img
+                    alt="image"
+                    src="../../public/burp-enterprise-dashboard-1200w.png"
+                    class="burp-suite-enterprise-features-image11" /></div></div></div></div></div
+        ><div class="burp-suite-enterprise-features-container116"
+          ><div class="burp-suite-enterprise-features-container117"
+            ><h2 class="burp-suite-enterprise-features-text111 H3"
+              ><span>Scanning Features</span
+              ><br
+                class="H3 burp-suite-enterprise-features-text113" /></h2></div
+          ><div class="burp-suite-enterprise-features-container118"
+            ><div class="burp-suite-enterprise-features-container119"
+              ><div class="burp-suite-enterprise-features-container120"
+                ><img
+                  alt="image"
+                  src="../../public/scans-400w.png"
+                  class="burp-suite-enterprise-features-image12" /></div></div
+            ><div class="burp-suite-enterprise-features-container121"
+              ><div class="burp-suite-enterprise-features-container122"
+                ><div class="burp-suite-enterprise-features-container123"
+                  ><div class="burp-suite-enterprise-features-container124"
+                    ><img
+                      alt="image"
+                      src="../../public/scan.svg"
+                      class="burp-suite-enterprise-features-image13" /><div
+                      class="burp-suite-enterprise-features-container125"
+                      ><span
+                        class="burp-suite-enterprise-features-text114 rich-text-root"
+                        ><span>Catch the latest vulnerabilities with </span
+                        ><a
+                          href="https://portswigger.net/burp/vulnerability-scanner"
+                          >Burp Scanner</a
+                        ><span>&nbsp;</span
+                        ><span
+                          >- the dynamic (DAST) web vulnerability scanner
+                          trusted by over 16,000 organizations.</span
+                        ><br /><span> </span></span></div></div
+                  ><div class="burp-suite-enterprise-features-container126"
+                    ><img
+                      alt="image"
+                      src="../../public/scan.svg"
+                      class="burp-suite-enterprise-features-image14"
+                    /><div class="burp-suite-enterprise-features-container127"
+                      ><p
+                        class="burp-suite-enterprise-features-text120 rich-text-root rich-text"
+                        >Set your scans to run on a daily, weekly, or even
+                        monthly basis.</p
+                      ></div
+                    ></div
+                  ><div class="burp-suite-enterprise-features-container128"
+                    ><img
+                      alt="image"
+                      src="../../public/scan.svg"
+                      class="burp-suite-enterprise-features-image15"
+                    /><div class="burp-suite-enterprise-features-container129"
+                      ><p
+                        class="burp-suite-enterprise-features-text121 rich-text-root"
+                        ><span
+                          >Scale your scanning requirements as needed, with our
+                          transparent </span
+                        ><a
+                          href="https://portswigger.net/burp/enterprise/pricing"
+                          >subscription options</a
+                        ><span>.</span></p
+                      ></div
+                    ></div
+                  ><div class="burp-suite-enterprise-features-container130"
+                    ><img
+                      alt="image"
+                      src="../../public/scan.svg"
+                      class="burp-suite-enterprise-features-image16"
+                    /><div class="burp-suite-enterprise-features-container131"
+                      ><p
+                        class="burp-suite-enterprise-features-text124 rich-text-root"
+                        >Point and click scanning - just a URL required, or
+                        trigger via CI/CD.</p
+                      ></div
+                    ></div
+                  ><div class="burp-suite-enterprise-features-container132"
+                    ><img
+                      alt="image"
+                      src="../../public/scan.svg"
+                      class="burp-suite-enterprise-features-image17"
+                    /><div class="burp-suite-enterprise-features-container133"
+                      ><p
+                        class="burp-suite-enterprise-features-text125 rich-text-root"
+                        >Manage security more easily, with bulk actions for
+                        operations like canceling scans, or launching quick
+                        scans.</p
+                      ></div
+                    ></div
+                  ><div class="burp-suite-enterprise-features-container134"
+                    ><img
+                      alt="image"
+                      src="../../public/scan.svg"
+                      class="burp-suite-enterprise-features-image18"
+                    /><div class="burp-suite-enterprise-features-container135"
+                      ><p
+                        class="burp-suite-enterprise-features-text126 rich-text-root"
+                        >Use preset scan modes ranging from Lightweight to Deep,
+                        or create your own custom scan configurations.</p
+                      ></div
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container136"
+                  ><div class="burp-suite-enterprise-features-container137"
+                    ><img
+                      alt="image"
+                      src="../../public/scan.svg"
+                      class="burp-suite-enterprise-features-image19"
+                    /><div class="burp-suite-enterprise-features-container138"
+                      ><span
+                        class="burp-suite-enterprise-features-text127 rich-text-root"
+                        ><span
+                          >Discover more potential attack surface. Burp Scanner
+                          parses JSON or YAML API definitions - </span
+                        ><a
+                          href="https://portswigger.net/burp/vulnerability-scanner/api-security-testing"
+                          class="burp-suite-enterprise-features-link45"
+                          >scanning any API endpoints</a
+                        ><span>&nbsp;</span><span>it finds.</span></span
+                      ></div
+                    ></div
+                  ><div class="burp-suite-enterprise-features-container139"
+                    ><img
+                      alt="image"
+                      src="../../public/scan.svg"
+                      class="burp-suite-enterprise-features-image20"
+                    /><div class="burp-suite-enterprise-features-container140"
+                      ><p
+                        class="burp-suite-enterprise-features-text131 rich-text-root"
+                        ><a
+                          href="https://portswigger.net/burp/vulnerability-scanner/authenticated-scanning"
+                          class="burp-suite-enterprise-features-link46"
+                          >Scan privileged areas of target applications</a
+                        ><span
+                          >, even if they use complex login mechanisms like
+                          single sign-on (SSO).</span
+                        ></p
+                      ></div
+                    ></div
+                  ><div class="burp-suite-enterprise-features-container141"
+                    ><img
+                      alt="image"
+                      src="../../public/scan.svg"
+                      class="burp-suite-enterprise-features-image21"
+                    /><div class="burp-suite-enterprise-features-container142"
+                      ><p
+                        class="burp-suite-enterprise-features-text133 rich-text-root"
+                        ><a
+                          href="https://portswigger.net/burp/vulnerability-scanner/authenticated-scanning"
+                          class="burp-suite-enterprise-features-link47"
+                          >Burp Scanner uses its embedded browser</a
+                        ><span>&nbsp;</span
+                        ><span class="burp-suite-enterprise-features-text135"
+                          >to render its target - enabling it to navigate even
+                          complex single-page applications (SPAs).</span
+                        ></p
+                      ></div
+                    ></div
+                  ><div class="burp-suite-enterprise-features-container143"
+                    ><img
+                      alt="image"
+                      src="../../public/scan.svg"
+                      class="burp-suite-enterprise-features-image22"
+                    /><div class="burp-suite-enterprise-features-container144"
+                      ><p
+                        class="burp-suite-enterprise-features-text136 rich-text-root"
+                        ><span>Automated </span
+                        ><a
+                          href="https://portswigger.net/burp/application-security-testing/oast"
+                          class="burp-suite-enterprise-features-link48"
+                          >OAST</a
+                        ><span>&nbsp;</span
+                        ><span
+                          >was pioneered by PortSwigger, and can identify many
+                          vulnerabilities with tremendous accuracy.</span
+                        ></p
+                      ></div
+                    ></div
+                  ><div class="burp-suite-enterprise-features-container145"
+                    ><img
+                      alt="image"
+                      src="../../public/scan.svg"
+                      class="burp-suite-enterprise-features-image23"
+                    /><div class="burp-suite-enterprise-features-container146"
+                      ><p
+                        class="burp-suite-enterprise-features-text140 rich-text-root"
+                        >Specify crawl maximum link depth, reported
+                        vulnerabilities, fast versus exhaustive results, and
+                        more.</p
+                      ></div
+                    ></div
+                  ></div
+                ></div
+              ></div
+            ></div
+          ></div
+        ><div class="burp-suite-enterprise-features-container147"
+          ><div class="burp-suite-enterprise-features-container148"
+            ><h2 class="burp-suite-enterprise-features-text141 H3"
+              >Integration Features</h2
+            ></div
+          ><div class="burp-suite-enterprise-features-container149"
+            ><div class="burp-suite-enterprise-features-container150"
+              ><div class="burp-suite-enterprise-features-container151"
+                ><div class="burp-suite-enterprise-features-container152"
+                  ><img
+                    alt="image"
+                    src="../../public/integrate.svg"
+                    class="burp-suite-enterprise-features-image24"
+                  /><div class="burp-suite-enterprise-features-container153"
+                    ><p class="burp-suite-enterprise-features-text142"
+                      >Integrate with any CI/CD platform. See vulnerabilities
+                      right in your development environment.</p
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container154"
+                  ><img
+                    alt="image"
+                    src="../../public/integrate.svg"
+                    class="burp-suite-enterprise-features-image25"
+                  /><div class="burp-suite-enterprise-features-container155"
+                    ><p class="burp-suite-enterprise-features-text143"
+                      >Integrate scanning and security reporting into your own
+                      management and orchestration systems.</p
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container156"
+                  ><img
+                    alt="image"
+                    src="../../public/integrate.svg"
+                    class="burp-suite-enterprise-features-image26"
+                  /><div class="burp-suite-enterprise-features-container157"
+                    ><p
+                      class="burp-suite-enterprise-features-text144 rich-text-root"
+                      ><span
+                        >Tailor Burp Scanner to your exact requirements, by
+                        writing your own extensions, or by downloading them from
+                        the </span
+                      ><a
+                        href="https://portswigger.net/bappstore"
+                        class="burp-suite-enterprise-features-link49"
+                        >BApp Store</a
+                      ><span>.</span></p
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container158"
+                  ><img
+                    alt="image"
+                    src="../../public/integrate.svg"
+                    class="burp-suite-enterprise-features-image27"
+                  /><div class="burp-suite-enterprise-features-container159"
+                    ><p class="burp-suite-enterprise-features-text147"
+                      >Choose from an on-premise deployment with an interactive
+                      installer, a Kubernetes deployment, or a cloud-based
+                      instance.</p
+                    ></div
+                  ></div
+                ></div
+              ><div class="burp-suite-enterprise-features-container160"
+                ><div class="burp-suite-enterprise-features-container161"
+                  ><img
+                    alt="image"
+                    src="../../public/integrate.svg"
+                    class="burp-suite-enterprise-features-image28"
+                  /><div class="burp-suite-enterprise-features-container162"
+                    ><p class="burp-suite-enterprise-features-text148"
+                      >Track issues with Jira, GitLab, and Trello. Auto ticket
+                      generation, severity / confidence level triggers, and
+                      unlimited boards.</p
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container163"
+                  ><img
+                    alt="image"
+                    src="../../public/integrate.svg"
+                    class="burp-suite-enterprise-features-image29"
+                  /><div class="burp-suite-enterprise-features-container164"
+                    ><p class="burp-suite-enterprise-features-text149"
+                      >Initiate, schedule, cancel, update, and work through your
+                      scans, to get the exact data you need, with a GraphQL
+                      API.</p
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container165"
+                  ><img
+                    alt="image"
+                    src="../../public/integrate.svg"
+                    class="burp-suite-enterprise-features-image30"
+                  /><div class="burp-suite-enterprise-features-container166"
+                    ><p class="burp-suite-enterprise-features-text150"
+                      >Enable users to log in easily - with a variety of SSO
+                      options (SAML or LDAP, as well as SCIM). Integrate with
+                      any identity provider - including ADFS, Okta, or Active
+                      Directory.</p
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container167"
+                  ><img
+                    alt="image"
+                    src="../../public/integrate.svg"
+                    class="burp-suite-enterprise-features-image31"
+                  /><div class="burp-suite-enterprise-features-container168"
+                    ><p class="burp-suite-enterprise-features-text151"
+                      >Multi-user, role-based functionality for site hierarchy,
+                      scan detail and reporting. Give everyone control.</p
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container169"
+                  ><img
+                    alt="image"
+                    src="../../public/integrate.svg"
+                    class="burp-suite-enterprise-features-image32"
+                  /><div class="burp-suite-enterprise-features-container170"
+                    ><p class="burp-suite-enterprise-features-text152"
+                      >Manually integrate configurations from Burp Suite Pro,
+                      directly into your fully automated Enterprise
+                      environment.</p
+                    ></div
+                  ></div
+                ></div
+              ></div
+            ><div class="burp-suite-enterprise-features-container171"
+              ><div class="burp-suite-enterprise-features-container172"
+                ><img
+                  alt="image"
+                  src="../../public/integrate-1300w.png"
+                  class="burp-suite-enterprise-features-image33" /></div></div></div></div
+        ><div class="burp-suite-enterprise-features-container173"
+          ><div class="burp-suite-enterprise-features-container174"
+            ><h2 class="burp-suite-enterprise-features-text153 H3"
+              >Reporting Features</h2
+            ></div
+          ><div class="burp-suite-enterprise-features-container175"
+            ><div class="burp-suite-enterprise-features-container176"
+              ><div class="burp-suite-enterprise-features-container177"
+                ><img
+                  alt="image"
+                  src="../../public/report-1400w.png"
+                  class="burp-suite-enterprise-features-image34" /></div></div
+            ><div class="burp-suite-enterprise-features-container178"
+              ><div class="burp-suite-enterprise-features-container179"
+                ><div class="burp-suite-enterprise-features-container180"
+                  ><img
+                    alt="image"
+                    src="../../public/report1.svg"
+                    class="burp-suite-enterprise-features-image35"
+                  /><div class="burp-suite-enterprise-features-container181"
+                    ><p
+                      class="burp-suite-enterprise-features-text154 rich-text-root"
+                      >Graphical dashboards allow you to view bugs by severity
+                      or type. See security posture for all or just part of your
+                      organization.</p
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container182"
+                  ><img
+                    alt="image"
+                    src="../../public/report1.svg"
+                    class="burp-suite-enterprise-features-image36"
+                  /><div class="burp-suite-enterprise-features-container183"
+                    ><p
+                      class="burp-suite-enterprise-features-text155 rich-text-root"
+                      >Export tailored HTML reports. Include any level of
+                      detail, severity, and confidence you require.</p
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container184"
+                  ><img
+                    alt="image"
+                    src="../../public/report1.svg"
+                    class="burp-suite-enterprise-features-image37"
+                  /><div class="burp-suite-enterprise-features-container185"
+                    ><p
+                      class="burp-suite-enterprise-features-text156 rich-text-root"
+                      >Metrics include changes by issue type and severity. See
+                      when and where bugs were introduced.</p
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container186"
+                  ><img
+                    alt="image"
+                    src="../../public/report1.svg"
+                    class="burp-suite-enterprise-features-image38"
+                  /><div class="burp-suite-enterprise-features-container187"
+                    ><p
+                      class="burp-suite-enterprise-features-text157 rich-text-root"
+                      >Almost all features can be controlled through an
+                      intuitive, attractive UI. This opens security up to
+                      everyone.</p
+                    ></div
+                  ></div
+                ></div
+              ><div class="burp-suite-enterprise-features-container188"
+                ><div class="burp-suite-enterprise-features-container189"
+                  ><img
+                    alt="image"
+                    src="../../public/report1.svg"
+                    class="burp-suite-enterprise-features-image39"
+                  /><div class="burp-suite-enterprise-features-container190"
+                    ><p
+                      class="burp-suite-enterprise-features-text158 rich-text-root"
+                      ><span
+                        >Every issue Burp Scanner finds comes with actionable
+                        remediation advice from </span
+                      ><a
+                        href="https://portswigger.net/research"
+                        class="burp-suite-enterprise-features-link50"
+                        >PortSwigger Research</a
+                      ><span>&nbsp;</span><span>and the </span
+                      ><a
+                        href="https://portswigger.net/web-security"
+                        class="burp-suite-enterprise-features-link51"
+                        >Web Security Academy</a
+                      ><span>.</span></p
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container191"
+                  ><img
+                    alt="image"
+                    src="../../public/report1.svg"
+                    class="burp-suite-enterprise-features-image40"
+                  /><div class="burp-suite-enterprise-features-container192"
+                    ><p
+                      class="burp-suite-enterprise-features-text163 rich-text-root"
+                      >Get reports emailed to the right members of your team, to
+                      tailor your communications effectively.</p
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container193"
+                  ><img
+                    alt="image"
+                    src="../../public/report1.svg"
+                    class="burp-suite-enterprise-features-image41"
+                  /><div class="burp-suite-enterprise-features-container194"
+                    ><p
+                      class="burp-suite-enterprise-features-text164 rich-text-root"
+                      >View deltas and other changes to visually represent your
+                      security posture's evolution. Know your attack surface.</p
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container195"
+                  ><img
+                    alt="image"
+                    src="../../public/report1.svg"
+                    class="burp-suite-enterprise-features-image42"
+                  /><div class="burp-suite-enterprise-features-container196"
+                    ><p
+                      class="burp-suite-enterprise-features-text165 rich-text-root"
+                      >Organize issues by their class at the touch of a button.
+                      Focus on the vulnerabilities you want to fix.</p
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-container197"
+                  ><img
+                    alt="image"
+                    src="../../public/report1.svg"
+                    class="burp-suite-enterprise-features-image43"
+                  /><div class="burp-suite-enterprise-features-container198"
+                    ><p
+                      class="burp-suite-enterprise-features-text166 rich-text-root"
+                      >Check for vulnerabilities relevant to the PCI DSS
+                      standard and 2021 OWASP Top 10, across your whole web
+                      portfolio.</p
+                    ></div
+                  ></div
+                ></div
+              ></div
+            ></div
+          ></div
+        ><div class="burp-suite-enterprise-features-testimonial"
+          ><div class="burp-suite-enterprise-features-container199"
+            ><div class="burp-suite-enterprise-features-hero-card"
+              ><div class="burp-suite-enterprise-features-container200"
+                ><div class="burp-suite-enterprise-features-container201"
+                  ><div class="burp-suite-enterprise-features-container202"
+                    ><div class="burp-suite-enterprise-features-container203"
+                      ><p class="burp-suite-enterprise-features-text167"
+                        >"The scanning engine is loaded with modern
+                        vulnerability detection engines. Sophisticated attacks
+                        are identified with ease with a detailed explanation.
+                        The ability to reproduce the issue using the proof of
+                        concept from the results provides a detailed level of
+                        understanding and the corresponding fix."</p
+                      ><p class="burp-suite-enterprise-features-text168"
+                        ><span class="burp-suite-enterprise-features-text169"
+                          >Source: Application Security Engineer, Global 500
+                          Insurance Company,&nbsp;TechValidate survey of
+                          PortSwigger customers</span
+                        ><br /></p
+                      ><a
+                        href="../../customers.html"
+                        class="burp-suite-enterprise-features-link52"
+                        ><div class="burp-suite-enterprise-features-link53"
+                          ><span class="burp-suite-enterprise-features-text171"
+                            >Read more</span
+                          ><svg width="20" height="20" viewBox="0 0 32 32">
+                            <path
+                              d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                              fill="currentColor"
+                            ></path></svg></div></a></div></div></div></div></div></div></div
+        ><div class="burp-suite-enterprise-features-container204"
+          ><div class="burp-suite-enterprise-features-container205"
+            ><a
+              href="features.html"
+              class="burp-suite-enterprise-features-link54"
+              ><div
+                class="burp-suite-enterprise-features-discover-card1 elevation-effect"
+                ><div
+                  ><div
+                    ><div class="burp-suite-enterprise-features-container206"
+                      ><div class="burp-suite-enterprise-features-container207"
+                        ><div
+                          class="burp-suite-enterprise-features-container208"
+                          ><p class="burp-suite-enterprise-features-text172"
+                            >Features</p
+                          ></div
+                        ></div
+                      ></div
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-link55"
+                  ><span class="burp-suite-enterprise-features-text173"
+                    >Find out more</span
+                  ><svg width="20" height="20" viewBox="0 0 32 32">
+                    <path
+                      d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                      fill="currentColor"
+                    ></path></svg></div></div></a
+            ><a
+              href="pricing.html"
+              class="burp-suite-enterprise-features-link56"
+              ><div
+                class="burp-suite-enterprise-features-discover-card2 elevation-effect"
+                ><div
+                  ><div
+                    ><div class="burp-suite-enterprise-features-container209"
+                      ><div class="burp-suite-enterprise-features-container210"
+                        ><div
+                          class="burp-suite-enterprise-features-container211"
+                          ><p class="burp-suite-enterprise-features-text174"
+                            >Pricing</p
+                          ></div
+                        ></div
+                      ></div
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-link57"
+                  ><div class="burp-suite-enterprise-features-link58"
+                    ><span class="burp-suite-enterprise-features-text175"
+                      >Find out more</span
+                    ><svg width="20" height="20" viewBox="0 0 32 32">
+                      <path
+                        d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                        fill="currentColor"
+                      ></path></svg></div></div></div></a
+            ><a
+              href="../../blog/burp-suite-enterprise-edition-spring-update-2024.html"
+              class="burp-suite-enterprise-features-link59"
+              ><div
+                class="burp-suite-enterprise-features-discover-card3 elevation-effect"
+                ><div
+                  ><div
+                    ><div class="burp-suite-enterprise-features-container212"
+                      ><div class="burp-suite-enterprise-features-container213"
+                        ><div
+                          class="burp-suite-enterprise-features-container214"
+                          ><p class="burp-suite-enterprise-features-text176"
+                            >Roadmap</p
+                          ></div
+                        ></div
+                      ></div
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-link60"
+                  ><div class="burp-suite-enterprise-features-link61"
+                    ><span class="burp-suite-enterprise-features-text177"
+                      >Find out more</span
+                    ><svg width="20" height="20" viewBox="0 0 32 32">
+                      <path
+                        d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                        fill="currentColor"
+                      ></path></svg></div></div></div></a
+            ><a
+              href="https://portswigger.net/findareseller"
+              class="burp-suite-enterprise-features-link62"
+              ><div
+                class="burp-suite-enterprise-features-discover-card4 elevation-effect"
+                ><div
+                  ><div
+                    ><div class="burp-suite-enterprise-features-container215"
+                      ><div class="burp-suite-enterprise-features-container216"
+                        ><div
+                          class="burp-suite-enterprise-features-container217"
+                          ><p class="burp-suite-enterprise-features-text178"
+                            >Resellers</p
+                          ></div
+                        ></div
+                      ></div
+                    ></div
+                  ></div
+                ><div class="burp-suite-enterprise-features-link63"
+                  ><div class="burp-suite-enterprise-features-link64"
+                    ><span class="burp-suite-enterprise-features-text179"
+                      >Find out more</span
+                    ><svg width="20" height="20" viewBox="0 0 32 32">
+                      <path
+                        d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                        fill="currentColor"
+                      ></path></svg></div></div></div></a></div></div
+        ><div class="burp-suite-enterprise-features-container218"
+          ><div class="burp-suite-enterprise-features-container219"
+            ><div class="burp-suite-enterprise-features-container220"
+              ><div class="burp-suite-enterprise-features-container221"
+                ><div class="burp-suite-enterprise-features-container222"
+                  ><img
+                    alt="image"
+                    src="../../public/content/images/svg/icons/enterprise.svg"
+                    class="burp-suite-enterprise-features-image44" /><h1
+                    class="burp-suite-enterprise-features-text180"
+                    >Scale your Application Security with the Best of Breed DAST
+                    Scanner</h1
+                  ><span class="burp-suite-enterprise-features-text181"
+                    ><span class="H6 burp-suite-enterprise-features-text182"
+                      >Request a demo</span
+                    ><br /></span
+                  ><div class="burp-suite-enterprise-features-container223"
+                    ><div class="burp-suite-enterprise-features-container224"
+                      ><img
+                        alt="image"
+                        src="../../public/check%20in%20circle.svg"
+                        class="burp-suite-enterprise-features-image45" /><div
+                        class="burp-suite-enterprise-features-container225"
+                        ><span class="burp-suite-enterprise-features-text184"
+                          ><span>Indefinitely scalable</span><br /><span>
+                          </span></span></div></div
+                    ><div class="burp-suite-enterprise-features-container226"
+                      ><img
+                        alt="image"
+                        src="../../public/check%20in%20circle.svg"
+                        class="burp-suite-enterprise-features-image46" /><div
+                        class="burp-suite-enterprise-features-container227"
+                        ><span class="burp-suite-enterprise-features-text188"
+                          ><span>Unlimited users</span><br /><span>
+                          </span></span></div></div
+                    ><div class="burp-suite-enterprise-features-container228"
+                      ><img
+                        alt="image"
+                        src="../../public/check%20in%20circle.svg"
+                        class="burp-suite-enterprise-features-image47" /><div
+                        class="burp-suite-enterprise-features-container229"
+                        ><span class="burp-suite-enterprise-features-text192"
+                          ><span>Free technical support</span><br /><span>
+                          </span></span></div></div></div
+                  ><a
+                    href="https://burp/enterprise/trial"
+                    class="burp-suite-enterprise-features-button3 button"
+                    ><span
+                      buttontext="TQ_TH6-S_dqix"
+                      class="burp-suite-enterprise-features-text196"
+                      >REQUEST A DEMO</span
+                    ><img
+                      id=""
+                      alt="ChevronRightI2321"
+                      src="../../public/external/chevronright1151-d7ji.svg"
+                      class="burp-suite-enterprise-features-chevron-right" /></a></div></div></div></div></div
+        ><footer-final-wrapper
+          class="footer-final-wrapper"
+          rootclassname="footer-finalundefined"
+          ><!--FooterFinal component--><div
+            class="footer-final-footer1 footer-finalroot-class-name6"
+            ><div class="footer-final-container10"
+              ><div class="footer-final-container11"
+                ><div class="footer-final-footer2"
+                  ><div class="footer-final-container12"
+                    ><div class="footer-final-container13"
+                      ><div class="footer-final-section1"
+                        ><div class="footer-final-container14"
+                          ><footer-column-title-wrapper
+                            class="footer-column-title-wrapper"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container footer-column-titleroot-class-name261"
+                              ><p class="footer-column-title-text"
+                                ><span>Burp Suite</span></p
+                              ></div
+                            ></footer-column-title-wrapper
+                          ><a
+                            href="https://portswigger.net/burp/vulnerability-scanner"
+                            class="footer-final-link10"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text10 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment10"
+                                ><span
+                                  class="burp-suite-enterprise-features-text197"
+                                  >Web vulnerability scanner</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/burp"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            class="footer-final-link11"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text11 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment11"
+                                ><span
+                                  class="burp-suite-enterprise-features-text198"
+                                  >Burp Suite Editions</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/burp/releases"
+                            class="footer-final-link12"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text12 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment12"
+                                ><span
+                                  class="burp-suite-enterprise-features-text199"
+                                  >Release Notes</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container15"
+                          ><footer-column-title-wrapper-708d
+                            class="footer-column-title-wrapper-708d"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container1 footer-column-titleroot-class-name262"
+                              ><p class="footer-column-title-text1"
+                                ><span>Vulnerabilities</span></p
+                              ></div
+                            ></footer-column-title-wrapper-708d
+                          ><a
+                            href="https://portswigger.net/web-security/cross-site-scripting"
+                            class="footer-final-link13"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text13 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment13"
+                                ><span
+                                  class="burp-suite-enterprise-features-text200"
+                                  >Cross-site scripting (XSS)</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/sql-injection"
+                            class="footer-final-link14"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text14 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment14"
+                                ><span
+                                  class="burp-suite-enterprise-features-text201"
+                                  >SQL injection</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/csrf"
+                            class="footer-final-link15"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text15 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment15"
+                                ><span
+                                  class="burp-suite-enterprise-features-text202"
+                                  >Cross-site request forgery</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/xxe"
+                            class="footer-final-link16"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text16 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment16"
+                                ><span
+                                  class="burp-suite-enterprise-features-text203"
+                                  >XML external entity injection</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/file-path-traversal"
+                            class="footer-final-link17"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text17 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment17"
+                                ><span
+                                  class="burp-suite-enterprise-features-text204"
+                                  >Directory traversal</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/web-security/ssrf"
+                            class="footer-final-link18"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text18 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment18"
+                                ><span
+                                  class="burp-suite-enterprise-features-text205"
+                                  >Server-side request forgery</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ></div
+                      ><div class="footer-final-section2"
+                        ><div class="footer-final-container16"
+                          ><footer-column-title-wrapper-9xzq
+                            class="footer-column-title-wrapper-9xzq"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container2 footer-column-titleroot-class-name263"
+                              ><p class="footer-column-title-text2"
+                                ><span>Customers</span></p
+                              ></div
+                            ></footer-column-title-wrapper-9xzq
+                          ><a
+                            href="https://portswigger.net/organizations"
+                            class="footer-final-link19"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text19 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment19"
+                                ><span
+                                  class="burp-suite-enterprise-features-text206"
+                                  >Organizations</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/testers"
+                            class="footer-final-link20"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text20 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment20"
+                                ><span
+                                  class="burp-suite-enterprise-features-text207"
+                                  >Testers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/developers"
+                            class="footer-final-link21"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text21 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment21"
+                                ><span
+                                  class="burp-suite-enterprise-features-text208"
+                                  >Developers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container17"
+                          ><footer-column-title-wrapper-2a6t
+                            class="footer-column-title-wrapper-2a6t"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container3 footer-column-titleroot-class-name264"
+                              ><p class="footer-column-title-text3"
+                                ><span>Company</span></p
+                              ></div
+                            ></footer-column-title-wrapper-2a6t
+                          ><a
+                            href="https://portswigger.net/about"
+                            class="footer-final-link22"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text22 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment22"
+                                ><span
+                                  class="burp-suite-enterprise-features-text209"
+                                  >About</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/careers"
+                            class="footer-final-link23"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text23 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment23"
+                                ><span
+                                  class="burp-suite-enterprise-features-text210"
+                                  >Careers</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/about/contact"
+                            class="footer-final-link24"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text24 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment24"
+                                ><span
+                                  class="burp-suite-enterprise-features-text211"
+                                  >Contact</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/legal"
+                            class="footer-final-link25"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text25 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment25"
+                                ><span
+                                  class="burp-suite-enterprise-features-text212"
+                                  >Legal</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/privacy"
+                            class="footer-final-link26"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text26 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment26"
+                                ><span
+                                  class="burp-suite-enterprise-features-text213"
+                                  >Privacy Notice</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ></div
+                      ><div class="footer-final-section3"
+                        ><div class="footer-final-container18"
+                          ><footer-column-title-wrapper-7jt7
+                            class="footer-column-title-wrapper-7jt7"
+                            rootclassname="footer-column-titleundefined"
+                            ><!--FooterColumnTitle component--><div
+                              class="footer-column-title-container4 footer-column-titleroot-class-name265"
+                              ><p class="footer-column-title-text4"
+                                ><span>Insights</span></p
+                              ></div
+                            ></footer-column-title-wrapper-7jt7
+                          ><a
+                            href="https://portswigger.net/web-security"
+                            class="footer-final-link27"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text27 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment27"
+                                ><span
+                                  class="burp-suite-enterprise-features-text214"
+                                  >Web Security Academy</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/blog"
+                            class="footer-final-link28"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text28 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment28"
+                                ><span
+                                  class="burp-suite-enterprise-features-text215"
+                                  >Blog</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ><a
+                            href="https://portswigger.net/research"
+                            class="footer-final-link29"
+                            ><span
+                              href="https://play.teleporthq.io/static/svg/default-img.svg"
+                              class="footer-final-text29 Footer"
+                              ><fragment
+                                class="burp-suite-enterprise-features-fragment29"
+                                ><span
+                                  class="burp-suite-enterprise-features-text216"
+                                  >Research</span
+                                ></fragment
+                              ></span
+                            ></a
+                          ></div
+                        ><div class="footer-final-container19"
+                          ><a
+                            href="https://portswigger.net"
+                            class="footer-final-link30"
+                            ><img
+                              alt="image"
+                              src="../../public/portswigger-logo.svg"
+                              class="footer-final-image" /></a
+                          ><a
+                            href="https://x.com/PortSwigger"
+                            class="footer-final-link31"
+                            ><twitter-button-wrapper
+                              class="footer-final-component6"
+                              rootclassname="twitter-buttonundefined"
+                              ><!--TwitterButton component--><div
+                                class="twitter-button-container twitter-buttonroot-class-name50"
+                                ><div
+                                  href="https://twitter.com/Burp_Suite"
+                                  class="twitter-button-frame5622"
+                                  ><div class="twitter-button-frame5626"
+                                    ><img
+                                      alt="TwitterandXlogossvg14713"
+                                      src="../../public/external/twitterandxlogossvg14713-0pok-200h.png"
+                                      class="twitter-button-twitterand-xlogossvg1"
+                                    /><span class="twitter-button-text"
+                                      ><span>Follow us</span></span
+                                    ></div
+                                  ></div
+                                ></div
+                              ></twitter-button-wrapper
+                            ></a
+                          ><p class="footer-final-text30 Footer"
+                            ><fragment
+                              class="burp-suite-enterprise-features-fragment30"
+                              ><span
+                                class="burp-suite-enterprise-features-text217"
+                                >© 2025 PortSwigger Ltd.</span
+                              ></fragment
+                            ></p
+                          ></div
+                        ></div
+                      ></div
+                    ></div
+                  ></div
+                ></div
+              ></div
+            ></div
+          ></footer-final-wrapper
+        ></div
+      ></div
+    >
+    <script>
+      (function(window, document, dataLayerName, id) {
+          window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});
+          var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+          var qP = [];
+          dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), tags.nonce = "@Html.Raw(Context.GetNonce())";
+      var qPString=qP.length>0?("?"+qP.join("&")):"";
+          tags.async=!0,tags.src="https://ps.containers.piwik.pro/"+id+".js"+qPString,
+          scripts.parentNode.insertBefore(tags,scripts);
+          !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){
+          var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+          })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');</script
+    ><script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script></body
+></html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en"
+  ><head
+    ><title>Copy 1 of Portswigger website</title
+    ><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    /><meta charset="utf-8" /><meta
+      property="twitter:card"
+      content="summary_large_image"
+    />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <link
+      rel="preload"
+      href="/mega-nav/images/mega-nav-portswigger-logo.svg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="/content/fonts/ps-main/ps-icons.woff?l1la2n"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/content/fonts/ps-icons-small/ps-icons-small.woff?td2uot"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link rel="preload" href="/mega-nav/meganav.css" as="style" />
+
+    <style>
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+    <script>
+      (function(window, document, dataLayerName, id) {
+      var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName);
+      var qPString=qP.length>0?("?"+qP.join("&")):"";
+      document.write('<nonce-script src="https://ps.containers.piwik.pro/'+id+'.sync.js' + qPString + '" nonce="NIFdcp1UaO0OFJv1ewzs2Putqt1LcUl0"></' + 'nonce-script>');
+      })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');
+    </script></head
+  >
+  <body
+    ><link rel="stylesheet" href="../style.css" /><div
+      ><link href="./home-sections-resources.css" rel="stylesheet" /><div
+        class="home-sections-resources-resources section-full home-sections-resources"
+        ><div class="home-sections-resources-max-width section-max-width"
+          ><h2 variant="" class="home-sections-resources-heading-big heading-1"
+            ><fragment class="home-sections-resources-fragment"
+              ><span>Security resources for everyone</span></fragment
+            ></h2
+          ><div class="home-sections-resources-container"
+            ><common-cards-security-resource-card-wrapper
+              class="common-cards-security-resource-card-wrapper"
+              rootclassname="common-cards-security-resource-cardundefined"
+              ><!--CommonCardsSecurityResourceCard component--><div
+                class="common-cards-security-resource-card-hero-card elevation-effect translate-child-svg-right common-cards-security-resource-cardroot-class-name"
+                ><div class="common-cards-security-resource-card-container1"
+                  ><div
+                    class="common-cards-security-resource-card-image-container"
+                    ><img
+                      alt="image"
+                      src="public/external/resources-200h-200h.png"
+                      class="common-cards-security-resource-card-image1" /></div
+                  ><div class="common-cards-security-resource-card-container2"
+                    ><h2 class="common-cards-security-resource-card-text1"
+                      ><span>The PortSwigger Blog</span></h2
+                    ><span
+                      class="common-cards-security-resource-card-description1"
+                      ><span
+                        >Get the inside scoop on the latest Burp Suite news,
+                        tech, and interviews - from right across the PortSwigger
+                        team.</span
+                      ></span
+                    ><a
+                      href="https://www.teleporthq.io"
+                      class="common-cards-security-resource-card-link1"
+                      ><div class="common-cards-security-resource-card-link2"
+                        ><span class="common-cards-security-resource-card-text2"
+                          >Read More</span
+                        ><svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 32 32"
+                          class="common-cards-security-resource-card-icon1"
+                        >
+                          <path
+                            d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                            fill="currentColor"
+                          ></path></svg></div></a></div></div
+                ><div class="common-cards-security-resource-card-container3"
+                  ><img
+                    alt="image"
+                    src="public/external/resources-200h-200h.png"
+                    class="common-cards-security-resource-card-image2" /><div
+                    class="common-cards-security-resource-card-container4"
+                    ><div class="common-cards-security-resource-card-container5"
+                      ><h3 class="common-cards-security-resource-card-text3"
+                        ><span>The PortSwigger Blog</span></h3
+                      ><span
+                        class="common-cards-security-resource-card-description2"
+                        ><span
+                          >Get the inside scoop on the latest Burp Suite news,
+                          tech, and interviews - from right across the
+                          PortSwigger team.</span
+                        ></span
+                      ><div
+                        class="common-cards-security-resource-card-container6"
+                        ><span class="common-cards-security-resource-card-text4"
+                          >Read More</span
+                        ><svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 32 32"
+                          class="common-cards-security-resource-card-icon3"
+                        >
+                          <path
+                            d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                            fill="currentColor"
+                          ></path></svg></div></div></div></div></div></common-cards-security-resource-card-wrapper
+            ><div class="home-sections-resources-grid"
+              ><common-cards-security-resource-card-wrapper-vbsj
+                class="common-cards-security-resource-card-wrapper-vbsj"
+                rootclassname="common-cards-security-resource-cardundefined"
+                ><!--CommonCardsSecurityResourceCard component--><div
+                  class="common-cards-security-resource-card-hero-card1 elevation-effect translate-child-svg-right common-cards-security-resource-cardroot-class-name1"
+                  ><div class="common-cards-security-resource-card-container7"
+                    ><div
+                      class="common-cards-security-resource-card-image-container1"
+                      ><img
+                        alt="image"
+                        src="public/external/top-10-200h-200h.png"
+                        class="common-cards-security-resource-card-image3" /></div
+                    ><div class="common-cards-security-resource-card-container8"
+                      ><h2 class="common-cards-security-resource-card-text5"
+                        ><span
+                          >The top 10 web hacking techniques of 2023</span
+                        ></h2
+                      ><span
+                        class="common-cards-security-resource-card-description3"
+                        ><span
+                          >PortSwigger Research's annual community-powered
+                          effort to identify the year's must-read web security
+                          research.
+                        </span></span
+                      ><a
+                        href="https://www.teleporthq.io"
+                        class="common-cards-security-resource-card-link3"
+                        ><div class="common-cards-security-resource-card-link4"
+                          ><span
+                            class="common-cards-security-resource-card-text6"
+                            >Read More</span
+                          ><svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 32 32"
+                            class="common-cards-security-resource-card-icon5"
+                          >
+                            <path
+                              d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                              fill="currentColor"
+                            ></path></svg></div></a></div></div
+                  ><div class="common-cards-security-resource-card-container9"
+                    ><img
+                      alt="image"
+                      src="public/external/top-10-200h-200h.png"
+                      class="common-cards-security-resource-card-image4" /><div
+                      class="common-cards-security-resource-card-container10"
+                      ><div
+                        class="common-cards-security-resource-card-container11"
+                        ><h3 class="common-cards-security-resource-card-text7"
+                          ><span
+                            >The top 10 web hacking techniques of 2023</span
+                          ></h3
+                        ><span
+                          class="common-cards-security-resource-card-description4"
+                          ><span
+                            >PortSwigger Research's annual community-powered
+                            effort to identify the year's must-read web security
+                            research.
+                          </span></span
+                        ><div
+                          class="common-cards-security-resource-card-container12"
+                          ><span
+                            class="common-cards-security-resource-card-text8"
+                            >Read More</span
+                          ><svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 32 32"
+                            class="common-cards-security-resource-card-icon7"
+                          >
+                            <path
+                              d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                              fill="currentColor"
+                            ></path></svg></div></div></div></div></div></common-cards-security-resource-card-wrapper-vbsj
+              ><common-cards-security-resource-card-wrapper-rxxk
+                class="common-cards-security-resource-card-wrapper-rxxk"
+                rootclassname="common-cards-security-resource-cardundefined"
+                ><!--CommonCardsSecurityResourceCard component--><div
+                  class="common-cards-security-resource-card-hero-card2 elevation-effect translate-child-svg-right common-cards-security-resource-cardroot-class-name6"
+                  ><div class="common-cards-security-resource-card-container13"
+                    ><div
+                      class="common-cards-security-resource-card-image-container2"
+                      ><img
+                        alt="image"
+                        src="public/external/burp-suite-enterprise-200h-200h.png"
+                        class="common-cards-security-resource-card-image5" /></div
+                    ><div
+                      class="common-cards-security-resource-card-container14"
+                      ><h2 class="common-cards-security-resource-card-text9"
+                        ><span
+                          >Burp Suite Enterprise Edition and Burp Suite
+                          Professional</span
+                        ></h2
+                      ><span
+                        class="common-cards-security-resource-card-description5"
+                        ><span
+                          >Find the Burp Suite that's right for your use-case,
+                          and discover a world of possibility.</span
+                        ></span
+                      ><a
+                        href="https://www.teleporthq.io"
+                        class="common-cards-security-resource-card-link5"
+                        ><div class="common-cards-security-resource-card-link6"
+                          ><span
+                            class="common-cards-security-resource-card-text10"
+                            >Read More</span
+                          ><svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 32 32"
+                            class="common-cards-security-resource-card-icon9"
+                          >
+                            <path
+                              d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                              fill="currentColor"
+                            ></path></svg></div></a></div></div
+                  ><div class="common-cards-security-resource-card-container15"
+                    ><img
+                      alt="image"
+                      src="public/external/burp-suite-enterprise-200h-200h.png"
+                      class="common-cards-security-resource-card-image6" /><div
+                      class="common-cards-security-resource-card-container16"
+                      ><div
+                        class="common-cards-security-resource-card-container17"
+                        ><h3 class="common-cards-security-resource-card-text11"
+                          ><span
+                            >Burp Suite Enterprise Edition and Burp Suite
+                            Professional</span
+                          ></h3
+                        ><span
+                          class="common-cards-security-resource-card-description6"
+                          ><span
+                            >Find the Burp Suite that's right for your use-case,
+                            and discover a world of possibility.</span
+                          ></span
+                        ><div
+                          class="common-cards-security-resource-card-container18"
+                          ><span
+                            class="common-cards-security-resource-card-text12"
+                            >Read More</span
+                          ><svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 32 32"
+                            class="common-cards-security-resource-card-icon11"
+                          >
+                            <path
+                              d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                              fill="currentColor"
+                            ></path></svg></div></div></div></div></div></common-cards-security-resource-card-wrapper-rxxk
+              ><common-cards-security-resource-card-wrapper-rg1p
+                class="common-cards-security-resource-card-wrapper-rg1p"
+                rootclassname="common-cards-security-resource-cardundefined"
+                ><!--CommonCardsSecurityResourceCard component--><div
+                  class="common-cards-security-resource-card-hero-card3 elevation-effect translate-child-svg-right common-cards-security-resource-cardroot-class-name5"
+                  ><div class="common-cards-security-resource-card-container19"
+                    ><div
+                      class="common-cards-security-resource-card-image-container3"
+                      ><img
+                        alt="image"
+                        src="public/external/burp-uite-certified-200h-200h.png"
+                        class="common-cards-security-resource-card-image7" /></div
+                    ><div
+                      class="common-cards-security-resource-card-container20"
+                      ><h2 class="common-cards-security-resource-card-text13"
+                        ><span
+                          >Become a Burp Suite Certified Practitioner</span
+                        ></h2
+                      ><span
+                        class="common-cards-security-resource-card-description7"
+                        ><span
+                          >Prove your ability to detect and exploit common web
+                          vulnerabilities, with a Burp Suite
+                          certification.</span
+                        ></span
+                      ><a
+                        href="https://www.teleporthq.io"
+                        class="common-cards-security-resource-card-link7"
+                        ><div class="common-cards-security-resource-card-link8"
+                          ><span
+                            class="common-cards-security-resource-card-text14"
+                            >Read More</span
+                          ><svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 32 32"
+                            class="common-cards-security-resource-card-icon13"
+                          >
+                            <path
+                              d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                              fill="currentColor"
+                            ></path></svg></div></a></div></div
+                  ><div class="common-cards-security-resource-card-container21"
+                    ><img
+                      alt="image"
+                      src="public/external/burp-uite-certified-200h-200h.png"
+                      class="common-cards-security-resource-card-image8" /><div
+                      class="common-cards-security-resource-card-container22"
+                      ><div
+                        class="common-cards-security-resource-card-container23"
+                        ><h3 class="common-cards-security-resource-card-text15"
+                          ><span
+                            >Become a Burp Suite Certified Practitioner</span
+                          ></h3
+                        ><span
+                          class="common-cards-security-resource-card-description8"
+                          ><span
+                            >Prove your ability to detect and exploit common web
+                            vulnerabilities, with a Burp Suite
+                            certification.</span
+                          ></span
+                        ><div
+                          class="common-cards-security-resource-card-container24"
+                          ><span
+                            class="common-cards-security-resource-card-text16"
+                            >Read More</span
+                          ><svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 32 32"
+                            class="common-cards-security-resource-card-icon15"
+                          >
+                            <path
+                              d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                              fill="currentColor"
+                            ></path></svg></div></div></div></div></div></common-cards-security-resource-card-wrapper-rg1p
+              ><common-cards-security-resource-card-wrapper-wsw0
+                class="common-cards-security-resource-card-wrapper-wsw0"
+                rootclassname="common-cards-security-resource-cardundefined"
+                ><!--CommonCardsSecurityResourceCard component--><div
+                  class="common-cards-security-resource-card-hero-card4 elevation-effect translate-child-svg-right common-cards-security-resource-cardroot-class-name7"
+                  ><div class="common-cards-security-resource-card-container25"
+                    ><div
+                      class="common-cards-security-resource-card-image-container4"
+                      ><img
+                        alt="image"
+                        src="public/external/get-started-200h-200h.png"
+                        class="common-cards-security-resource-card-image9" /></div
+                    ><div
+                      class="common-cards-security-resource-card-container26"
+                      ><h2 class="common-cards-security-resource-card-text17"
+                        ><span
+                          >Get started with the Web Security Academy</span
+                        ></h2
+                      ><span
+                        class="common-cards-security-resource-card-description9"
+                        ><span
+                          >Boost your cybersecurity skills, and get off to a
+                          flying start in the Web Security Academy.</span
+                        ></span
+                      ><a
+                        href="https://www.teleporthq.io"
+                        class="common-cards-security-resource-card-link9"
+                        ><div class="common-cards-security-resource-card-link10"
+                          ><span
+                            class="common-cards-security-resource-card-text18"
+                            >Read More</span
+                          ><svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 32 32"
+                            class="common-cards-security-resource-card-icon17"
+                          >
+                            <path
+                              d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                              fill="currentColor"
+                            ></path></svg></div></a></div></div
+                  ><div class="common-cards-security-resource-card-container27"
+                    ><img
+                      alt="image"
+                      src="public/external/get-started-200h-200h.png"
+                      class="common-cards-security-resource-card-image10" /><div
+                      class="common-cards-security-resource-card-container28"
+                      ><div
+                        class="common-cards-security-resource-card-container29"
+                        ><h3 class="common-cards-security-resource-card-text19"
+                          ><span
+                            >Get started with the Web Security Academy</span
+                          ></h3
+                        ><span
+                          class="common-cards-security-resource-card-description10"
+                          ><span
+                            >Boost your cybersecurity skills, and get off to a
+                            flying start in the Web Security Academy.</span
+                          ></span
+                        ><div
+                          class="common-cards-security-resource-card-container30"
+                          ><span
+                            class="common-cards-security-resource-card-text20"
+                            >Read More</span
+                          ><svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 32 32"
+                            class="common-cards-security-resource-card-icon19"
+                          >
+                            <path
+                              d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                              fill="currentColor"
+                            ></path></svg></div></div></div></div></div></common-cards-security-resource-card-wrapper-wsw0
+              ><common-cards-security-resource-card-wrapper-ndxd
+                class="common-cards-security-resource-card-wrapper-ndxd"
+                rootclassname="common-cards-security-resource-cardundefined"
+                ><!--CommonCardsSecurityResourceCard component--><div
+                  class="common-cards-security-resource-card-hero-card5 elevation-effect translate-child-svg-right common-cards-security-resource-cardroot-class-name3"
+                  ><div class="common-cards-security-resource-card-container31"
+                    ><div
+                      class="common-cards-security-resource-card-image-container5"
+                      ><img
+                        alt="Burp Suite Roadmap"
+                        src="public/external/burp-suite-roadmap-200h-200h.png"
+                        class="common-cards-security-resource-card-image11" /></div
+                    ><div
+                      class="common-cards-security-resource-card-container32"
+                      ><h2 class="common-cards-security-resource-card-text21"
+                        ><span>Burp Suite roadmap update: July 2023</span></h2
+                      ><span
+                        class="common-cards-security-resource-card-description11"
+                        ><span
+                          >Discover the new functionality and features we have
+                          planned for the Burp Suite family over the next 12
+                          months.</span
+                        ></span
+                      ><a
+                        href="https://www.teleporthq.io"
+                        class="common-cards-security-resource-card-link11"
+                        ><div class="common-cards-security-resource-card-link12"
+                          ><span
+                            class="common-cards-security-resource-card-text22"
+                            >Read More</span
+                          ><svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 32 32"
+                            class="common-cards-security-resource-card-icon21"
+                          >
+                            <path
+                              d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                              fill="currentColor"
+                            ></path></svg></div></a></div></div
+                  ><div class="common-cards-security-resource-card-container33"
+                    ><img
+                      alt="Burp Suite Roadmap"
+                      src="public/external/burp-suite-roadmap-200h-200h.png"
+                      class="common-cards-security-resource-card-image12" /><div
+                      class="common-cards-security-resource-card-container34"
+                      ><div
+                        class="common-cards-security-resource-card-container35"
+                        ><h3 class="common-cards-security-resource-card-text23"
+                          ><span>Burp Suite roadmap update: July 2023</span></h3
+                        ><span
+                          class="common-cards-security-resource-card-description12"
+                          ><span
+                            >Discover the new functionality and features we have
+                            planned for the Burp Suite family over the next 12
+                            months.</span
+                          ></span
+                        ><div
+                          class="common-cards-security-resource-card-container36"
+                          ><span
+                            class="common-cards-security-resource-card-text24"
+                            >Read More</span
+                          ><svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 32 32"
+                            class="common-cards-security-resource-card-icon23"
+                          >
+                            <path
+                              d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                              fill="currentColor"
+                            ></path></svg></div></div></div></div></div></common-cards-security-resource-card-wrapper-ndxd
+              ><common-cards-security-resource-card-wrapper-8sn8
+                class="common-cards-security-resource-card-wrapper-8sn8"
+                rootclassname="common-cards-security-resource-cardundefined"
+                ><!--CommonCardsSecurityResourceCard component--><div
+                  class="common-cards-security-resource-card-hero-card6 elevation-effect translate-child-svg-right common-cards-security-resource-cardroot-class-name2"
+                  ><div class="common-cards-security-resource-card-container37"
+                    ><div
+                      class="common-cards-security-resource-card-image-container6"
+                      ><img
+                        alt="image"
+                        src="public/external/video-tutorials-200h-200h.png"
+                        class="common-cards-security-resource-card-image13" /></div
+                    ><div
+                      class="common-cards-security-resource-card-container38"
+                      ><h2 class="common-cards-security-resource-card-text25"
+                        ><span>Burp Suite video tutorials and more</span></h2
+                      ><span
+                        class="common-cards-security-resource-card-description13"
+                        ><span
+                          >Watch product guidance, video tutorials, interviews,
+                          and more on the PortSwigger YouTube channel.</span
+                        ></span
+                      ><a
+                        href="https://www.teleporthq.io"
+                        class="common-cards-security-resource-card-link13"
+                        ><div class="common-cards-security-resource-card-link14"
+                          ><span
+                            class="common-cards-security-resource-card-text26"
+                            >Read More</span
+                          ><svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 32 32"
+                            class="common-cards-security-resource-card-icon25"
+                          >
+                            <path
+                              d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                              fill="currentColor"
+                            ></path></svg></div></a></div></div
+                  ><div class="common-cards-security-resource-card-container39"
+                    ><img
+                      alt="image"
+                      src="public/external/video-tutorials-200h-200h.png"
+                      class="common-cards-security-resource-card-image14" /><div
+                      class="common-cards-security-resource-card-container40"
+                      ><div
+                        class="common-cards-security-resource-card-container41"
+                        ><h3 class="common-cards-security-resource-card-text27"
+                          ><span>Burp Suite video tutorials and more</span></h3
+                        ><span
+                          class="common-cards-security-resource-card-description14"
+                          ><span
+                            >Watch product guidance, video tutorials,
+                            interviews, and more on the PortSwigger YouTube
+                            channel.</span
+                          ></span
+                        ><div
+                          class="common-cards-security-resource-card-container42"
+                          ><span
+                            class="common-cards-security-resource-card-text28"
+                            >Read More</span
+                          ><svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 32 32"
+                            class="common-cards-security-resource-card-icon27"
+                          >
+                            <path
+                              d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"
+                              fill="currentColor"
+                            ></path></svg></div></div></div></div></div></common-cards-security-resource-card-wrapper-8sn8></div></div></div></div
+    ></div>
+    <script>
+      (function(window, document, dataLayerName, id) {
+          window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});
+          var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+          var qP = [];
+          dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), tags.nonce = "@Html.Raw(Context.GetNonce())";
+      var qPString=qP.length>0?("?"+qP.join("&")):"";
+          tags.async=!0,tags.src="https://ps.containers.piwik.pro/"+id+".js"+qPString,
+          scripts.parentNode.insertBefore(tags,scripts);
+          !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){
+          var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+          })(window, document, 'dataLayer', '287552c2-4917-42e0-8982-ba994a2a73d7');</script
+    ><script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script></body
+></html>

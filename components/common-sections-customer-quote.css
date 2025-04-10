@@ -1,0 +1,17 @@
+.common-sections-customer-quote-container1 {
+  position: relative;
+  border-radius: var(--dl-layout-radius-radius4);
+}
+ 
+.common-sections-customer-quote-max-width {
+  border-color: #cbd0d1;
+  border-width: 1px;
+}
+ 
+.common-sections-customer-quote-max-width:hover {
+  box-shadow: 0 0 6px #00000029;
+}
+ 
+.common-sections-customer-quote-quote-source2 {
+  justify-content: flex-start;
+}

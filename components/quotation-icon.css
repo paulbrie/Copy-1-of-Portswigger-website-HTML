@@ -1,0 +1,48 @@
+.quotation-icon-container1 {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.quotation-icon-container2 {
+  gap: var(--dl-layout-space-twounits);
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+ 
+.quotation-icon-image {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+ 
+.quotation-icon-fragment {
+  display: contents;
+}
+ 
+.quotation-icon-text2 {
+  display: inline-block;
+}
+ 
+.quotation-iconroot-class-name {
+  width: 100%;
+}
+ 
+.quotation-iconroot-class-name1 {
+  width: 100%;
+}
+ 
+.quotation-iconroot-class-name4 {
+  width: 100%;
+}
+ 
+.quotation-iconroot-class-name5 {
+  width: 100%;
+}

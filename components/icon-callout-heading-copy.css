@@ -1,0 +1,98 @@
+.icon-callout-heading-copy-container1 {
+  gap: var(--dl-layout-space-unit);
+  width: auto;
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  max-width: 370px;
+  min-width: 250px;
+  min-height: 100%;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+.icon-callout-heading-copy-image {
+  width: 90px;
+  height: 79px;
+  object-fit: cover;
+}
+ 
+.icon-callout-heading-copy-text1 {
+  width: 100%;
+  text-align: center;
+}
+ 
+.icon-callout-heading-copy-text2 {
+  width: 100%;
+  text-align: center;
+}
+ 
+.icon-callout-heading-copy-container2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+ 
+.icon-callout-heading-copy-text3 {
+  fill: var(--dl-color-text-text-linkorange);
+  color: var(--dl-color-text-text-linkorange);
+  margin-right: var(--dl-layout-space-halfunit);
+}
+ 
+.icon-callout-heading-copy-chevron-down {
+  width: 16px;
+  height: 16px;
+}
+ 
+.icon-callout-heading-copy-fragment {
+  display: contents;
+}
+ 
+.icon-callout-heading-copy-text4 {
+  display: inline-block;
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+

@@ -1,0 +1,188 @@
+.common-cards-burp-enterprise-benefit-scroll-to-wrapper {
+  display: contents;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-benefit-scroll-to {
+  gap: var(--dl-layout-space-two);
+  cursor: pointer;
+  padding: var(--dl-layout-space-two);
+  overflow: hidden;
+  position: relative;
+  border-color: var(--dl-color-separators-gray);
+  border-width: 1px;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-icon1 {
+  width: 4rem;
+  object-fit: cover;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-content {
+  display: flex;
+  transition: all 0.3s;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-text1 {
+  text-align: left;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-text2 {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+ 
+
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-chevron {
+  width: 4rem;
+  height: 4rem;
+  transform: rotate(90deg);
+  align-self: flex-end;
+}
+ 
+@media(max-width: 991px) {
+  .common-cards-burp-enterprise-benefit-scroll-to-benefit-scroll-to {
+    width: 100%;
+    max-width: unset;
+  }
+}
+ 
+
+ 
+
+
+.common-cards-burp-enterprise-benefit-scroll-to-wrapper-1fex {
+  display: contents;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-benefit-scroll-to1 {
+  gap: var(--dl-layout-space-two);
+  cursor: pointer;
+  padding: var(--dl-layout-space-two);
+  overflow: hidden;
+  position: relative;
+  border-color: var(--dl-color-separators-gray);
+  border-width: 1px;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-icon3 {
+  width: 4rem;
+  object-fit: cover;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-content1 {
+  display: flex;
+  transition: all 0.3s;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-text3 {
+  text-align: left;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-text4 {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+ 
+
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-chevron1 {
+  width: 4rem;
+  height: 4rem;
+  transform: rotate(90deg);
+  align-self: flex-end;
+}
+ 
+@media(max-width: 991px) {
+  .common-cards-burp-enterprise-benefit-scroll-to-benefit-scroll-to1 {
+    width: 100%;
+    max-width: unset;
+  }
+}
+ 
+
+ 
+
+
+.common-cards-burp-enterprise-benefit-scroll-to-wrapper-dicb {
+  display: contents;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-benefit-scroll-to2 {
+  gap: var(--dl-layout-space-two);
+  cursor: pointer;
+  padding: var(--dl-layout-space-two);
+  overflow: hidden;
+  position: relative;
+  border-color: var(--dl-color-separators-gray);
+  border-width: 1px;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-icon5 {
+  width: 4rem;
+  object-fit: cover;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-content2 {
+  display: flex;
+  transition: all 0.3s;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-text5 {
+  text-align: left;
+}
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-text6 {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+ 
+
+ 
+.common-cards-burp-enterprise-benefit-scroll-to-chevron2 {
+  width: 4rem;
+  height: 4rem;
+  transform: rotate(90deg);
+  align-self: flex-end;
+}
+ 
+@media(max-width: 991px) {
+  .common-cards-burp-enterprise-benefit-scroll-to-benefit-scroll-to2 {
+    width: 100%;
+    max-width: unset;
+  }
+}
+ 
+
+ 
+
+
+.burp-enterprise-sections-scroll-to-cards-burp-enterprise-sections-scroll-to-cards {
+  position: relative;
+}
+ 
+.burp-enterprise-sections-scroll-to-cards-max-width {
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+ 
+
+ 
+@media(max-width: 991px) {
+  .burp-enterprise-sections-scroll-to-cards-max-width {
+    flex-direction: column;
+  }
+}
+ 
+
+ 
+
